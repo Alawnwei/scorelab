@@ -115,6 +115,7 @@ def prepare_data():
         "pnl_records": pnl_records,
         "pnl_count": len(pnl_records),
         "pnl_wins": sum(1 for r in pnl_records if r.get("result") == "win"),
+        "pnl_losses": sum(1 for r in pnl_records if r.get("result") == "loss"),
         "pnl_total_pnl": sum(r.get("pnl", 0) for r in pnl_records),
         "settled_list": [{
             "date": p.get("date", ""),
@@ -211,7 +212,7 @@ th {{ color: #90caf9; font-weight: 500; position: sticky; top: 0; background: #1
   <div class="stat">
     <div class="value">{data['pnl_count']}</div>
     <div class="label">PnL 记录</div>
-    <div class="tag {'tag-green' if data['pnl_total_pnl']>0 else 'tag-red'}">{data['pnl_wins']}胜 {data['pnl_count']-data['pnl_wins']}负</div>
+    <div class="tag {'tag-green' if data['pnl_total_pnl']>0 else 'tag-red'}">{data['pnl_wins']}胜 {data['pnl_losses']}负</div>
   </div>
   <div class="stat">
     <div class="value">{data['pending']}</div>
