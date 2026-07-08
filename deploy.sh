@@ -1,6 +1,6 @@
 #!/bin/bash
 # ============================================================
-# 一键部署：预测 → 看板 → 推送 Gitee
+# 一键部署：预测 → 看板 → 推送 GitHub
 # 用法: bash deploy.sh <主队> <客队> [联赛]
 # 示例: bash deploy.sh "葡萄牙" "西班牙" wm26
 # ============================================================
@@ -53,9 +53,9 @@ echo ""
 echo "📊 [3/4] 生成看板..."
 python skill/report_to_html.py
 
-# 步骤 4：推送到 Gitee
+# 步骤 4：推送到 GitHub
 echo ""
-echo "🚀 [4/4] 推送到 Gitee..."
+echo "🚀 [4/4] 推送到 GitHub..."
 git add -A
 git commit -m "📊 $DATE $HOME vs $AWAY"
 
@@ -76,8 +76,5 @@ echo "  ✅ 部署完成 (耗时 ${COST}s)"
 echo "═══════════════════════════════════════════"
 echo ""
 echo "  📱 手机查看:"
-echo "  https://你的用户名.gitee.io/scorelab/html/report.html"
-echo ""
-echo "  ⚠️ 别忘了去 Gitee Pages 点「更新」:"
-echo "  https://gitee.com/你的用户名/scorelab/pages"
+echo "  https://你的用户名.github.io/scorelab/"
 echo ""

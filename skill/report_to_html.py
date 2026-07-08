@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-生成自包含 HTML 看板 → Gitee Pages 可访问
+生成自包含 HTML 看板 → GitHub Pages 可访问
 手机/电脑浏览器直接打开，无需服务器
 
 用法:
@@ -14,7 +14,7 @@ from collections import defaultdict
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE_DIR = os.path.join(BASE_DIR, "数据缓存")
-HTML_DIR = os.path.join(BASE_DIR, "html")
+HTML_DIR = os.path.join(BASE_DIR, "docs")
 REVIEW_DIR = os.path.join(BASE_DIR, "预测数据")
 
 
@@ -267,8 +267,8 @@ th {{ color: #90caf9; font-weight: 500; position: sticky; top: 0; background: #1
 </div>
 
 <div class="footer">
-⚡ 自动生成 by report_to_html.py | Gitee Pages 托管<br>
-<a href="https://gitee.com/你的用户名/scorelab" style="color:#90caf9;">scorelab</a>
+⚡ 自动生成 by report_to_html.py | GitHub Pages 托管<br>
+<a href="https://github.com/你的用户名/scorelab" style="color:#90caf9;">scorelab</a>
 </div>
 
 <script>
@@ -332,13 +332,13 @@ def main():
     html = gen_html(data)
 
     os.makedirs(HTML_DIR, exist_ok=True)
-    path = os.path.join(HTML_DIR, "report.html")
+    path = os.path.join(HTML_DIR, "index.html")
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
 
     print(f"✅ 看板已生成: {path}")
     print(f"   大小: {len(html)/1024:.0f} KB")
-    print(f"   Gitee Pages: https://你的用户名.gitee.io/scorelab/html/report.html")
+    print(f"   GitHub Pages: https://你的用户名.github.io/scorelab/")
 
 
 if __name__ == "__main__":

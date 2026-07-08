@@ -142,7 +142,7 @@ GitHub Pages 免费托管 HTML 文件，手机也能访问。
    |:-----|:---------|
    | Source | **Deploy from a branch** |
    | Branch | `master` |
-   | Folder | `/html` |
+   | Folder | `/docs` |
    | 点击 **Save** |
 
 3. 等待 1-2 分钟，页面顶部会显示访问地址：
@@ -179,7 +179,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: html/
+          path: docs/
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
 ```
@@ -210,7 +210,7 @@ git push
 等待 1-2 分钟让 GitHub Pages 自动部署，然后用手机打开：
 
 ```
-https://你的用户名.github.io/scorelab/html/report.html
+https://你的用户名.github.io/scorelab/
 ```
 
 > 应该能看到：KPI 卡片 + 校准曲线 + 预测表格。
@@ -250,7 +250,7 @@ GitHub Pages 会在推送后自动重新部署，通常 1-2 分钟生效。
 
 手机浏览器打开：
 ```
-https://你的用户名.github.io/scorelab/html/report.html
+https://你的用户名.github.io/scorelab/
 ```
 
 ### 赛后：回填结果
@@ -296,7 +296,7 @@ git commit -m "📊 $(date +%Y-%m-%d) $HOME vs $AWAY"
 git push
 
 echo "✅ 完成！等待 GitHub Pages 自动部署（约1-2分钟）"
-echo "   https://你的用户名.github.io/scorelab/html/report.html"
+echo "   https://你的用户名.github.io/scorelab/"
 ```
 
 用法：
@@ -369,4 +369,4 @@ https://github.com/你的用户名/scorelab/actions
 
 ---
 
-> **📱 最终效果**：笔记本上跑 `bash deploy.sh "葡萄牙" "西班牙"` → 手机打开 https://你的用户名.github.io/scorelab/html/report.html 就能看到预测结果和校准曲线。
+> **📱 最终效果**：笔记本上跑 `bash deploy.sh "葡萄牙" "西班牙"` → 手机打开 https://你的用户名.github.io/scorelab/ 就能看到预测结果和校准曲线。
