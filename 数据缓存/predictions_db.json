@@ -700,24 +700,6 @@
       "p_final_source": "inferred_neutral"
     },
     {
-      "id": "20260707_葡萄牙_西班牙",
-      "date": "2026-07-07",
-      "home": "葡萄牙",
-      "away": "西班牙",
-      "p_final": 0.4632045508567916,
-      "direction": "客胜",
-      "league": "wm26",
-      "confidence": "⭐",
-      "source": "predict.py",
-      "result": {
-        "status": "matched",
-        "score_home": 0,
-        "score_away": 1,
-        "actual_result": "客胜",
-        "correct": true
-      }
-    },
-    {
       "id": "20260707_阿根廷_埃及",
       "date": "2026-07-07",
       "home": "阿根廷",
@@ -758,20 +740,50 @@
       "confidence": "⭐"
     },
     {
-      "id": "20260708_葡萄牙_西班牙",
+      "id": "20260708_法国_摩洛哥",
       "date": "2026-07-08",
-      "home": "葡萄牙",
-      "away": "西班牙",
-      "p_final": 0.49152566455580216,
-      "direction": "客胜",
+      "home": "法国",
+      "away": "摩洛哥",
+      "p_final": 0.5133777814270044,
+      "direction": "主胜",
       "league": "wm26",
       "confidence": "⭐",
       "source": "predict.py",
-      "score_diff": -1.15,
-      "M_coef": 1.0347,
+      "score_diff": 1.71,
+      "M_coef": 0.9625,
+      "lam_h": 3.3927,
+      "lam_a": 2.3272,
+      "probs_3way": {
+        "home": 0.5666,
+        "draw": 0.1449,
+        "away": 0.2822
+      },
+      "over_25": 0.8888,
+      "btts": 0.8187,
       "result": {
         "status": "pending"
       }
+    },
+    {
+      "id": "MANUAL_20260708_163814_Kair_FK S",
+      "date": "2026-07-08",
+      "home": "Kairat Almaty",
+      "away": "FK Sutjeska",
+      "league": "uecl",
+      "p_final": 0.5,
+      "direction": "主不败",
+      "is_bet": false,
+      "odds": 0.0,
+      "source": "manual_analysis",
+      "confidence": "⭐⭐",
+      "result": {
+        "status": "pending",
+        "score_home": null,
+        "score_away": null,
+        "actual_result": null,
+        "correct": null
+      },
+      "analysis_notes": "ELO 1650 vs 1420 | 主场优势 | 估算xG 2.04 vs 1.69"
     }
   ],
   "last_updated": "2026-07-08"

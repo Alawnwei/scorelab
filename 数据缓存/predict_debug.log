@@ -1,9 +1,9 @@
 Error: I/O operation on closed file.
 Traceback (most recent call last):
-  File "C:\Users\Huawei\Downloads\电商\足球分析\skill\predict.py", line 764, in <module>
+  File "C:\Users\Huawei\Downloads\电商\足球分析\scorelab\skill\predict.py", line 896, in <module>
     main()
     ~~~~^^
-  File "C:\Users\Huawei\Downloads\电商\足球分析\skill\predict.py", line 705, in main
+  File "C:\Users\Huawei\Downloads\电商\足球分析\scorelab\skill\predict.py", line 826, in main
     print(f"[文件已写入] {filepath}")
     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: I/O operation on closed file.

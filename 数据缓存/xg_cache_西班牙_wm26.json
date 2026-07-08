@@ -1,0 +1,14 @@
+{
+  "cached_at": "2026-07-08T15:58:41.502245",
+  "result": {
+    "xG_for_90": 1.8,
+    "xG_against_90": 0.0,
+    "xG_per_shot": 0,
+    "matches_played": 5,
+    "source": "football-data.org",
+    "form_rating": null,
+    "is_calibrated": true,
+    "team": "西班牙",
+    "league": "wm26"
+  }
+}

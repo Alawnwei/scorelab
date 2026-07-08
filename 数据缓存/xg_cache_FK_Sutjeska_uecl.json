@@ -1,0 +1,14 @@
+{
+  "cached_at": "2026-07-08T16:38:13.122892",
+  "result": {
+    "xG_for_90": 1.4,
+    "xG_against_90": 1.4,
+    "xG_per_shot": 0,
+    "matches_played": 0,
+    "source": "league_average_default",
+    "form_rating": null,
+    "is_calibrated": false,
+    "team": "FK Sutjeska",
+    "league": "uecl"
+  }
+}

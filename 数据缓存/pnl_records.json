@@ -239,9 +239,25 @@
       "result": "win",
       "pnl": 0.33,
       "notes": "自动回填: 实际主胜 3-2"
+    },
+    {
+      "id": "20260708_163410_法国_vs_摩洛哥",
+      "date": "2026-07-08",
+      "home": "法国",
+      "away": "摩洛哥",
+      "league": "wm26",
+      "direction": "主胜",
+      "P_final": 0.513,
+      "odds": 1.571,
+      "+EV": 0,
+      "stake": 1.0,
+      "confidence": "⭐",
+      "result": "pending",
+      "pnl": 0,
+      "notes": ""
     }
   ],
-  "last_updated": "2026-07-08 10:20",
+  "last_updated": "2026-07-08 16:34",
   "bankroll": {
     "initial": 10000.0,
     "current": 10000.0,
