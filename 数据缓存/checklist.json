@@ -1,0 +1,176 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-07-06",
+  "items": [
+    {
+      "id": "correction_factor_3",
+      "title": "修正因子3：保平≠不进攻",
+      "question": "当前是否双方都满足「打平即出线」？\n如果是→ 是否自动假设了「满足→不攻→小球」？\n→ 如果是，标记为【v5.0修正因子3违规】，强制停止原推理",
+      "applicable_if_factor": "hold_lead",
+      "applicable_if_value": true,
+      "severity": "high",
+      "source_version": "v5.0/v6.2"
+    },
+    {
+      "id": "narrative_driven",
+      "title": "叙事驱动因素检查（复仇/纪录/历史恩怨）",
+      "question": "本场比赛是否存在历史恩怨/复仇动机/纪录追逐？\n如果是→ 自动上调大球预期0.5球",
+      "applicable_if_league_in": [
+        "world_cup",
+        "cup",
+        "knockout"
+      ],
+      "severity": "medium",
+      "source_version": "v6.2"
+    },
+    {
+      "id": "must_win_attack_boost",
+      "title": "必须赢进攻爆发因子",
+      "question": "是否有球队「必须赢」且对手防守非顶级？\n该队的进攻预期是否已上调？\n（对应v6.1规则：必须赢球队的进攻预期×1.15-1.225）",
+      "applicable_if_factor": "must_win",
+      "applicable_if_value_in": [
+        "high",
+        "low"
+      ],
+      "severity": "high",
+      "source_version": "v6.1"
+    },
+    {
+      "id": "half_time_drive",
+      "title": "半场比分驱动因子（必须赢球队半场落后反扑）",
+      "question": "必须赢球队是否有半场落后风险？\n对手是否非顶级防守强队？\n如果是→ 半场落后预期进球×1.5-2.0（v6.2规则）",
+      "applicable_if_factor": "must_win",
+      "applicable_if_value": "high",
+      "severity": "high",
+      "source_version": "v6.2"
+    },
+    {
+      "id": "rotation_damage",
+      "title": "轮换幅度量化检查",
+      "question": "轮换等级是否达到L3及以上？\nL3→×0.85、L4→×0.775 是否已应用？\n（v5.0规则：大幅轮换≠实力正常）",
+      "applicable_if_factor": "rotation",
+      "applicable_if_value_min": 3,
+      "severity": "high",
+      "source_version": "v5.0"
+    },
+    {
+      "id": "big_loss_hangover",
+      "title": "大败后低迷效应",
+      "question": "是否有球队上轮大败（2+球）？\n大败2球→×0.85、大败3+球→×0.70 是否已应用？\n注意：原v6.0的×0.3/0.5过激，已修正为×0.70/0.85",
+      "applicable_if_factor": "big_loss",
+      "applicable_if_value_min": 2,
+      "severity": "medium",
+      "source_version": "v6.0"
+    },
+    {
+      "id": "hold_lead_retreat",
+      "title": "领先后退速（保平收缩）",
+      "question": "领先方是否「保平即出线」？\n是否已评估领先方可能在领先后收缩？\n（v5.0规则：M系数×0.80，不要×0.5过激）",
+      "applicable_if_factor": "hold_lead",
+      "applicable_if_value": true,
+      "severity": "medium",
+      "source_version": "v5.0"
+    },
+    {
+      "id": "do_or_die_defense",
+      "title": "生死战防守提升",
+      "question": "本场是否是生死战（输球=淘汰）？\n弱队是否可能死守导致小球概率上升？\n（v5.0规则：M系数×1.05，但不应过度）",
+      "applicable_if_factor": "do_or_die",
+      "applicable_if_value": true,
+      "severity": "medium",
+      "source_version": "v5.0"
+    },
+    {
+      "id": "small_sample_defense",
+      "title": "防守数据小样本约束",
+      "question": "球队是否有<5场的数据？\n如果是→ 防守评分不可靠，零封预测不得高于⭐⭐\n（v6.1规则）",
+      "applicable_if_any": [
+        "league_average_default"
+      ],
+      "severity": "medium",
+      "source_version": "v6.1"
+    },
+    {
+      "id": "live_odds_reverse_check",
+      "title": "临场修正反向校验",
+      "question": "临场盘口变化是否与原方向一致？\n如果不一致→ 是否进行了反向校验？\n（v6.1规则：临场盘口反向时，降低原方向信心）",
+      "applicable_if": "live_odds_available",
+      "severity": "medium",
+      "source_version": "v6.1"
+    },
+    {
+      "id": "eliminated_team_zero_goal",
+      "title": "已淘汰球队零封禁令",
+      "question": "是否有已淘汰球队？\n如果是→ 零封预测不得高于⭐⭐\n（v5.0规则：已淘汰球队无压力，反而可能放开踢进球）",
+      "applicable_if_league_in": [
+        "world_cup",
+        "cup",
+        "knockout"
+      ],
+      "severity": "high",
+      "source_version": "v5.0"
+    },
+    {
+      "id": "home_streak_decay",
+      "title": "主场连胜衰减",
+      "question": "主队是否已主场3+连胜？\n如果是→ 连胜衰减因子是否已考虑？\n（v6.0规则：连胜越长，回调概率越大）",
+      "applicable_if_factor": "home_streak",
+      "applicable_if_value_min": 3,
+      "severity": "low",
+      "source_version": "v6.0"
+    },
+    {
+      "id": "relegation_or_title_battle",
+      "title": "净胜球战意（争冠/保级附加赛）",
+      "question": "比赛是否涉及争冠/保级/资格争夺？\n如果是→ 大球概率可能因净胜球战意而上调\n（v6.0规则）",
+      "applicable_if": "title_or_relegation_battle",
+      "severity": "low",
+      "source_version": "v6.0"
+    },
+    {
+      "id": "btts_ou_contradiction",
+      "title": "BTTS与大小球自洽性（系统检查）",
+      "question": "是否同时推荐了BTTS(是)和方向为「小」的大小球？\n如果是→ 两者矛盾（BTTS+胜负方向=最少3球）\n（赛后偏差分析2026-07-01）",
+      "applicable_if": "always",
+      "severity": "high",
+      "source_version": "v7.0-post"
+    }
+  ],
+  "observations": [
+    {
+      "id": "obs_1",
+      "title": "东道主淘汰赛激进系数验证",
+      "question": "东道主在淘汰赛半场进攻是否比常规赛更激进？",
+      "match": "墨西哥vs厄瓜多尔（2026-07-01）",
+      "severity": "high",
+      "confidence": "高疑似",
+      "added_date": "2026-07-06",
+      "validated": false,
+      "validation_result": null,
+      "source_version": "待观察",
+      "applicable_if_factor": "host",
+      "applicable_if_value": true,
+      "applicable_if_league_in": [
+        "wm26"
+      ]
+    },
+    {
+      "id": "obs_2",
+      "title": "历史交锋在淘汰赛的权重衰减验证",
+      "question": "淘汰赛中历史交锋记录的重要性是否应降权50%？",
+      "match": "墨西哥vs厄瓜多尔（2026-07-01）",
+      "severity": "medium",
+      "confidence": "高疑似",
+      "added_date": "2026-07-06",
+      "validated": false,
+      "validation_result": null,
+      "source_version": "待观察"
+    }
+  ],
+  "observation_meta": {
+    "batch_size_target": 50,
+    "current_batch_count": 2,
+    "last_validation_date": null,
+    "notes": "待观察项积累到50场后批量验证，验证通过的升级为规则，未通过的废弃"
+  }
+}

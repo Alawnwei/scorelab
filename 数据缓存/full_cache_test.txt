@@ -1,0 +1,11 @@
+Cleared recent_matches_cache.json
+=== Run 1: Cold start ===
+  索尔纳: 94s -> xG_for=1.4, source=datafc_goals_fallback
+  哥德堡: 55s -> xG_for=2.0, source=datafc_goals_fallback
+  Cache team_strength_cache.json: 537 bytes
+  Cache recent_matches_cache.json: 2591 bytes
+
+=== Run 2: New process (full cache) ===
+  索尔纳: 0s -> xG_for=1.4, source=datafc_goals_fallback
+  哥德堡: 0s -> xG_for=2.0, source=datafc_goals_fallback
+DONE

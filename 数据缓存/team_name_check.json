@@ -1,0 +1,134 @@
+[
+  {
+    "cn": "索尔纳",
+    "team_en": "AIK",
+    "sofascore": "AIK",
+    "status": "OK"
+  },
+  {
+    "cn": "哥德堡",
+    "team_en": "IFK Gothenburg",
+    "sofascore": "IFK Gothenburg",
+    "status": "OK"
+  },
+  {
+    "cn": "哈马比",
+    "team_en": "Hammarby",
+    "sofascore": "Hammarby IF",
+    "status": "OK"
+  },
+  {
+    "cn": "卡尔马",
+    "team_en": "Kalmar FF",
+    "sofascore": "Kalmar FF",
+    "status": "OK"
+  },
+  {
+    "cn": "埃尔夫斯堡",
+    "team_en": "Elfsborg",
+    "sofascore": "IF Elfsborg",
+    "status": "OK"
+  },
+  {
+    "cn": "埃夫斯堡",
+    "team_en": "MISSING",
+    "sofascore": "IF Elfsborg",
+    "status": "MISSING"
+  },
+  {
+    "cn": "韦斯特罗斯",
+    "team_en": "Vasteras SK",
+    "sofascore": "Vasteras SK",
+    "status": "OK"
+  },
+  {
+    "cn": "厄格里特",
+    "team_en": "MISSING",
+    "sofascore": "Örgryte IS",
+    "status": "MISSING"
+  },
+  {
+    "cn": "天狼星",
+    "team_en": "Sirius",
+    "sofascore": "IK Sirius",
+    "status": "OK"
+  },
+  {
+    "cn": "布洛马波卡纳",
+    "team_en": "Brommapojkarna",
+    "sofascore": "IF Brommapojkarna",
+    "status": "OK"
+  },
+  {
+    "cn": "马尔默",
+    "team_en": "Malmö FF",
+    "sofascore": "Malmö FF",
+    "status": "OK"
+  },
+  {
+    "cn": "赫根",
+    "team_en": "BK Hacken",
+    "sofascore": "BK Häcken",
+    "status": "OK"
+  },
+  {
+    "cn": "佐加顿斯",
+    "team_en": "Djurgarden",
+    "sofascore": "Djurgardens IF",
+    "status": "OK"
+  },
+  {
+    "cn": "北雪平",
+    "team_en": "IFK Norrkoping",
+    "sofascore": "IFK Norrkoping",
+    "status": "OK"
+  },
+  {
+    "cn": "米亚尔比",
+    "team_en": "Mjallby",
+    "sofascore": "Mjallby AIF",
+    "status": "OK"
+  },
+  {
+    "cn": "哈尔姆斯塔德",
+    "team_en": "Halmstads BK",
+    "sofascore": "Halmstads BK",
+    "status": "OK"
+  },
+  {
+    "cn": "蔚山现代",
+    "team_en": "Ulsan Hyundai",
+    "sofascore": "Ulsan HD",
+    "status": "OK"
+  },
+  {
+    "cn": "大田市民",
+    "team_en": "Daejeon Citizen",
+    "sofascore": "Daejeon Hana Citizen",
+    "status": "OK"
+  },
+  {
+    "cn": "安养FC",
+    "team_en": "MISSING",
+    "sofascore": "FC Anyang",
+    "status": "MISSING"
+  },
+  {
+    "cn": "富川FC",
+    "team_en": "MISSING",
+    "sofascore": "Bucheon FC 1995",
+    "status": "MISSING"
+  },
+  {
+    "cn": "水原FC",
+    "team_en": "Suwon FC",
+    "sofascore": "Suwon FC",
+    "status": "OK"
+  },
+  {
+    "cn": "大邱FC",
+    "team_en": "Daegu FC",
+    "sofascore": "Daegu FC",
+    "status": "OK"
+  }
+]

@@ -1,0 +1,778 @@
+{
+  "predictions": [
+    {
+      "id": "20260627_克罗地亚_加纳",
+      "date": "2026-06-27",
+      "home": "克罗地亚",
+      "away": "加纳",
+      "p_final": 0.5,
+      "direction": "小2.5球",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 2,
+        "score_away": 1,
+        "actual_result": "主胜",
+        "correct": false
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260627_哥伦比亚_葡萄牙",
+      "date": "2026-06-27",
+      "home": "哥伦比亚",
+      "away": "葡萄牙",
+      "p_final": 0.5,
+      "direction": "平局",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 0,
+        "score_away": 0,
+        "actual_result": "平局",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260627_巴拿马_英格兰",
+      "date": "2026-06-27",
+      "home": "巴拿马",
+      "away": "英格兰",
+      "p_final": 0.5,
+      "direction": "英格兰胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 0,
+        "score_away": 2,
+        "actual_result": "客胜",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260627_民主刚果_乌兹别克",
+      "date": "2026-06-27",
+      "home": "民主刚果",
+      "away": "乌兹别克斯坦",
+      "p_final": 0.5,
+      "direction": "民主刚果胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 3,
+        "score_away": 1,
+        "actual_result": "主胜",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260627_约旦_阿根廷",
+      "date": "2026-06-27",
+      "home": "约旦",
+      "away": "阿根廷",
+      "p_final": 0.5,
+      "direction": "阿根廷胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 1,
+        "score_away": 3,
+        "actual_result": "客胜",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260627_AC奥卢_拉赫蒂",
+      "date": "2026-06-27",
+      "home": "AC奥卢",
+      "away": "拉赫蒂",
+      "p_final": 0.5,
+      "direction": "AC奥卢胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 1,
+        "score_away": 1,
+        "actual_result": "平局",
+        "correct": false
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260627_TPS图_雅罗",
+      "date": "2026-06-27",
+      "home": "TPS图尔库",
+      "away": "雅罗",
+      "p_final": 0.5,
+      "direction": "TPS图尔库胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 3,
+        "score_away": 2,
+        "actual_result": "主胜",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260627_坦佩雷山_塞伊奈约",
+      "date": "2026-06-27",
+      "home": "坦佩雷山猫",
+      "away": "塞伊奈约基",
+      "p_final": 0.5,
+      "direction": "坦佩雷山猫不败(双选)",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 2,
+        "score_away": 2,
+        "actual_result": "平局",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260627_玛丽港_国际图尔",
+      "date": "2026-06-27",
+      "home": "玛丽港",
+      "away": "国际图尔库",
+      "p_final": 0.5,
+      "direction": "国际图尔库胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 0,
+        "score_away": 2,
+        "actual_result": "客胜",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260627_赫尔辛基_库奥皮奥",
+      "date": "2026-06-27",
+      "home": "赫尔辛基",
+      "away": "库奥皮奥",
+      "p_final": 0.5,
+      "direction": "库奥皮奥不败(双选)",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 0,
+        "score_away": 4,
+        "actual_result": "客胜",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260627_赫尔辛基_瓦萨",
+      "date": "2026-06-27",
+      "home": "赫尔辛基火花",
+      "away": "瓦萨",
+      "p_final": 0.5,
+      "direction": "平局",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 1,
+        "score_away": 1,
+        "actual_result": "平局",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260627_阿尔及利_奥地利",
+      "date": "2026-06-27",
+      "home": "阿尔及利亚",
+      "away": "奥地利",
+      "p_final": 0.5,
+      "direction": "平局",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 3,
+        "score_away": 3,
+        "actual_result": "平局",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260628_南非_加拿大",
+      "date": "2026-06-28",
+      "home": "南非",
+      "away": "加拿大",
+      "p_final": 0.5,
+      "direction": "客胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 0,
+        "score_away": 1,
+        "actual_result": "客胜",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260630_巴西_日本",
+      "date": "2026-06-30",
+      "home": "巴西",
+      "away": "日本",
+      "p_final": 0.354,
+      "direction": "巴西胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 2,
+        "score_away": 1,
+        "actual_result": "主胜",
+        "correct": true
+      }
+    },
+    {
+      "id": "20260630_德国_巴拉圭",
+      "date": "2026-06-30",
+      "home": "德国",
+      "away": "巴拉圭",
+      "p_final": 0.5,
+      "direction": "德国胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 4,
+        "score_away": 5,
+        "actual_result": "客胜",
+        "correct": false
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260630_荷兰_摩洛哥",
+      "date": "2026-06-30",
+      "home": "荷兰",
+      "away": "摩洛哥",
+      "p_final": 0.5,
+      "direction": "平局",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 3,
+        "score_away": 4,
+        "actual_result": "客胜",
+        "correct": false
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260701_墨西哥_厄瓜多尔",
+      "date": "2026-07-01",
+      "home": "墨西哥",
+      "away": "厄瓜多尔",
+      "p_final": 0.5,
+      "direction": "平局",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 2,
+        "score_away": 0,
+        "actual_result": "主胜",
+        "correct": false
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260701_比利时_塞内加尔",
+      "date": "2026-07-01",
+      "home": "比利时",
+      "away": "塞内加尔",
+      "p_final": 0.5,
+      "direction": "主胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 3,
+        "score_away": 2,
+        "actual_result": "主胜",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260701_法国_瑞典",
+      "date": "2026-07-01",
+      "home": "法国",
+      "away": "瑞典",
+      "p_final": 0.5,
+      "direction": "法国胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 3,
+        "score_away": 0,
+        "actual_result": "主胜",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260701_科特迪瓦_挪威",
+      "date": "2026-07-01",
+      "home": "科特迪瓦",
+      "away": "挪威",
+      "p_final": 0.5,
+      "direction": "挪威胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 1,
+        "score_away": 2,
+        "actual_result": "客胜",
+        "correct": true
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260701_美国_波黑",
+      "date": "2026-07-01",
+      "home": "美国",
+      "away": "波黑",
+      "p_final": 0.5,
+      "direction": "波黑独赢——实力差距+首次淘汰赛",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 2,
+        "score_away": 0,
+        "actual_result": "主胜",
+        "correct": false
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260701_英格兰_民主刚果",
+      "date": "2026-07-01",
+      "home": "英格兰",
+      "away": "民主刚果",
+      "p_final": 0.5,
+      "direction": "民主刚果胜——实力差距悬殊",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 2,
+        "score_away": 1,
+        "actual_result": "主胜",
+        "correct": false
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260703_阿根廷_佛得角",
+      "date": "2026-07-03",
+      "home": "阿根廷",
+      "away": "佛得角",
+      "p_final": 0.625,
+      "direction": "主胜",
+      "is_bet": true,
+      "odds": 1.15,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 1,
+        "score_away": 0,
+        "actual_result": "主胜",
+        "correct": true
+      }
+    },
+    {
+      "id": "20260704_Jeon_Gang",
+      "date": "2026-07-04",
+      "home": "Jeonbuk",
+      "away": "Gangwon",
+      "p_final": 0.5,
+      "direction": "客胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 1,
+        "score_away": 2,
+        "actual_result": "客胜",
+        "correct": true
+      },
+      "notes": "重复记录, 结果同步自 全北现代vs江原FC"
+    },
+    {
+      "id": "20260704_全北现代_江原FC",
+      "date": "2026-07-04",
+      "home": "全北现代",
+      "away": "江原FC",
+      "p_final": 0.377,
+      "direction": "客胜",
+      "is_bet": true,
+      "odds": 2.35,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 1,
+        "score_away": 2,
+        "actual_result": "客胜",
+        "correct": true
+      }
+    },
+    {
+      "id": "20260704_大田市民_富川FC",
+      "date": "2026-07-04",
+      "home": "大田市民",
+      "away": "富川FC",
+      "p_final": 0.575,
+      "direction": "平局",
+      "is_bet": true,
+      "odds": 1.54,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 2,
+        "score_away": 2,
+        "actual_result": "平局",
+        "correct": true
+      }
+    },
+    {
+      "id": "20260704_安养FC_浦项制铁",
+      "date": "2026-07-04",
+      "home": "安养FC",
+      "away": "浦项制铁",
+      "p_final": 0.266,
+      "direction": "客胜",
+      "is_bet": true,
+      "odds": 3.33,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 2,
+        "score_away": 3,
+        "actual_result": "客胜",
+        "correct": true
+      }
+    },
+    {
+      "id": "20260704_摩洛哥_加拿大",
+      "date": "2026-07-04",
+      "home": "摩洛哥",
+      "away": "加拿大",
+      "p_final": 0.18,
+      "direction": "客胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 0,
+        "score_away": 3,
+        "actual_result": "客胜",
+        "correct": true
+      }
+    },
+    {
+      "id": "20260704_阿根廷_佛得角",
+      "date": "2026-07-04",
+      "home": "阿根廷",
+      "away": "佛得角",
+      "p_final": 0.625,
+      "direction": "主胜",
+      "is_bet": false,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 3,
+        "score_away": 2,
+        "actual_result": "主胜",
+        "correct": true
+      }
+    },
+    {
+      "id": "20260705_哈尔姆斯_韦斯特罗",
+      "date": "2026-07-05",
+      "home": "哈尔姆斯塔德",
+      "away": "韦斯特罗斯",
+      "p_final": 0.511,
+      "direction": "客胜",
+      "is_bet": true,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 1,
+        "score_away": 3,
+        "actual_result": "客胜",
+        "correct": true
+      }
+    },
+    {
+      "id": "20260705_塞伊奈_TPS图",
+      "date": "2026-07-05",
+      "home": "塞伊奈",
+      "away": "TPS图尔库",
+      "p_final": 0.526,
+      "direction": "主胜",
+      "is_bet": true,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 3,
+        "score_away": 1,
+        "actual_result": "主胜",
+        "correct": true
+      }
+    },
+    {
+      "id": "20260705_拉赫蒂_赫尔火花",
+      "date": "2026-07-05",
+      "home": "拉赫蒂",
+      "away": "赫尔火花",
+      "p_final": 0.477,
+      "direction": "主胜",
+      "is_bet": true,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 1,
+        "score_away": 0,
+        "actual_result": "主胜",
+        "correct": true
+      }
+    },
+    {
+      "id": "20260705_雅罗_坦佩雷",
+      "date": "2026-07-05",
+      "home": "雅罗",
+      "away": "坦佩雷",
+      "p_final": 0.458,
+      "direction": "主胜",
+      "is_bet": true,
+      "odds": 0,
+      "source": "md_file",
+      "result": {
+        "status": "matched",
+        "score_home": 2,
+        "score_away": 1,
+        "actual_result": "主胜",
+        "correct": true
+      }
+    },
+    {
+      "id": "20260705_005647_代格福什_vs_马尔默",
+      "date": "2026-07-05",
+      "home": "代格福什",
+      "away": "马尔默",
+      "p_final": 0.432,
+      "direction": "客胜",
+      "is_bet": true,
+      "odds": 0,
+      "source": "pnl_tracker",
+      "result": {
+        "status": "matched",
+        "score_home": 0,
+        "score_away": 1,
+        "actual_result": "客胜",
+        "correct": true
+      }
+    },
+    {
+      "id": "20260705_005708_日本_vs_巴西",
+      "date": "2026-07-05",
+      "home": "日本",
+      "away": "巴西",
+      "p_final": 0.538,
+      "direction": "平局/均衡",
+      "is_bet": true,
+      "odds": 0,
+      "source": "pnl_tracker",
+      "result": {
+        "status": "matched",
+        "score_home": 2,
+        "score_away": 1,
+        "actual_result": "主胜",
+        "correct": false
+      }
+    },
+    {
+      "id": "20260705_011036_巴西_vs_挪威",
+      "date": "2026-07-05",
+      "home": "巴西",
+      "away": "挪威",
+      "p_final": 0.536,
+      "direction": "平局/均衡",
+      "is_bet": true,
+      "odds": 1.8,
+      "source": "pnl_tracker",
+      "result": {
+        "status": "matched",
+        "score_home": 1,
+        "score_away": 2,
+        "actual_result": "客胜",
+        "correct": false
+      },
+      "clv": 9.1,
+      "clv_detail": {
+        "open_odds": 1.8,
+        "close_odds": 1.65,
+        "open_mip": 53.9,
+        "close_mip": 58.8,
+        "open_file": "odds_巴西_挪威_20260705.json",
+        "close_file": "odds_巴西_挪威_20260706.json"
+      }
+    },
+    {
+      "id": "2串1_法国让2_雅罗+1",
+      "date": "2026-07-05",
+      "home": "法国(让2)/雅罗(+1)",
+      "away": "巴拉圭/伊尔维斯",
+      "p_final": 0.5,
+      "direction": "法国让2+雅罗+1",
+      "is_bet": true,
+      "odds": 0,
+      "stake": 500,
+      "source": "manual",
+      "result": {
+        "status": "matched",
+        "score_home": null,
+        "score_away": null,
+        "actual_result": "法国1-0巴拉圭(让2输)+雅罗2-1(+1赢)",
+        "correct": false
+      },
+      "p_final_source": "inferred_neutral"
+    },
+    {
+      "id": "20260707_葡萄牙_西班牙",
+      "date": "2026-07-07",
+      "home": "葡萄牙",
+      "away": "西班牙",
+      "p_final": 0.4632045508567916,
+      "direction": "客胜",
+      "league": "wm26",
+      "confidence": "⭐",
+      "source": "predict.py",
+      "result": {
+        "status": "matched",
+        "score_home": 0,
+        "score_away": 1,
+        "actual_result": "客胜",
+        "correct": true
+      }
+    },
+    {
+      "id": "20260707_阿根廷_埃及",
+      "date": "2026-07-07",
+      "home": "阿根廷",
+      "away": "埃及",
+      "p_final": 0.5445583971340482,
+      "direction": "主胜",
+      "is_bet": false,
+      "odds": 0.0,
+      "source": "predict.py",
+      "result": {
+        "status": "matched",
+        "score_home": 3,
+        "score_away": 2,
+        "actual_result": "主胜",
+        "correct": true
+      },
+      "league": "wm26",
+      "confidence": "⭐⭐"
+    },
+    {
+      "id": "20260707_瑞士_哥伦比亚",
+      "date": "2026-07-07",
+      "home": "瑞士",
+      "away": "哥伦比亚",
+      "p_final": 0.489997919054289,
+      "direction": "不推荐/均衡",
+      "is_bet": false,
+      "odds": 0.0,
+      "source": "predict.py",
+      "result": {
+        "status": "matched",
+        "score_home": 0,
+        "score_away": 0,
+        "actual_result": "平局",
+        "correct": null
+      },
+      "league": "wm26",
+      "confidence": "⭐"
+    },
+    {
+      "id": "20260708_葡萄牙_西班牙",
+      "date": "2026-07-08",
+      "home": "葡萄牙",
+      "away": "西班牙",
+      "p_final": 0.49152566455580216,
+      "direction": "客胜",
+      "league": "wm26",
+      "confidence": "⭐",
+      "source": "predict.py",
+      "score_diff": -1.15,
+      "M_coef": 1.0347,
+      "result": {
+        "status": "pending"
+      }
+    }
+  ],
+  "last_updated": "2026-07-08"
+}

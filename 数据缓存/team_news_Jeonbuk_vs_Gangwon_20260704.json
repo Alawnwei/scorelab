@@ -1,0 +1,36 @@
+{
+  "match_id": "Jeonbuk_vs_Gangwon_20260704",
+  "date": "2026-07-04",
+  "home_team": "Jeonbuk",
+  "away_team": "Gangwon",
+  "home": {
+    "formation": "",
+    "formation_stability": "",
+    "rotation_level": "",
+    "rotation_note": "",
+    "key_injuries": [],
+    "key_returns": [],
+    "tactical_style": "",
+    "notes": ""
+  },
+  "away": {
+    "formation": "",
+    "formation_stability": "",
+    "rotation_level": "",
+    "rotation_note": "",
+    "key_injuries": [],
+    "key_returns": [],
+    "tactical_style": "",
+    "notes": ""
+  },
+  "weather": {
+    "condition": "",
+    "temperature": "",
+    "pitch": ""
+  },
+  "referee": {
+    "name": "",
+    "cards_per_game": ""
+  },
+  "last_updated": "2026-07-04 17:42"
+}

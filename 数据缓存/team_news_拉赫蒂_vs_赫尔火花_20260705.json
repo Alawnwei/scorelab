@@ -1,0 +1,36 @@
+{
+  "match_id": "拉赫蒂_vs_赫尔火花_20260705",
+  "date": "2026-07-05",
+  "home_team": "拉赫蒂",
+  "away_team": "赫尔火花",
+  "home": {
+    "formation": "",
+    "formation_stability": "",
+    "rotation_level": "",
+    "rotation_note": "",
+    "key_injuries": [],
+    "key_returns": [],
+    "tactical_style": "",
+    "notes": ""
+  },
+  "away": {
+    "formation": "",
+    "formation_stability": "",
+    "rotation_level": "",
+    "rotation_note": "",
+    "key_injuries": [],
+    "key_returns": [],
+    "tactical_style": "",
+    "notes": ""
+  },
+  "weather": {
+    "condition": "",
+    "temperature": "",
+    "pitch": ""
+  },
+  "referee": {
+    "name": "",
+    "cards_per_game": ""
+  },
+  "last_updated": "2026-07-05 00:42"
+}

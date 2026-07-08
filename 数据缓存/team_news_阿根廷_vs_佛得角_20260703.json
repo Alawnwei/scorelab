@@ -1,0 +1,36 @@
+{
+  "match_id": "阿根廷_vs_佛得角_20260703",
+  "date": "2026-07-03",
+  "home_team": "阿根廷",
+  "away_team": "佛得角",
+  "home": {
+    "formation": "",
+    "formation_stability": "",
+    "rotation_level": "",
+    "rotation_note": "",
+    "key_injuries": [],
+    "key_returns": [],
+    "tactical_style": "",
+    "notes": ""
+  },
+  "away": {
+    "formation": "",
+    "formation_stability": "",
+    "rotation_level": "",
+    "rotation_note": "",
+    "key_injuries": [],
+    "key_returns": [],
+    "tactical_style": "",
+    "notes": ""
+  },
+  "weather": {
+    "condition": "",
+    "temperature": "",
+    "pitch": ""
+  },
+  "referee": {
+    "name": "",
+    "cards_per_game": ""
+  },
+  "last_updated": "2026-07-03 18:39"
+}

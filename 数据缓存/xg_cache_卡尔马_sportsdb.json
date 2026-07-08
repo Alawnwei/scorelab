@@ -1,0 +1,14 @@
+{
+  "cached_at": "2026-07-05T08:06:48.429436",
+  "result": {
+    "xG_for_90": 1.12,
+    "xG_against_90": 1.38,
+    "xG_per_shot": 0,
+    "matches_played": 16,
+    "source": "builtin_table_瑞典超",
+    "form_rating": null,
+    "is_calibrated": false,
+    "team": "卡尔马",
+    "league": "sportsdb"
+  }
+}

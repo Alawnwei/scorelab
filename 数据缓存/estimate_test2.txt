@@ -1,0 +1,18 @@
+DATAFIC_ALIVE=True
+
+索尔纳: 64.6s
+  xG_for=1.33 xG_against=1.67
+  matches=3 source=datafc_goals_fallback
+  attack=5.1 defense=3.9
+
+哥德堡: 183.5s
+  xG_for=0 xG_against=0
+  matches=0 source=datafc_no_data
+  attack=1.9 defense=8.1
+
+哈马比: 51.5s
+  xG_for=1.33 xG_against=2.0
+  matches=3 source=datafc_goals_fallback
+  attack=5.1 defense=3.0
+
+DONE

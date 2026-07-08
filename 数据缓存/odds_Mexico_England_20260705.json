@@ -1,0 +1,19 @@
+{
+  "lambda_A": 2.0,
+  "lambda_B": 2.0,
+  "odds_home": 3.1,
+  "odds_draw": 3.2,
+  "odds_away": 2.4,
+  "ah_hdp": 0.25,
+  "ah_home_odds": 1.775,
+  "ah_away_odds": 2.1,
+  "ou_line": 2.25,
+  "ou_over_odds": 2.1,
+  "ou_under_odds": 1.775,
+  "xb_home": 3.175,
+  "xb_draw": 3.28,
+  "xb_away": 2.527,
+  "home": "Mexico",
+  "away": "England",
+  "timestamp": "2026-07-05 21:23"
+}

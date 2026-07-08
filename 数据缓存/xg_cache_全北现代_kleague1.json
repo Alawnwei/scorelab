@@ -1,0 +1,14 @@
+{
+  "cached_at": "2026-07-04T23:20:48.788780",
+  "result": {
+    "xG_for_90": 1.38,
+    "xG_against_90": 0.88,
+    "xG_per_shot": 0,
+    "matches_played": 16,
+    "source": "kleague_table_builtin",
+    "form_rating": 1.51,
+    "is_calibrated": false,
+    "team": "全北现代",
+    "league": "kleague1"
+  }
+}

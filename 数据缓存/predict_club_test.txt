@@ -1,0 +1,16 @@
+=== Warming up data cache ===
+索尔纳: 74s → xG_for=1.4, matches=5, source=datafc_goals_fallback
+哥德堡: 94s → xG_for=2.0, matches=5, source=datafc_goals_fallback
+
+=== Now run compute_7dim_scores (should be cached) ===
+compute_7dim_scores: 337s
+  home_进攻: 4.7
+  home_防守: 4.1
+  away_进攻: 5.3
+  away_防守: 2.5
+  home_total: 4.5
+  away_total: 4.01
+  diff: 0.49
+  P_base_raw: 0.5184
+
+DONE

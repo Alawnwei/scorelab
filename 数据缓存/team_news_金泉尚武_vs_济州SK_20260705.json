@@ -1,0 +1,36 @@
+{
+  "match_id": "金泉尚武_vs_济州SK_20260705",
+  "date": "2026-07-05",
+  "home_team": "金泉尚武",
+  "away_team": "济州SK",
+  "home": {
+    "formation": "",
+    "formation_stability": "",
+    "rotation_level": "",
+    "rotation_note": "",
+    "key_injuries": [],
+    "key_returns": [],
+    "tactical_style": "",
+    "notes": ""
+  },
+  "away": {
+    "formation": "",
+    "formation_stability": "",
+    "rotation_level": "",
+    "rotation_note": "",
+    "key_injuries": [],
+    "key_returns": [],
+    "tactical_style": "",
+    "notes": ""
+  },
+  "weather": {
+    "condition": "",
+    "temperature": "",
+    "pitch": ""
+  },
+  "referee": {
+    "name": "",
+    "cards_per_game": ""
+  },
+  "last_updated": "2026-07-05 08:18"
+}

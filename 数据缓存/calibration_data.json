@@ -1,0 +1,118 @@
+{
+  "total_predictions": 12,
+  "with_results": 9,
+  "judged": 9,
+  "correct": 1,
+  "wrong": 8,
+  "accuracy_pct": 11.1,
+  "matches": [
+    {
+      "home": "阿根廷",
+      "away": "佛得角",
+      "p_final": 0.95,
+      "direction": "主胜",
+      "score": "3-2",
+      "actual_dir": "主胜",
+      "correct": true
+    },
+    {
+      "home": "全北现代",
+      "away": "江原FC",
+      "p_final": 0.5,
+      "direction": "主胜",
+      "score": "1-2",
+      "actual_dir": "客胜",
+      "correct": false
+    },
+    {
+      "home": "安养FC",
+      "away": "浦项制铁",
+      "p_final": 0.266,
+      "direction": "主胜",
+      "score": "2-3",
+      "actual_dir": "客胜",
+      "correct": false
+    },
+    {
+      "home": "大田市民",
+      "away": "富川FC",
+      "p_final": 0.561,
+      "direction": "主胜",
+      "score": "2-2",
+      "actual_dir": "平局",
+      "correct": false
+    },
+    {
+      "home": "哈尔姆斯塔德",
+      "away": "韦斯特罗斯",
+      "p_final": 0.5,
+      "direction": "平局/均衡",
+      "score": "1-3",
+      "actual_dir": "客胜",
+      "correct": false
+    },
+    {
+      "home": "代格福什",
+      "away": "马尔默",
+      "p_final": 0.5,
+      "direction": "平局/均衡",
+      "score": "0-1",
+      "actual_dir": "客胜",
+      "correct": false
+    },
+    {
+      "home": "塞伊奈",
+      "away": "TPS图尔库",
+      "p_final": 0.5,
+      "direction": "平局/均衡",
+      "score": "3-1",
+      "actual_dir": "主胜",
+      "correct": false
+    },
+    {
+      "home": "雅罗",
+      "away": "坦佩雷",
+      "p_final": 0.5,
+      "direction": "平局/均衡",
+      "score": "2-1",
+      "actual_dir": "主胜",
+      "correct": false
+    },
+    {
+      "home": "日本",
+      "away": "巴西",
+      "p_final": 0.538,
+      "direction": "平局/均衡",
+      "score": "2-1",
+      "actual_dir": "主胜",
+      "correct": false
+    },
+    {
+      "home": "Jeonbuk",
+      "away": "Gangwon",
+      "p_final": 0.5,
+      "direction": "",
+      "score": "?",
+      "actual_dir": "?",
+      "correct": null
+    },
+    {
+      "home": "摩洛哥",
+      "away": "加拿大",
+      "p_final": 0.18,
+      "direction": "",
+      "score": "?",
+      "actual_dir": "?",
+      "correct": null
+    },
+    {
+      "home": "拉赫蒂",
+      "away": "赫尔火花",
+      "p_final": 0.477,
+      "direction": "",
+      "score": "?",
+      "actual_dir": "?",
+      "correct": null
+    }
+  ]
+}

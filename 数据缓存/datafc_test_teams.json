@@ -1,0 +1,20 @@
+{
+  "索尔纳": {
+    "time": 15.3,
+    "xg_for": 0,
+    "xg_against": 0,
+    "matches": 0,
+    "source": "datafc_no_data",
+    "home_attack": 1.9,
+    "home_defense": 8.1
+  },
+  "哥德堡": {
+    "time": 149.2,
+    "xg_for": 0,
+    "xg_against": 0,
+    "matches": 0,
+    "source": "datafc_no_data",
+    "home_attack": 1.9,
+    "home_defense": 8.1
+  }
+}

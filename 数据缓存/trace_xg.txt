@@ -1,0 +1,21 @@
+Week 30: 8 matches
+Columns: ['country', 'tournament', 'season', 'week', 'game_id', 'home_team', 'home_team_id', 'away_team', 'away_team_id', 'injury_time_1', 'injury_time_2', 'start_timestamp', 'status', 'home_score_current', 'home_score_display', 'home_score_period1', 'home_score_period2', 'home_score_normaltime', 'away_score_current', 'away_score_display', 'away_score_period1', 'away_score_period2', 'away_score_normaltime']
+Statuses: ['Not started', 'Not started', 'Not started', 'Not started', 'Not started', 'Not started', 'Not started', 'Not started']
+Scores:   home_score_normaltime away_score_normaltime
+0                  None                  None
+1                  None                  None
+2                  None                  None
+3                  None                  None
+4                  None                  None
+5                  None                  None
+6                  None                  None
+7                  None                  None
+
+After Ended filter: 0 matches
+
+get_team_recent_matches: 0 matches
+
+get_team_xg_summary: source=datafc_no_data
+  xG_for=0 xG_against=0
+  matches=0
+DONE

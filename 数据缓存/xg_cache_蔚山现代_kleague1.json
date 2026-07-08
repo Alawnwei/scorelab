@@ -1,0 +1,14 @@
+{
+  "cached_at": "2026-07-05T08:06:07.619001",
+  "result": {
+    "xG_for_90": 1.47,
+    "xG_against_90": 1.33,
+    "xG_per_shot": 0,
+    "matches_played": 15,
+    "source": "kleague_table_builtin",
+    "form_rating": 0.82,
+    "is_calibrated": false,
+    "team": "蔚山现代",
+    "league": "kleague1"
+  }
+}

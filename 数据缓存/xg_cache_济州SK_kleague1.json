@@ -1,0 +1,14 @@
+{
+  "cached_at": "2026-07-05T08:06:36.954140",
+  "result": {
+    "xG_for_90": 0.87,
+    "xG_against_90": 1.07,
+    "xG_per_shot": 0,
+    "matches_played": 15,
+    "source": "kleague_table_builtin",
+    "form_rating": 1.29,
+    "is_calibrated": false,
+    "team": "济州SK",
+    "league": "kleague1"
+  }
+}

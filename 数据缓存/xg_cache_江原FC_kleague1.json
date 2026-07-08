@@ -1,0 +1,14 @@
+{
+  "cached_at": "2026-07-04T23:20:40.467477",
+  "result": {
+    "xG_for_90": 1.31,
+    "xG_against_90": 0.69,
+    "xG_per_shot": 0,
+    "matches_played": 16,
+    "source": "kleague_table_builtin",
+    "form_rating": 2.64,
+    "is_calibrated": false,
+    "team": "江原FC",
+    "league": "kleague1"
+  }
+}

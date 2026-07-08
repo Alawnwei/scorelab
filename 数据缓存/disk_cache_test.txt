@@ -1,0 +1,10 @@
+=== Run 1: Cold start (Sofascore API) ===
+  索尔纳: 71s -> xG_for=1.4, source=datafc_goals_fallback
+  哥德堡: 108s -> xG_for=2.0, source=datafc_goals_fallback
+
+  Disk cache file: 2591 bytes
+
+=== Run 2: New process (disk cache) ===
+  索尔纳: 42s -> xG_for=1.4, source=datafc_goals_fallback
+  哥德堡: 6s -> xG_for=2.0, source=datafc_goals_fallback
+DONE

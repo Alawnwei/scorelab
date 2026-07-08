@@ -1,0 +1,14 @@
+{
+  "cached_at": "2026-07-05T00:43:09.553862",
+  "result": {
+    "xG_for_90": 0.93,
+    "xG_against_90": 1.29,
+    "xG_per_shot": 0,
+    "matches_played": 14,
+    "source": "builtin_table_芬超",
+    "form_rating": null,
+    "is_calibrated": false,
+    "team": "TPS图尔库",
+    "league": "sportsdb"
+  }
+}

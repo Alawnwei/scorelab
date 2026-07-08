@@ -1,0 +1,228 @@
+[
+  {
+    "match": "巴拿马 vs 英格兰",
+    "home_cn": "巴拿马",
+    "away_cn": "英格兰",
+    "score_ht": "0-0",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "date": "2026-06-27",
+    "stage": "GROUP_STAGE"
+  },
+  {
+    "match": "克罗地亚 vs 加纳",
+    "home_cn": "克罗地亚",
+    "away_cn": "加纳",
+    "score_ht": "1-0",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "date": "2026-06-27",
+    "stage": "GROUP_STAGE"
+  },
+  {
+    "match": "哥伦比亚 vs 葡萄牙",
+    "home_cn": "哥伦比亚",
+    "away_cn": "葡萄牙",
+    "score_ht": "0-0",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "date": "2026-06-27",
+    "stage": "GROUP_STAGE"
+  },
+  {
+    "match": "民主刚果 vs 乌兹别克斯坦",
+    "home_cn": "民主刚果",
+    "away_cn": "乌兹别克斯坦",
+    "score_ht": "0-1",
+    "score_ft": "3-1",
+    "status": "FINISHED",
+    "date": "2026-06-27",
+    "stage": "GROUP_STAGE"
+  },
+  {
+    "match": "约旦 vs 阿根廷",
+    "home_cn": "约旦",
+    "away_cn": "阿根廷",
+    "score_ht": "0-2",
+    "score_ft": "1-3",
+    "status": "FINISHED",
+    "date": "2026-06-28",
+    "stage": "GROUP_STAGE"
+  },
+  {
+    "match": "阿尔及利亚 vs 奥地利",
+    "home_cn": "阿尔及利亚",
+    "away_cn": "奥地利",
+    "score_ht": "1-1",
+    "score_ft": "3-3",
+    "status": "FINISHED",
+    "date": "2026-06-28",
+    "stage": "GROUP_STAGE"
+  },
+  {
+    "match": "南非 vs 加拿大",
+    "home_cn": "南非",
+    "away_cn": "加拿大",
+    "score_ht": "0-0",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "date": "2026-06-28",
+    "stage": "LAST_32"
+  },
+  {
+    "match": "巴西 vs 日本",
+    "home_cn": "巴西",
+    "away_cn": "日本",
+    "score_ht": "0-1",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "date": "2026-06-29",
+    "stage": "LAST_32"
+  },
+  {
+    "match": "德国 vs 巴拉圭",
+    "home_cn": "德国",
+    "away_cn": "巴拉圭",
+    "score_ht": "0-1",
+    "score_ft": "4-5",
+    "status": "FINISHED",
+    "date": "2026-06-29",
+    "stage": "LAST_32"
+  },
+  {
+    "match": "荷兰 vs 摩洛哥",
+    "home_cn": "荷兰",
+    "away_cn": "摩洛哥",
+    "score_ht": "0-0",
+    "score_ft": "3-4",
+    "status": "FINISHED",
+    "date": "2026-06-30",
+    "stage": "LAST_32"
+  },
+  {
+    "match": "墨西哥 vs 厄瓜多尔",
+    "home_cn": "墨西哥",
+    "away_cn": "厄瓜多尔",
+    "score_ht": "2-0",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "date": "2026-07-01",
+    "stage": "LAST_32"
+  },
+  {
+    "match": "法国 vs 瑞典",
+    "home_cn": "法国",
+    "away_cn": "瑞典",
+    "score_ht": "1-0",
+    "score_ft": "3-0",
+    "status": "FINISHED",
+    "date": "2026-06-30",
+    "stage": "LAST_32"
+  },
+  {
+    "match": "科特迪瓦 vs 挪威",
+    "home_cn": "科特迪瓦",
+    "away_cn": "挪威",
+    "score_ht": "0-1",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "date": "2026-06-30",
+    "stage": "LAST_32"
+  },
+  {
+    "match": "西班牙 vs 奥地利",
+    "home_cn": "西班牙",
+    "away_cn": "奥地利",
+    "score_ht": "1-0",
+    "score_ft": "3-0",
+    "status": "FINISHED",
+    "date": "2026-07-02",
+    "stage": "LAST_32"
+  },
+  {
+    "match": "葡萄牙 vs 克罗地亚",
+    "home_cn": "葡萄牙",
+    "away_cn": "克罗地亚",
+    "score_ht": "0-0",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "date": "2026-07-02",
+    "stage": "LAST_32"
+  },
+  {
+    "match": "哥伦比亚 vs 加纳",
+    "home_cn": "哥伦比亚",
+    "away_cn": "加纳",
+    "score_ht": "1-0",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "date": "2026-07-04",
+    "stage": "LAST_32"
+  },
+  {
+    "match": "澳大利亚 vs 埃及",
+    "home_cn": "澳大利亚",
+    "away_cn": "埃及",
+    "score_ht": "0-1",
+    "score_ft": "3-5",
+    "status": "FINISHED",
+    "date": "2026-07-03",
+    "stage": "LAST_32"
+  },
+  {
+    "match": "阿根廷 vs 佛得角",
+    "home_cn": "阿根廷",
+    "away_cn": "佛得角",
+    "score_ht": "1-0",
+    "score_ft": "3-2",
+    "status": "FINISHED",
+    "date": "2026-07-03",
+    "stage": "LAST_32"
+  },
+  {
+    "match": "加拿大 vs 摩洛哥",
+    "home_cn": "加拿大",
+    "away_cn": "摩洛哥",
+    "score_ht": "0-1",
+    "score_ft": "0-3",
+    "status": "FINISHED",
+    "date": "2026-07-04",
+    "stage": "LAST_16"
+  },
+  {
+    "match": "巴西 vs 挪威",
+    "home_cn": "巴西",
+    "away_cn": "挪威",
+    "score_ht": "?",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "date": "2026-07-05",
+    "stage": "QUARTER_FINAL"
+  },
+  {
+    "home_cn": "葡萄牙",
+    "away_cn": "西班牙",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "date": "2026-07-07",
+    "stage": "KNOCKOUT"
+  },
+  {
+    "match": "阿根廷 vs 埃及",
+    "home_cn": "阿根廷",
+    "away_cn": "埃及",
+    "score_ft": "3-2",
+    "status": "FINISHED",
+    "date": "2026-07-07",
+    "stage": "KNOCKOUT"
+  },
+  {
+    "match": "瑞士 vs 哥伦比亚",
+    "home_cn": "瑞士",
+    "away_cn": "哥伦比亚",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "date": "2026-07-07",
+    "stage": "KNOCKOUT"
+  }
+]

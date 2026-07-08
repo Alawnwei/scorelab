@@ -1,0 +1,6 @@
+Fetching week 30 data...
+Week 30: 8 matches
+TEAM_EN["索尔纳"] = AIK
+查找 索尔纳: 1 matches
+  Match: Kalmar FF vs AIK
+DONE

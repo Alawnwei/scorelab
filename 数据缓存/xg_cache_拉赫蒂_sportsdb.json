@@ -1,0 +1,14 @@
+{
+  "cached_at": "2026-07-05T00:41:03.135596",
+  "result": {
+    "xG_for_90": 0.86,
+    "xG_against_90": 1.43,
+    "xG_per_shot": 0,
+    "matches_played": 14,
+    "source": "builtin_table_芬超",
+    "form_rating": null,
+    "is_calibrated": false,
+    "team": "拉赫蒂",
+    "league": "sportsdb"
+  }
+}

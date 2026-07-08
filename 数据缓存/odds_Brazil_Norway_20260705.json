@@ -1,0 +1,19 @@
+{
+  "lambda_A": 2.25,
+  "lambda_B": 2.5,
+  "odds_home": 1.75,
+  "odds_draw": 3.7,
+  "odds_away": 4.75,
+  "ah_hdp": 0.75,
+  "ah_home_odds": 2.0,
+  "ah_away_odds": 1.85,
+  "ou_line": 2.75,
+  "ou_over_odds": 1.85,
+  "ou_under_odds": 2.0,
+  "xb_home": 1.856,
+  "xb_draw": 3.835,
+  "xb_away": 4.635,
+  "home": "Brazil",
+  "away": "Norway",
+  "timestamp": "2026-07-05 21:23"
+}

@@ -1,0 +1,19 @@
+{
+  "lambda_A": 1.4,
+  "lambda_B": 1.5,
+  "odds_home": 5.25,
+  "odds_draw": 3.4,
+  "odds_away": 1.75,
+  "ah_hdp": 0.75,
+  "ah_home_odds": 1.875,
+  "ah_away_odds": 1.975,
+  "ou_line": 2.25,
+  "ou_over_odds": 1.925,
+  "ou_under_odds": 1.925,
+  "xb_home": 5.52,
+  "xb_draw": 3.51,
+  "xb_away": 1.819,
+  "home": "摩洛哥",
+  "away": "加拿大",
+  "timestamp": "2026-07-04 19:42"
+}

@@ -1,0 +1,14 @@
+{
+  "cached_at": "2026-07-05T00:40:43.989675",
+  "result": {
+    "xG_for_90": 0.88,
+    "xG_against_90": 2.0,
+    "xG_per_shot": 0,
+    "matches_played": 16,
+    "source": "builtin_table_瑞典超",
+    "form_rating": null,
+    "is_calibrated": false,
+    "team": "代格福什",
+    "league": "sportsdb"
+  }
+}

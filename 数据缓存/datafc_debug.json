@@ -1,0 +1,43 @@
+{
+  "allsvenskan_sample_weeks": [
+    30,
+    29,
+    28
+  ],
+  "home_teams": [
+    "AIK",
+    "BK Häcken",
+    "Degerfors IF",
+    "Djurgårdens IF",
+    "GAIS",
+    "Halmstads BK",
+    "Hammarby IF",
+    "IF Brommapojkarna",
+    "IF Elfsborg",
+    "IFK Göteborg",
+    "IK Sirius",
+    "Kalmar FF",
+    "Malmö FF",
+    "Mjällby AIF",
+    "Västerås SK",
+    "Örgryte IS"
+  ],
+  "match_tests": {
+    "索尔纳": {
+      "tn_lower": "aik",
+      "matches": [
+        "AIK"
+      ]
+    },
+    "哥德堡": {
+      "tn_lower": "ifkgothenburg",
+      "matches": []
+    },
+    "哈马比": {
+      "tn_lower": "hammarby",
+      "matches": [
+        "Hammarby IF"
+      ]
+    }
+  }
+}

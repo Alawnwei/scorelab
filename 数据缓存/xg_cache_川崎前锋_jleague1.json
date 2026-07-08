@@ -1,0 +1,14 @@
+{
+  "cached_at": "2026-07-04T23:46:11.920763",
+  "result": {
+    "xG_for_90": 1.28,
+    "xG_against_90": 1.5,
+    "xG_per_shot": 0,
+    "matches_played": 18,
+    "source": "jleague_table_builtin",
+    "form_rating": null,
+    "is_calibrated": false,
+    "team": "川崎前锋",
+    "league": "jleague1"
+  }
+}

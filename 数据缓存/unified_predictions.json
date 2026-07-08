@@ -1,0 +1,2901 @@
+{
+  "schema_version": 2,
+  "predictions": [
+    {
+      "id": "mig_pdb_克罗地亚|加纳|2026-06-27",
+      "predicted_at": "2026-06-27",
+      "match": {
+        "home": "克罗地亚",
+        "away": "加纳"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "小2.5球",
+        "value_pct": null,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 2,
+        "away_score": 1,
+        "correct": false,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_哥伦比亚|葡萄牙|2026-06-27",
+      "predicted_at": "2026-06-27",
+      "match": {
+        "home": "哥伦比亚",
+        "away": "葡萄牙"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "平局",
+        "value_pct": null,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 0,
+        "away_score": 0,
+        "correct": true,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_巴拿马|英格兰|2026-06-27",
+      "predicted_at": "2026-06-27",
+      "match": {
+        "home": "巴拿马",
+        "away": "英格兰"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "英格兰胜",
+        "value_pct": null,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 0,
+        "away_score": 2,
+        "correct": true,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_民主刚果|乌兹别克斯坦|2026-06-",
+      "predicted_at": "2026-06-27",
+      "match": {
+        "home": "民主刚果",
+        "away": "乌兹别克斯坦"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "民主刚果胜",
+        "value_pct": null,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 3,
+        "away_score": 1,
+        "correct": true,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_约旦|阿根廷|2026-06-27",
+      "predicted_at": "2026-06-27",
+      "match": {
+        "home": "约旦",
+        "away": "阿根廷"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "阿根廷胜",
+        "value_pct": null,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 1,
+        "away_score": 3,
+        "correct": true,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_ac奥卢|拉赫蒂|2026-06-27",
+      "predicted_at": "2026-06-27",
+      "match": {
+        "home": "AC奥卢",
+        "away": "拉赫蒂"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "AC奥卢胜",
+        "value_pct": null,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 1,
+        "away_score": 1,
+        "correct": false,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_tps图尔库|雅罗|2026-06-27",
+      "predicted_at": "2026-06-27",
+      "match": {
+        "home": "TPS图尔库",
+        "away": "雅罗"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "TPS图尔库胜",
+        "value_pct": null,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 3,
+        "away_score": 2,
+        "correct": true,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_坦佩雷山猫|塞伊奈约基|2026-06-",
+      "predicted_at": "2026-06-27",
+      "match": {
+        "home": "坦佩雷山猫",
+        "away": "塞伊奈约基"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "坦佩雷山猫不败(双选)",
+        "value_pct": null,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 2,
+        "away_score": 2,
+        "correct": true,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_玛丽港|国际图尔库|2026-06-27",
+      "predicted_at": "2026-06-27",
+      "match": {
+        "home": "玛丽港",
+        "away": "国际图尔库"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "国际图尔库胜",
+        "value_pct": null,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 0,
+        "away_score": 2,
+        "correct": true,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_赫尔辛基|库奥皮奥|2026-06-27",
+      "predicted_at": "2026-06-27",
+      "match": {
+        "home": "赫尔辛基",
+        "away": "库奥皮奥"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "库奥皮奥不败(双选)",
+        "value_pct": null,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 0,
+        "away_score": 4,
+        "correct": true,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_赫尔辛基火花|瓦萨|2026-06-27",
+      "predicted_at": "2026-06-27",
+      "match": {
+        "home": "赫尔辛基火花",
+        "away": "瓦萨"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "平局",
+        "value_pct": null,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 1,
+        "away_score": 1,
+        "correct": true,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_阿尔及利亚|奥地利|2026-06-27",
+      "predicted_at": "2026-06-27",
+      "match": {
+        "home": "阿尔及利亚",
+        "away": "奥地利"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "平局",
+        "value_pct": null,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 3,
+        "away_score": 3,
+        "correct": true,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_南非|加拿大|2026-06-28",
+      "predicted_at": "2026-06-28",
+      "match": {
+        "home": "南非",
+        "away": "加拿大"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 0,
+        "away_score": 1,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_巴西|日本|2026-06-30",
+      "predicted_at": "2026-06-30",
+      "match": {
+        "home": "巴西",
+        "away": "日本"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 2,
+        "away_score": 1,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_德国|巴拉圭|2026-06-30",
+      "predicted_at": "2026-06-30",
+      "match": {
+        "home": "德国",
+        "away": "巴拉圭"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 4,
+        "away_score": 5,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_荷兰|摩洛哥|2026-06-30",
+      "predicted_at": "2026-06-30",
+      "match": {
+        "home": "荷兰",
+        "away": "摩洛哥"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 3,
+        "away_score": 4,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_墨西哥|厄瓜多尔|2026-07-01",
+      "predicted_at": "2026-07-01",
+      "match": {
+        "home": "墨西哥",
+        "away": "厄瓜多尔"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 2,
+        "away_score": 0,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_比利时|塞内加尔|2026-07-01",
+      "predicted_at": "2026-07-01",
+      "match": {
+        "home": "比利时",
+        "away": "塞内加尔"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 3,
+        "away_score": 2,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_法国|瑞典|2026-07-01",
+      "predicted_at": "2026-07-01",
+      "match": {
+        "home": "法国",
+        "away": "瑞典"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 3,
+        "away_score": 0,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_科特迪瓦|挪威|2026-07-01",
+      "predicted_at": "2026-07-01",
+      "match": {
+        "home": "科特迪瓦",
+        "away": "挪威"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 1,
+        "away_score": 2,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_美国|波黑|2026-07-01",
+      "predicted_at": "2026-07-01",
+      "match": {
+        "home": "美国",
+        "away": "波黑"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 2,
+        "away_score": 0,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_英格兰|民主刚果|2026-07-01",
+      "predicted_at": "2026-07-01",
+      "match": {
+        "home": "英格兰",
+        "away": "民主刚果"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 2,
+        "away_score": 1,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_阿根廷|佛得角|2026-07-03",
+      "predicted_at": "2026-07-03",
+      "match": {
+        "home": "阿根廷",
+        "away": "佛得角"
+      },
+      "league": "世界杯",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.95,
+        "p_draw": null,
+        "p_away": 0.050000000000000044,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐⭐⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 1.15,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "主胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 3,
+        "away_score": 2,
+        "correct": true,
+        "pnl": null,
+        "updated_at": "2026-07-06 14:48"
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_全北现代|江原fc|2026-07-04",
+      "predicted_at": "2026-07-04",
+      "match": {
+        "home": "全北现代",
+        "away": "江原FC"
+      },
+      "league": "kleague1",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.5,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 2.35,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "主胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_安养fc|浦项制铁|2026-07-04",
+      "predicted_at": "2026-07-04",
+      "match": {
+        "home": "安养FC",
+        "away": "浦项制铁"
+      },
+      "league": "kleague1",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.734,
+        "p_draw": null,
+        "p_away": 0.266,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "❌",
+        "factors": {}
+      },
+      "odds": {
+        "home": 3.33,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "主胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_大田市民|富川fc|2026-07-04",
+      "predicted_at": "2026-07-04",
+      "match": {
+        "home": "大田市民",
+        "away": "富川FC"
+      },
+      "league": "kleague1",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.561,
+        "p_draw": null,
+        "p_away": 0.43899999999999995,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 1.58,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "主胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_jeonbuk|gangwon|2026",
+      "predicted_at": "2026-07-04",
+      "match": {
+        "home": "Jeonbuk",
+        "away": "Gangwon"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.5,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 1,
+        "away_score": 2,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_摩洛哥|加拿大|2026-07-04",
+      "predicted_at": "2026-07-04",
+      "match": {
+        "home": "摩洛哥",
+        "away": "加拿大"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.18,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 0,
+        "away_score": 3,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pdb_阿根廷|佛得角|2026-07-04",
+      "predicted_at": "2026-07-04",
+      "match": {
+        "home": "阿根廷",
+        "away": "佛得角"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.625,
+        "p_draw": null,
+        "p_away": 0.375,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "source": "legacy_pdb"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 3,
+        "away_score": 2,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pdb",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_拉赫蒂|赫尔火花|2026-07-05",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "拉赫蒂",
+        "away": "赫尔火花"
+      },
+      "league": "sportsdb",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.5,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 0.0,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "平局/均衡",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_哈尔姆斯塔德|韦斯特罗斯|2026-07",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "哈尔姆斯塔德",
+        "away": "韦斯特罗斯"
+      },
+      "league": "sportsdb",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.5,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 0.0,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "平局/均衡",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_代格福什|马尔默|2026-07-05",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "代格福什",
+        "away": "马尔默"
+      },
+      "league": "sportsdb",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.5,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 0.0,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "平局/均衡",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_塞伊奈|tps图尔库|2026-07-0",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "塞伊奈",
+        "away": "TPS图尔库"
+      },
+      "league": "sportsdb",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.5,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 0.0,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "平局/均衡",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_雅罗|坦佩雷|2026-07-05",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "雅罗",
+        "away": "坦佩雷"
+      },
+      "league": "sportsdb",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.5,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 0.0,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "平局/均衡",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_巴西|挪威|2026-07-05",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "巴西",
+        "away": "挪威"
+      },
+      "league": "wm26",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.542,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 1.8,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "平局/均衡",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_日本|巴西|2026-07-05",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "日本",
+        "away": "巴西"
+      },
+      "league": "wm26",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.538,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 0.0,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "平局/均衡",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 2,
+        "away_score": 1,
+        "correct": null,
+        "pnl": null,
+        "updated_at": "2026-07-06 14:48"
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_墨西哥|英格兰|2026-07-05",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "墨西哥",
+        "away": "英格兰"
+      },
+      "league": "wm26",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.61,
+        "p_draw": null,
+        "p_away": 0.39,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 3.1,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "客胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_首尔fc|仁川联|2026-07-05",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "首尔FC",
+        "away": "仁川联"
+      },
+      "league": "kleague1",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.618,
+        "p_draw": null,
+        "p_away": 0.382,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 1.68,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "客胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_光州fc|蔚山现代|2026-07-05",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "光州FC",
+        "away": "蔚山现代"
+      },
+      "league": "kleague1",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.749,
+        "p_draw": null,
+        "p_away": 0.251,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "❌",
+        "factors": {}
+      },
+      "odds": {
+        "home": 5.95,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "客胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_金泉尚武|济州sk|2026-07-05",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "金泉尚武",
+        "away": "济州SK"
+      },
+      "league": "kleague1",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.692,
+        "p_draw": null,
+        "p_away": 0.308,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "❌",
+        "factors": {}
+      },
+      "odds": {
+        "home": 2.4,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "客胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_卡尔马|厄格里特|2026-07-05",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "卡尔马",
+        "away": "厄格里特"
+      },
+      "league": "sportsdb",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.687,
+        "p_draw": null,
+        "p_away": 0.313,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "❌",
+        "factors": {}
+      },
+      "odds": {
+        "home": 0.0,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "客胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_哥德堡|索尔纳|2026-07-05",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "哥德堡",
+        "away": "索尔纳"
+      },
+      "league": "sportsdb",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.677,
+        "p_draw": null,
+        "p_away": 0.323,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "❌",
+        "factors": {}
+      },
+      "odds": {
+        "home": 0.0,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "客胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_埃夫斯堡|哈马比|2026-07-05",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "埃夫斯堡",
+        "away": "哈马比"
+      },
+      "league": "sportsdb",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.687,
+        "p_draw": null,
+        "p_away": 0.313,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "❌",
+        "factors": {}
+      },
+      "odds": {
+        "home": 0.0,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "客胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_brazil|norway|2026-0",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "Brazil",
+        "away": "Norway"
+      },
+      "league": "wm26",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.6,
+        "p_draw": null,
+        "p_away": 0.4,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 1.75,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "客胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_mexico|england|2026-",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "Mexico",
+        "away": "England"
+      },
+      "league": "wm26",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.61,
+        "p_draw": null,
+        "p_away": 0.39,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": 3.1,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "客胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_pnl_埃尔夫斯堡|哈马比|2026-07-05",
+      "predicted_at": "2026-07-05",
+      "match": {
+        "home": "埃尔夫斯堡",
+        "away": "哈马比"
+      },
+      "league": "sportsdb",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.677,
+        "p_draw": null,
+        "p_away": 0.323,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "❌",
+        "factors": {}
+      },
+      "odds": {
+        "home": 0.0,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "legacy_pnl"
+      },
+      "ev": {
+        "best_direction": "客胜",
+        "value_pct": 0,
+        "recommendation": ""
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_pnl",
+        "md_report": ""
+      }
+    },
+    {
+      "id": "mig_md_巴西|挪威|2026-07-06",
+      "predicted_at": "2026-07-06",
+      "match": {
+        "home": "巴西",
+        "away": "挪威"
+      },
+      "league": "unknown",
+      "model": {
+        "version": "legacy",
+        "p_home": 0.308,
+        "p_draw": null,
+        "p_away": 0.692,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "",
+        "factors": {}
+      },
+      "odds": {
+        "source": "legacy_md"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "migrate_md",
+        "md_report": "足球预测-2026-07-06-巴西vs挪威.md"
+      }
+    },
+    {
+      "id": "4b418c7f",
+      "source": "prematch_update",
+      "predicted_at": "2026-07-06 11:13",
+      "match": {
+        "home": "巴西",
+        "away": "挪威"
+      },
+      "league": "wm26",
+      "model": {
+        "version": "v8.4-update",
+        "p_home": null,
+        "p_draw": null,
+        "p_away": null,
+        "lambda_A": 1.37,
+        "lambda_B": 1.57,
+        "distribution_most_likely": null,
+        "star_rating": null,
+        "factors": {}
+      },
+      "odds": {
+        "home": 1.65,
+        "draw": 3.8,
+        "away": 5.5,
+        "ah_hdp": -0.75,
+        "ah_home": 1.875,
+        "ah_away": 1.975,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "datafc"
+      },
+      "ev": {
+        "best_direction": "legacy_无方向",
+        "value_pct": null,
+        "recommendation": "遗留数据（无方向）"
+      },
+      "quality": {
+        "score": null,
+        "warnings": []
+      },
+      "baselines": {
+        "elo": null,
+        "market": null,
+        "consistency": null
+      },
+      "update": {
+        "signal": "稳定",
+        "changes": {
+          "home": {
+            "label": "主胜",
+            "from": 1.65,
+            "to": 1.65,
+            "pct": 0.0,
+            "signal": "稳定"
+          },
+          "draw": {
+            "label": "平局",
+            "from": 3.8,
+            "to": 3.8,
+            "pct": 0.0,
+            "signal": "稳定"
+          },
+          "away": {
+            "label": "客胜",
+            "from": 5.5,
+            "to": 5.5,
+            "pct": 0.0,
+            "signal": "稳定"
+          },
+          "ah": {
+            "from_raw": 0.75,
+            "to_raw": -0.75,
+            "from_label": "主让0.75",
+            "to_label": "主让0.75",
+            "direction_desc": "基本不变",
+            "signal": "稳定"
+          }
+        },
+        "initial_time": "2026-07-06 01:47",
+        "initial_id": "mig_pnl_巴西|挪威|2026-07-05"
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "predict.py --update"
+      }
+    },
+    {
+      "id": "427696eb",
+      "predicted_at": "2026-07-06 14:08",
+      "match": {
+        "home": "葡萄牙",
+        "away": "西班牙"
+      },
+      "league": "wm26",
+      "model": {
+        "version": "v8.4",
+        "p_home": 0.22565137949903272,
+        "p_draw": 0.3663116231382695,
+        "p_away": 0.4080369973626978,
+        "lambda_A": null,
+        "lambda_B": null,
+        "distribution_most_likely": null,
+        "star_rating": "❌",
+        "factors": {}
+      },
+      "odds": {
+        "home": 4.2,
+        "draw": 3.6,
+        "away": 1.85,
+        "ah_hdp": 0.5,
+        "ah_home": 1.925,
+        "ah_away": 1.925,
+        "ou_line": 2.5,
+        "ou_over": 1.825,
+        "ou_under": 2.025,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "odds-api"
+      },
+      "ev": {
+        "best_direction": "平局",
+        "value_pct": 40.9,
+        "recommendation": "强推平局(+EV)"
+      },
+      "quality": {
+        "score": 93,
+        "warnings": [
+          "样本量过少（3场），降5分",
+          "xG数据未校准，降2分"
+        ]
+      },
+      "baselines": {
+        "elo": "西班牙",
+        "market": "西班牙",
+        "consistency": "— 平局推荐不参与基线对比"
+      },
+      "result": {
+        "status": "pending",
+        "home_score": null,
+        "away_score": null,
+        "correct": null,
+        "pnl": null,
+        "updated_at": null
+      },
+      "meta": {
+        "source": "predict.py",
+        "md_report": "C:\\Users\\Huawei\\Downloads\\电商\\足球分析\\预测数据\\足球预测-2026-07-06-葡萄牙vs西班牙.md"
+      }
+    },
+    {
+      "id": "6addfcd9",
+      "predicted_at": "2026-07-06 14:44",
+      "match": {
+        "home": "葡萄牙",
+        "away": "克罗地亚"
+      },
+      "league": "wm26",
+      "model": {
+        "version": "v8.4",
+        "p_home": 0.46418954423022823,
+        "p_draw": 0.2943021372103747,
+        "p_away": 0.2415083185593972,
+        "lambda_A": 2.0,
+        "lambda_B": 1.5,
+        "distribution_most_likely": "1-1",
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "odds-api"
+      },
+      "ev": {
+        "best_direction": null,
+        "value_pct": null,
+        "recommendation": null
+      },
+      "quality": {
+        "score": 87,
+        "warnings": [
+          "xG数据来自OpenLigaDB回退，降5分",
+          "样本量过少（4场），降5分",
+          "无市场赔率（无法计算+EV），降3分"
+        ]
+      },
+      "baselines": {
+        "elo": "葡萄牙",
+        "market": "-",
+        "consistency": "-"
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 2,
+        "away_score": 1,
+        "correct": null,
+        "pnl": null,
+        "updated_at": "2026-07-06 14:44"
+      },
+      "meta": {
+        "source": "predict.py",
+        "md_report": "C:\\Users\\Huawei\\Downloads\\电商\\足球分析\\预测数据\\足球预测-2026-07-06-葡萄牙vs克罗地亚.md"
+      }
+    },
+    {
+      "id": "dcc7b814",
+      "predicted_at": "2026-07-06 14:45",
+      "match": {
+        "home": "哥伦比亚",
+        "away": "加纳"
+      },
+      "league": "wm26",
+      "model": {
+        "version": "v8.4",
+        "p_home": 0.49595739729098015,
+        "p_draw": 0.2940219166528618,
+        "p_away": 0.210020686056158,
+        "lambda_A": 1.25,
+        "lambda_B": 0.5,
+        "distribution_most_likely": "1-0",
+        "star_rating": "⭐",
+        "factors": {}
+      },
+      "odds": {
+        "home": null,
+        "draw": null,
+        "away": null,
+        "ah_hdp": null,
+        "ah_home": null,
+        "ah_away": null,
+        "ou_line": null,
+        "ou_over": null,
+        "ou_under": null,
+        "btts_yes": null,
+        "btts_no": null,
+        "source": "odds-api"
+      },
+      "ev": {
+        "best_direction": null,
+        "value_pct": null,
+        "recommendation": null
+      },
+      "quality": {
+        "score": 87,
+        "warnings": [
+          "xG数据来自OpenLigaDB回退，降5分",
+          "样本量过少（4场），降5分",
+          "无市场赔率（无法计算+EV），降3分"
+        ]
+      },
+      "baselines": {
+        "elo": "哥伦比亚",
+        "market": "-",
+        "consistency": "-"
+      },
+      "result": {
+        "status": "finished",
+        "home_score": 1,
+        "away_score": 0,
+        "correct": null,
+        "pnl": null,
+        "updated_at": "2026-07-06 14:45"
+      },
+      "meta": {
+        "source": "predict.py",
+        "md_report": "C:\\Users\\Huawei\\Downloads\\电商\\足球分析\\预测数据\\足球预测-2026-07-06-哥伦比亚vs加纳.md"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "lambda_A": 1.37,
+  "lambda_B": 1.57,
+  "odds_home": 1.65,
+  "odds_draw": 3.8,
+  "odds_away": 5.5,
+  "ah_hdp": 0.75,
+  "ah_home_odds": 1.875,
+  "ah_away_odds": 1.975,
+  "btts_yes_odds": 2.05,
+  "btts_no_odds": 1.7,
+  "xb_home": 1.847,
+  "xb_draw": 3.795,
+  "xb_away": 4.745,
+  "home": "巴西",
+  "away": "挪威",
+  "timestamp": "2026-07-06 01:47"
+}
