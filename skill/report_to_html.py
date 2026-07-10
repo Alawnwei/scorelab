@@ -101,6 +101,37 @@ def prepare_data():
             "predicted": round(d["sum_p"] / d["n"], 3),
         })
 
+    # 推荐复盘统计
+    rec_total = 0
+    rec_hit = 0
+    rec_pending = 0
+    rec_by_market = {}
+    rec_pending_list = []
+    for p in predictions:
+        for r in p.get("recommendations", []):
+            m = r.get("market", "")
+            if "大小球" in m: cat = "OU"
+            elif "亚盘" in m: cat = "AH"
+            elif "BTTS" in m: cat = "BTTS"
+            elif "1X2" in m: cat = "1X2"
+            else: cat = "其他"
+            if r.get("hit") is not None:
+                rec_total += 1
+                if r["hit"]:
+                    rec_hit += 1
+                if cat not in rec_by_market:
+                    rec_by_market[cat] = {"total": 0, "hit": 0}
+                rec_by_market[cat]["total"] += 1
+                if r["hit"]:
+                    rec_by_market[cat]["hit"] += 1
+            else:
+                rec_pending += 1
+                if len(rec_pending_list) < 10:
+                    rec_pending_list.append({
+                        "market": m, "ev": r.get("ev", 0),
+                        "odds": r.get("odds", 0), "bet_amount": r.get("bet_amount", 0),
+                    })
+
     return {
         "updated": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "predictions": len(predictions),
@@ -117,6 +148,12 @@ def prepare_data():
         "pnl_wins": sum(1 for r in pnl_records if r.get("result") == "win"),
         "pnl_losses": sum(1 for r in pnl_records if r.get("result") == "loss"),
         "pnl_total_pnl": sum(r.get("pnl", 0) for r in pnl_records),
+        "rec_total": rec_total,
+        "rec_hit": rec_hit,
+        "rec_by_market": rec_by_market,
+        "rec_pending": rec_pending,
+        "rec_pending_list": rec_pending_list,
+        "rec_data": {"total": rec_total, "hit": rec_hit, "markets": rec_by_market},
         "settled_list": [{
             "date": p.get("date", ""),
             "home": p.get("home", ""),
@@ -225,6 +262,42 @@ th {{ color: #90caf9; font-weight: 500; position: sticky; top: 0; background: #1
 </div>
 </div>
 
+<!-- 推荐复盘 -->
+<div class="card" id="recCard">
+<h2>🎯 推荐命中率</h2>
+<div id="recContent">
+<p style="font-size:0.85rem;color:#8899aa;">加载中...</p>
+</div>
+</div>
+
+<script>
+var _rd=DATA.rec_data;
+var _rp=DATA.rec_pending_list;
+if(_rd.total>0||_rp.length>0){{
+  var _h='<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;">';
+  if(_rd.total>0){{
+    _h+='<div class="stat"><div class="value">'+_rd.hit+'/'+_rd.total+'</div><div class="label">全部推荐</div><div class="tag '+(_rd.hit/_rd.total>0.5?'tag-green':'tag-yellow')+'">'+Math.round(_rd.hit/_rd.total*100)+'%</div></div>';
+    for(var _k in _rd.markets){{
+      var _d=_rd.markets[_k];
+      if(_d.total>0){{
+        var _p=Math.round(_d.hit/_d.total*100);
+        _h+='<div class="stat"><div class="value" style="font-size:1.1rem;">'+_d.hit+'/'+_d.total+'</div><div class="label">'+_k+'</div><div class="tag '+(_d.hit/_d.total>0.5?'tag-green':'tag-yellow')+'">'+_p+'%</div></div>';
+      }}
+    }}
+  }}
+  if(_rp.length>0){{
+    _h+='</div><div style="margin-top:8px;font-size:0.78rem;color:#8899aa;">待结算推荐:';
+    for(var _i=0;_i<_rp.length;_i++){{
+      _h+=' <span style="display:inline-block;background:#2a3a4a;padding:1px 6px;border-radius:3px;margin:2px;">'+_rp[_i].market+' +'+_rp[_i].ev+'%</span>';
+    }}
+    _h+='</div>';
+  }}
+  document.getElementById('recContent').innerHTML=_h;
+}}else{{
+  document.getElementById('recContent').innerHTML='<p style="font-size:0.85rem;color:#8899aa;">暂无推荐数据</p>';
+}}
+</script>
+
 <!-- 校准曲线 -->
 <div class="card">
 <h2>📈 校准曲线</h2>
@@ -327,7 +400,25 @@ def main():
     import argparse
     parser = argparse.ArgumentParser(description="生成HTML看板")
     parser.add_argument("--simple", action="store_true", help="仅表格（无图表，更快）")
+    parser.add_argument("--no-sync", action="store_true", help="不触发结果回填")
     args = parser.parse_args()
+
+    # ── 触发自动结果回填（v8.5） ──
+    if not args.no_sync:
+        try:
+            import subprocess, sys
+            _review_path = os.path.join(os.path.dirname(__file__), "auto_review.py")
+            _ret = subprocess.run(
+                [sys.executable, _review_path, "--sync"],
+                capture_output=True, text=True, timeout=30,
+                encoding="utf-8", errors="replace"
+            )
+            if _ret.stdout:
+                _line = [l for l in _ret.stdout.strip().split("\n") if "回填" in l or "同步" in l]
+                if _line:
+                    print(f"[自动回填] {_line[0]}")
+        except Exception:
+            pass
 
     data = prepare_data()
     html = gen_html(data)

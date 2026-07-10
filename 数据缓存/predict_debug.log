@@ -1,9 +1,25 @@
-Error: I/O operation on closed file.
+Error: expected 'except' or 'finally' block (datafc_provider.py, line 3076)
 Traceback (most recent call last):
-  File "C:\Users\Huawei\Downloads\电商\足球分析\scorelab\skill\predict.py", line 896, in <module>
+  File "C:\Users\Huawei\Downloads\电商\足球分析\scorelab\skill\predict.py", line 1326, in <module>
     main()
     ~~~~^^
-  File "C:\Users\Huawei\Downloads\电商\足球分析\scorelab\skill\predict.py", line 826, in main
-    print(f"[文件已写入] {filepath}")
-    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ValueError: I/O operation on closed file.
+  File "C:\Users\Huawei\Downloads\电商\足球分析\scorelab\skill\predict.py", line 470, in main
+    dp = _get_dp()
+  File "C:\Users\Huawei\Downloads\电商\足球分析\scorelab\skill\predict.py", line 27, in _get_dp
+    return importlib.import_module("datafc_provider")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Huawei\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1160, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1090, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Huawei\Downloads\电商\足球分析\scorelab\skill\datafc_provider.py", line 3076
+    _TEAM_LEAGUE_MAP = {
+    ^^^^^^^^^^^^^^^^
+SyntaxError: expected 'except' or 'finally' block

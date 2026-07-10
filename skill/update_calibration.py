@@ -25,12 +25,30 @@ PREDICT_FILE = os.path.join(BASE_DIR, "skill", "predict.py")
 DATAFPC_FILE = os.path.join(BASE_DIR, "skill", "datafc_provider.py")
 
 
-def load_valid():
-    """加载有效校准数据 — 排除遗留占位记录"""
+def _assign_split(pred_id: str) -> str:
+    """确定性分桶（与 predict.py 保持一致）"""
+    _h = hash(pred_id) & 0xFFFF
+    if _h % 10 < 6:
+        return "train"
+    elif _h % 10 < 8:
+        return "calib"
+    else:
+        return "holdout"
+
+
+def load_valid(split: str = "calib"):
+    """加载有效校准数据 — 按分桶筛选
+
+    v8.5: 默认只加载 calib 分桶，避免数据泄漏。
+    train → 参数训练（α/θ），calib → 温度/Platt校准，holdout → 最终验证。
+
+    Args:
+        split: "train" | "calib" | "holdout" | "all"
+    """
     with open(DB_FILE, "r", encoding="utf-8") as f:
         db = json.load(f)
     valid = []
-    excluded = {"inferred_neutral": 0, "p05_nodir": 0}
+    excluded = {"inferred_neutral": 0, "p05_nodir": 0, "wrong_split": 0}
     for p in db["predictions"]:
         if p["p_final"] is None: continue
         if p["result"]["status"] != "matched": continue
@@ -42,6 +60,12 @@ def load_valid():
         if p["p_final"] == 0.500:
             excluded["p05_nodir"] += 1
             continue
+        # 分桶筛选
+        if split != "all":
+            _pid = p.get("id", "")
+            if _assign_split(_pid) != split:
+                excluded["wrong_split"] += 1
+                continue
         valid.append(p)
     return valid, excluded
 

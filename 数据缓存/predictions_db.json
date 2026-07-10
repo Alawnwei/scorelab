@@ -17,7 +17,19 @@
         "actual_result": "主胜",
         "correct": false
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260627_哥伦比亚_葡萄牙",
@@ -36,7 +48,19 @@
         "actual_result": "平局",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260627_巴拿马_英格兰",
@@ -55,7 +79,19 @@
         "actual_result": "客胜",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260627_民主刚果_乌兹别克",
@@ -74,7 +110,19 @@
         "actual_result": "主胜",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260627_约旦_阿根廷",
@@ -93,7 +141,19 @@
         "actual_result": "客胜",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260627_AC奥卢_拉赫蒂",
@@ -112,7 +172,19 @@
         "actual_result": "平局",
         "correct": false
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260627_TPS图_雅罗",
@@ -131,7 +203,19 @@
         "actual_result": "主胜",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260627_坦佩雷山_塞伊奈约",
@@ -150,7 +234,19 @@
         "actual_result": "平局",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260627_玛丽港_国际图尔",
@@ -169,7 +265,19 @@
         "actual_result": "客胜",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260627_赫尔辛基_库奥皮奥",
@@ -188,7 +296,19 @@
         "actual_result": "客胜",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260627_赫尔辛基_瓦萨",
@@ -207,7 +327,19 @@
         "actual_result": "平局",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260627_阿尔及利_奥地利",
@@ -226,7 +358,19 @@
         "actual_result": "平局",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260628_南非_加拿大",
@@ -245,7 +389,19 @@
         "actual_result": "客胜",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260630_巴西_日本",
@@ -263,7 +419,19 @@
         "score_away": 1,
         "actual_result": "主胜",
         "correct": true
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260630_德国_巴拉圭",
@@ -282,7 +450,19 @@
         "actual_result": "客胜",
         "correct": false
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260630_荷兰_摩洛哥",
@@ -301,7 +481,19 @@
         "actual_result": "客胜",
         "correct": false
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260701_墨西哥_厄瓜多尔",
@@ -320,7 +512,19 @@
         "actual_result": "主胜",
         "correct": false
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260701_比利时_塞内加尔",
@@ -339,7 +543,19 @@
         "actual_result": "主胜",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260701_法国_瑞典",
@@ -358,7 +574,19 @@
         "actual_result": "主胜",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260701_科特迪瓦_挪威",
@@ -377,7 +605,19 @@
         "actual_result": "客胜",
         "correct": true
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260701_美国_波黑",
@@ -396,7 +636,19 @@
         "actual_result": "主胜",
         "correct": false
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260701_英格兰_民主刚果",
@@ -415,7 +667,19 @@
         "actual_result": "主胜",
         "correct": false
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260703_阿根廷_佛得角",
@@ -433,7 +697,19 @@
         "score_away": 0,
         "actual_result": "主胜",
         "correct": true
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260704_Jeon_Gang",
@@ -452,7 +728,19 @@
         "actual_result": "客胜",
         "correct": true
       },
-      "notes": "重复记录, 结果同步自 全北现代vs江原FC"
+      "notes": "重复记录, 结果同步自 全北现代vs江原FC",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260704_全北现代_江原FC",
@@ -470,7 +758,19 @@
         "score_away": 2,
         "actual_result": "客胜",
         "correct": true
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260704_大田市民_富川FC",
@@ -488,7 +788,19 @@
         "score_away": 2,
         "actual_result": "平局",
         "correct": true
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260704_安养FC_浦项制铁",
@@ -506,7 +818,19 @@
         "score_away": 3,
         "actual_result": "客胜",
         "correct": true
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260704_摩洛哥_加拿大",
@@ -524,7 +848,19 @@
         "score_away": 3,
         "actual_result": "客胜",
         "correct": true
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260704_阿根廷_佛得角",
@@ -542,7 +878,19 @@
         "score_away": 2,
         "actual_result": "主胜",
         "correct": true
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260705_哈尔姆斯_韦斯特罗",
@@ -560,7 +908,19 @@
         "score_away": 3,
         "actual_result": "客胜",
         "correct": true
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260705_塞伊奈_TPS图",
@@ -578,7 +938,19 @@
         "score_away": 1,
         "actual_result": "主胜",
         "correct": true
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260705_拉赫蒂_赫尔火花",
@@ -596,7 +968,19 @@
         "score_away": 0,
         "actual_result": "主胜",
         "correct": true
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260705_雅罗_坦佩雷",
@@ -614,7 +998,19 @@
         "score_away": 1,
         "actual_result": "主胜",
         "correct": true
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260705_005647_代格福什_vs_马尔默",
@@ -632,7 +1028,19 @@
         "score_away": 1,
         "actual_result": "客胜",
         "correct": true
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260705_005708_日本_vs_巴西",
@@ -650,7 +1058,19 @@
         "score_away": 1,
         "actual_result": "主胜",
         "correct": false
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260705_011036_巴西_vs_挪威",
@@ -677,7 +1097,18 @@
         "close_mip": 58.8,
         "open_file": "odds_巴西_挪威_20260705.json",
         "close_file": "odds_巴西_挪威_20260706.json"
-      }
+      },
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv_quality": "none"
     },
     {
       "id": "2串1_法国让2_雅罗+1",
@@ -697,7 +1128,19 @@
         "actual_result": "法国1-0巴拉圭(让2输)+雅罗2-1(+1赢)",
         "correct": false
       },
-      "p_final_source": "inferred_neutral"
+      "p_final_source": "inferred_neutral",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260707_阿根廷_埃及",
@@ -717,7 +1160,19 @@
         "correct": true
       },
       "league": "wm26",
-      "confidence": "⭐⭐"
+      "confidence": "⭐⭐",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "20260707_瑞士_哥伦比亚",
@@ -737,32 +1192,19 @@
         "correct": null
       },
       "league": "wm26",
-      "confidence": "⭐"
-    },
-    {
-      "id": "20260708_法国_摩洛哥",
-      "date": "2026-07-08",
-      "home": "法国",
-      "away": "摩洛哥",
-      "p_final": 0.5133777814270044,
-      "direction": "主胜",
-      "league": "wm26",
       "confidence": "⭐",
-      "source": "predict.py",
-      "score_diff": 1.71,
-      "M_coef": 0.9625,
-      "lam_h": 3.3927,
-      "lam_a": 2.3272,
-      "probs_3way": {
-        "home": 0.5666,
-        "draw": 0.1449,
-        "away": 0.2822
-      },
-      "over_25": 0.8888,
-      "btts": 0.8187,
-      "result": {
-        "status": "pending"
-      }
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
     },
     {
       "id": "MANUAL_20260708_163814_Kair_FK S",
@@ -777,13 +1219,167 @@
       "source": "manual_analysis",
       "confidence": "⭐⭐",
       "result": {
-        "status": "pending",
-        "score_home": null,
-        "score_away": null,
-        "actual_result": null,
+        "status": "matched",
+        "score_home": 2,
+        "score_away": 1,
+        "actual_result": "主胜",
+        "correct": true
+      },
+      "analysis_notes": "ELO 1650 vs 1420 | 主场优势 | 估算xG 2.04 vs 1.69 | 实际欧冠资格赛",
+      "recommendations": [],
+      "lam_h": null,
+      "lam_a": null,
+      "score_diff": null,
+      "M_coef": null,
+      "probs_3way": null,
+      "over_25": null,
+      "btts": null,
+      "bet_ts": null,
+      "hours_to_match": null,
+      "clv": null,
+      "clv_quality": "none"
+    },
+    {
+      "id": "20260709_法国_摩洛哥",
+      "date": "2026-07-09",
+      "home": "法国",
+      "away": "摩洛哥",
+      "p_final": 0.47339743288741415,
+      "direction": "主不败(双选)",
+      "league": "wm26",
+      "confidence": "❌",
+      "source": "predict.py",
+      "score_diff": 0.89,
+      "M_coef": 0.7459,
+      "lam_h": 1.751,
+      "lam_a": 1.581,
+      "probs_3way": {
+        "home": 0.4226,
+        "draw": 0.2187,
+        "away": 0.3585
+      },
+      "over_25": 0.622,
+      "btts": 0.6067,
+      "recommendations": [
+        {
+          "market": "1X2 客胜",
+          "ev": 146.0,
+          "odds": 6.5,
+          "model_prob": 35.9,
+          "kelly_pct": 6.0,
+          "bet_amount": 600,
+          "hit": null
+        }
+      ],
+      "odds": 1.55,
+      "result": {
+        "status": "matched",
+        "score_home": 2,
+        "score_away": 0,
+        "actual_result": "主胜",
+        "correct": true
+      },
+      "bet_ts": "2026-07-09 16:01",
+      "hours_to_match": 24
+    },
+    {
+      "id": "20260709_伏伊伏丁_费伦茨",
+      "date": "2026-07-09",
+      "home": "伏伊伏丁",
+      "away": "费伦茨",
+      "p_final": 0.49363014250687043,
+      "direction": "不推荐/均衡",
+      "league": "uel",
+      "confidence": "⭐",
+      "source": "predict.py",
+      "score_diff": 0.0,
+      "M_coef": 0.9625,
+      "lam_h": 1.2325,
+      "lam_a": 1.2325,
+      "probs_3way": {
+        "home": 0.3664,
+        "draw": 0.2672,
+        "away": 0.3664
+      },
+      "over_25": 0.4385,
+      "btts": 0.465,
+      "recommendations": [],
+      "odds": null,
+      "result": {
+        "status": "matched",
+        "score_home": 1,
+        "score_away": 2,
+        "actual_result": "客胜",
         "correct": null
       },
-      "analysis_notes": "ELO 1650 vs 1420 | 主场优势 | 估算xG 2.04 vs 1.69"
+      "bet_ts": "2026-07-09 20:35",
+      "hours_to_match": 24
+    },
+    {
+      "id": "20260709_索陆军_德里城",
+      "date": "2026-07-09",
+      "home": "索陆军",
+      "away": "德里城",
+      "p_final": 0.49363014250687043,
+      "direction": "不推荐/均衡",
+      "league": "uecl",
+      "confidence": "⭐",
+      "source": "predict.py",
+      "score_diff": 0.0,
+      "M_coef": 0.9625,
+      "lam_h": 1.19,
+      "lam_a": 1.19,
+      "probs_3way": {
+        "home": 0.3633,
+        "draw": 0.2735,
+        "away": 0.3633
+      },
+      "over_25": 0.418,
+      "btts": 0.4489,
+      "recommendations": [],
+      "odds": null,
+      "result": {
+        "status": "matched",
+        "score_home": 3,
+        "score_away": 2,
+        "actual_result": "主胜",
+        "correct": null
+      },
+      "bet_ts": "2026-07-09 20:42",
+      "hours_to_match": 24
+    },
+    {
+      "id": "20260709_斯海杜克_日利纳",
+      "date": "2026-07-09",
+      "home": "斯海杜克",
+      "away": "日利纳",
+      "p_final": 0.49363014250687043,
+      "direction": "不推荐/均衡",
+      "league": "uecl",
+      "confidence": "⭐",
+      "source": "predict.py",
+      "score_diff": 0.0,
+      "M_coef": 0.9625,
+      "lam_h": 1.19,
+      "lam_a": 1.19,
+      "probs_3way": {
+        "home": 0.3633,
+        "draw": 0.2735,
+        "away": 0.3633
+      },
+      "over_25": 0.418,
+      "btts": 0.4489,
+      "recommendations": [],
+      "odds": null,
+      "result": {
+        "status": "matched",
+        "score_home": 2,
+        "score_away": 0,
+        "actual_result": "主胜",
+        "correct": null
+      },
+      "bet_ts": "2026-07-09 20:47",
+      "hours_to_match": 24
     }
   ],
   "last_updated": "2026-07-08"

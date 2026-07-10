@@ -33,6 +33,84 @@ ALPHA_LOGISTIC = 0.15
 # 该值可通过 update_calibration.py --apply 自动优化
 ELO_ADJUST_FACTOR = 0.20
 
+# ============================================================
+# 联赛平均 xG 基准（v8.5 全局化 + datafc 可覆盖）
+# ============================================================
+LEAGUE_XG_AVG = {
+    "bl1": 1.55, "epl": 1.50, "laliga": 1.35, "seriea": 1.40,
+    "ligue1": 1.45, "kleague1": 1.13, "kleague2": 1.05,
+    "jleague1": 1.31, "jleague2": 1.28,
+    "allsvenskan": 1.30, "eliteserien": 1.30, "championship": 1.25,
+    "bundesliga2": 1.30, "ligue2": 1.25, "laliga2": 1.25, "serieb": 1.25,
+    "primeira": 1.30, "proleague": 1.40, "scottish": 1.30, "eredivisie": 1.50,
+    "aleague": 1.30, "mls": 1.50, "brasileirao": 1.35, "ligamx": 1.40,
+    "csl": 1.25, "zhongjia": 1.20, "zhongyi": 1.10, "saudi": 1.30,
+    "league1": 1.25, "league2": 1.20,
+    "kleague1": 1.13, "kleague2": 1.05, "jleague1": 1.31, "jleague2": 1.28,
+    "veikkausliiga": 1.25,
+    "ucl": 1.50, "uel": 1.45, "uecl": 1.40,
+    "facup": 1.40, "eflcup": 1.35, "copadelrey": 1.35, "dfbpokal": 1.35, "coppaita": 1.35,
+    "rsl": 1.30, "bul": 1.30, "cro": 1.35, "svk": 1.30, "hun": 1.35, "irl": 1.25,
+    "sportsdb": 1.30, "wm26": 1.40,
+    "euro": 1.40, "copaf": 1.40, "afcon": 1.35, "asiancup": 1.35,
+    "afccl": 1.40, "afccup": 1.35,
+    "default": 1.40,
+}
+
+# 联赛平均 ELO 获取函数（v8.5 数据驱动）
+_LEAGUE_AVG_ELO_CACHE = {}
+
+def get_league_avg_elo(league: str) -> int:
+    """获取联赛平均 ELO（从已缓存数据动态计算，v8.5）
+
+    对 wm26/WC：取国家队 ELO 前 48 均值 ≈ 1750-1900
+    对其他杯赛：取前 24 均值 ≈ 1600-1750
+    对 club 联赛：返回默认 1500（俱乐部球队无 ELO）
+    """
+    if league in _LEAGUE_AVG_ELO_CACHE:
+        return _LEAGUE_AVG_ELO_CACHE[league]
+
+    _data = _load_elo_rankings()
+    if _data and len(_data) > 10:
+        _elos = sorted([v.get("elo", 1500) for v in _data.values()
+                       if isinstance(v, dict) and v.get("elo")], reverse=True)
+        if _elos:
+            # 世界杯级：取前 48 强均值
+            if league in ("wm26", "WC"):
+                _top_n = min(48, len(_elos))
+            # 洲际杯赛：取前 24
+            elif league in ("euro", "copaf", "afcon", "asiancup"):
+                _top_n = min(24, len(_elos))
+            else:
+                _top_n = 0
+            if _top_n > 0:
+                _avg = int(sum(_elos[:_top_n]) / _top_n)
+                _LEAGUE_AVG_ELO_CACHE[league] = _avg
+                return _avg
+
+    # 俱乐部赛事或数据不足时回退
+    _LEAGUE_AVG_ELO_CACHE[league] = 1500
+    return 1500
+
+
+# ============================================================
+# 联赛平均角球基准（v8.5 全局化 + datafc 可覆盖）
+# ============================================================
+LEAGUE_AVG_CORNER = {
+    "bl1": 4.8, "epl": 5.5, "laliga": 5.0, "seriea": 5.0, "ligue1": 5.2,
+    "bundesliga2": 5.2, "championship": 5.5, "ligue2": 5.0, "laliga2": 5.0, "serieb": 5.0,
+    "kleague1": 4.0, "kleague2": 3.8,
+    "jleague1": 4.2, "jleague2": 4.0,
+    "allsvenskan": 5.0, "eliteserien": 5.0, "veikkausliiga": 4.5,
+    "eredivisie": 5.0, "primeira": 5.0, "proleague": 5.0, "scottish": 5.0,
+    "aleague": 5.0, "mls": 5.0, "brasileirao": 5.0, "ligamx": 5.0,
+    "csl": 3.5, "zhongjia": 3.5, "zhongyi": 3.0, "saudi": 4.5,
+    "rsl": 4.5, "bul": 4.5, "cro": 4.8, "svk": 4.5, "hun": 4.5, "irl": 4.5,
+    "sportsdb": 5.0,
+    "default": 5.0,
+}
+
+
 import pandas as pd
 
 # === datafc 导入 ===
@@ -56,9 +134,89 @@ except ImportError:
     DATAFIC_AVAILABLE = False
 
 # === SofaScore 连通性 ===
-# api.sofascore.com 已被 CDN 永久封禁（HTTP 403），标记为不可达
-# Sofascore 数据源（2026-07-07 验证可达）
-DATAFIC_ALIVE = True
+# 动态检测：用 datafc 自身 search 探活（绕过 Cloudflare 对直连的 403 阻断）
+# v8.6: 改为动态探活 + 5 分钟自动重检，避免一次失败永远锁死在回退路径
+_DATAFIC_ALIVE_STATE = None       # None=未初始化, True/False=上次结果
+_DATAFIC_ALIVE_LAST_CHECK = 0.0   # 上次检查时间戳
+_DATAFIC_ALIVE_TTL = 300          # 探活缓存有效期（秒）
+
+def _fast_check_datafc_alive() -> bool:
+    """用较短超时（10s）快速检查 datafc 连通性，避免硬等 30s+3 次重试"""
+    try:
+        from datafc import search_data
+        import concurrent.futures
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as _ex:
+            _fut = _ex.submit(search_data, "France", entity_type="team")
+            _r = _fut.result(timeout=10)
+            return (_r is not None and not _r.empty)
+    except concurrent.futures.TimeoutError:
+        return False
+    except Exception:
+        return False
+
+def get_datafc_alive() -> bool:
+    """动态获取 Sofascore 连通状态（缓存 5 分钟后自动重检）
+
+    首次调用触发真实探活，后续 300 秒内返回缓存结果。
+    过期后异步重检一次，检测到恢复/断开自动切换数据源。
+
+    Returns:
+        True  → datafc (Sofascore) 可用
+        False → 已断开，上游应回退到 OpenLigaDB
+    """
+    global _DATAFIC_ALIVE_STATE, _DATAFIC_ALIVE_LAST_CHECK
+    _now = time()
+    # 首次 || 缓存过期 → 重新探活
+    if _DATAFIC_ALIVE_STATE is None or (_now - _DATAFIC_ALIVE_LAST_CHECK) > _DATAFIC_ALIVE_TTL:
+        _new = _fast_check_datafc_alive()
+        if _new != _DATAFIC_ALIVE_STATE:
+            if _new:
+                print("[datafc] →→→ Sofascore API 恢复可用，切回主通路", flush=True)
+            else:
+                print("[datafc] →→→ Sofascore API 不可达，降级到 OpenLigaDB 回退", flush=True)
+        _DATAFIC_ALIVE_STATE = _new
+        _DATAFIC_ALIVE_LAST_CHECK = _now
+    return _DATAFIC_ALIVE_STATE
+
+# 兼容旧调用方式（通过名字引用，但本质上已不再是静态常量）
+DATAFIC_ALIVE = get_datafc_alive()
+
+# datafc 调用超时保护（秒）：datafc 内部默认 30s×3 次重试太慢，
+# 包装器用较短超时快速失败，避免单次调用卡住整个预测管线
+_DATAFIC_CALL_TIMEOUT = 25  # 单次 datafc 函数调用的最大等待时间
+
+def _call_datafc(func, *args, timeout: int = None, **kwargs):
+    """调用 datafc 函数并带超时保护
+
+    用 ThreadPoolExecutor 包装，超时后抛出 TimeoutError。
+    datafc 库内部有 30s×3 次重试，我们外层再加一道 25s 的熔断，
+    防止 Cloudflare 卡住时整个进程挂起。
+
+    Args:
+        func: datafc 函数对象
+        timeout: 自定义超时（秒），默认 _DATAFIC_CALL_TIMEOUT
+        *args, **kwargs: 传递给 func
+
+    Returns:
+        func 的返回值，或超时时返回 None
+    """
+    import concurrent.futures
+    _to = timeout if timeout is not None else _DATAFIC_CALL_TIMEOUT
+    _ex = concurrent.futures.ThreadPoolExecutor(max_workers=1)
+    try:
+        _fut = _ex.submit(func, *args, **kwargs)
+        try:
+            return _fut.result(timeout=_to)
+        except concurrent.futures.TimeoutError:
+            log(f"[datafc] 调用超时 ({_to}s): {func.__name__} — 网络抖动跳过")
+            _fut.cancel()
+            return None
+    except Exception as _e:
+        log(f"[datafc] 调用异常: {func.__name__} → {_e}")
+        return None
+    finally:
+        # shutdown(wait=False) 防止超时后线程池还没退出导致整个流程卡住
+        _ex.shutdown(wait=False)
 
 # Windows 编码
 if sys.platform == "win32":
@@ -122,6 +280,13 @@ LEAGUE_TOURNAMENT = {
     "allsvenskan": {"tid": 40, "sid": 87925, "name": "Allsvenskan 2026", "type": "league"},
     "eliteserien": {"tid": 20, "sid": 87809, "name": "Eliteserien 2026", "type": "league"},
     "veikkausliiga": {"tid": 41, "sid": 87930, "name": "Veikkausliiga 2026", "type": "league"},
+    # 东欧/小联赛（欧战资格赛球队的国内联赛，v8.5）
+    "rsl":      {"tid": 210, "sid": 96249, "name": "Mozzart Bet Superliga", "type": "league"},
+    "bul":      {"tid": 247, "sid": 95923, "name": "Parva Liga", "type": "league"},
+    "cro":      {"tid": 170, "sid": 95727, "name": "HNL", "type": "league"},
+    "svk":      {"tid": 211, "sid": 96151, "name": "Niké Liga", "type": "league"},
+    "hun":      {"tid": 187, "sid": 96914, "name": "OTP Bank Liga", "type": "league"},
+    "irl":      {"tid": 382, "name": "League of Ireland", "type": "league"},
     # 杯赛（⚠️ cup 赛事需要 tournament_stage 参数，auto_fill_odds 暂未支持）
     "ucl":      {"tid": 7, "sid": 96758, "name": "UEFA Champions League", "type": "uefa"},
     "uel":      {"tid": 679, "sid": 96522, "name": "UEFA Europa League", "type": "uefa"},
@@ -136,9 +301,9 @@ LEAGUE_TOURNAMENT = {
     "copaf":     {"tid": 15, "sid": 88442, "name": "Copa America", "type": "world_cup"},
     "afcon":     {"tid": 15, "sid": 88446, "name": "Africa Cup of Nations", "type": "world_cup"},
     "asiancup":  {"tid": 15, "sid": 88445, "name": "AFC Asian Cup", "type": "world_cup"},
-    # 亚足联赛事（ESPN 数据源）
-    "afccl":     {"tid": 15, "sid": 88448, "name": "AFC Champions League Elite", "type": "uefa", "espn": "afc.champions"},
-    "afccup":    {"tid": 15, "sid": 88449, "name": "AFC Cup", "type": "uefa", "espn": "afc.cup"},
+    # 亚足联赛事（datafc 覆盖，v8.5 移除 ESPN）
+    "afccl":     {"tid": 15, "sid": 88448, "name": "AFC Champions League Elite", "type": "uefa"},
+    "afccup":    {"tid": 15, "sid": 88449, "name": "AFC Cup", "type": "uefa"},
 }
 
 # 中文队名 → Sofascore 英文队名（辅助匹配）
@@ -301,6 +466,38 @@ TEAM_EN = {
     # 芬超球队别名
     "塞伊奈约基": "SJK", "坦佩雷山猫": "Tampere United",
 
+    # 欧战俱乐部
+    "索陆军": "CSKA Sofia", "CSKA Sofia": "CSKA Sofia",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "德里城": "Derry City", "Derry City": "Derry City",
+    "索陆军": "CSKA Sofia", "CSKA Sofia": "CSKA Sofia",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "德里城": "Derry City", "Derry City": "Derry City",
+    "伏伊伏丁": "Vojvodina", "Vojvodina": "Vojvodina",
+    "费伦茨": "Ferencváros", "Ferencváros": "Ferencváros", "Ferencvaros": "Ferencváros",
+    "索陆军": "CSKA Sofia", "CSKA Sofia": "CSKA Sofia",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "德里城": "Derry City", "Derry City": "Derry City",
+    "索陆军": "CSKA Sofia", "CSKA Sofia": "CSKA Sofia",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "德里城": "Derry City", "Derry City": "Derry City",
+    "伏伊伏丁": "Vojvodina", "Vojvodina": "Vojvodina",
+    "费伦茨": "Ferencváros", "Ferencváros": "Ferencváros",
+    "阿拉木图": "Kairat Almaty", "Kairat Almaty": "Kairat Almaty",
+    "苏捷斯卡": "FK Sutjeska", "FK Sutjeska": "FK Sutjeska",
+
     # 德甲
     "拜仁": "Bayern Munich", "多特蒙德": "Borussia Dortmund",
     "勒沃库森": "Bayer Leverkusen", "莱比锡": "RB Leipzig",
@@ -343,6 +540,36 @@ TEAM_DE = {
     "泰国": "Thailand", "越南": "Vietnam", "印尼": "Indonesien",
     "中国": "China", "朝鲜": "Nordkorea", "马来西亚": "Malaysia",
     "刚果(金)": "DR Kongo", "刚果(布)": "Kongo",
+    "索陆军": "CSKA Sofia", "CSKA Sofia": "CSKA Sofia",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "德里城": "Derry City", "Derry City": "Derry City",
+    "索陆军": "CSKA Sofia", "CSKA Sofia": "CSKA Sofia",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "德里城": "Derry City", "Derry City": "Derry City",
+    "伏伊伏丁": "Vojvodina", "Vojvodina": "Vojvodina",
+    "费伦茨": "Ferencváros", "Ferencváros": "Ferencváros", "Ferencvaros": "Ferencváros",
+    "索陆军": "CSKA Sofia", "CSKA Sofia": "CSKA Sofia",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "德里城": "Derry City", "Derry City": "Derry City",
+    "索陆军": "CSKA Sofia", "CSKA Sofia": "CSKA Sofia",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "斯海杜克": "Hajduk Split", "Hajduk Split": "Hajduk Split",
+    "日利纳": "Žilina", "Žilina": "Žilina",
+    "德里城": "Derry City", "Derry City": "Derry City",
+    "伏伊伏丁": "Vojvodina", "Vojvodina": "Vojvodina",
+    "费伦茨": "Ferencváros", "Ferencváros": "Ferencváros",
+    "阿拉木图": "Kairat Almaty", "Kairat Almaty": "Kairat Almaty",
+    "苏捷斯卡": "FK Sutjeska", "FK Sutjeska": "FK Sutjeska",
 }
 
 # === 自动反向映射：英文 → 德文（用于 OpenLigaDB 队名匹配）===
@@ -523,7 +750,9 @@ def get_matches(league: str, week_number: Optional[int] = None,
         kwargs = {"tournament_id": tid, "season_id": sid}
         if tour_type in ("world_cup", "cup") or week_number is not None:
             kwargs["week_number"] = week_number or 1
-        df = dfc_match_data(**kwargs)
+        df = _call_datafc(dfc_match_data, **kwargs)
+        if df is None:
+            return pd.DataFrame()
     except Exception as e:
         log(f"[datafc] match_data 失败: {e}")
         return pd.DataFrame()
@@ -534,12 +763,9 @@ def get_matches(league: str, week_number: Optional[int] = None,
     # 如果指定了week_number但没有数据，尝试其他轮次
     if df.empty and week_number is not None:
         for w in range(1, 20):
-            try:
-                df = dfc_match_data(tournament_id=tid, season_id=sid, week_number=w)
-                if not df.empty:
-                    break
-            except:
-                continue
+            df = _call_datafc(dfc_match_data, tournament_id=tid, season_id=sid, week_number=w)
+            if df is not None and not df.empty:
+                break
 
     # 按球队筛选
     if team_name and not df.empty:
@@ -776,7 +1002,7 @@ def _enrich_match_names(team_name: str, df: pd.DataFrame) -> set:
 # 数据源覆盖检查 — 防止为无数据的赛事生成预测
 # ============================================================
 
-SUPPORTED_DATA_SOURCES = {"datafc", "openligadb", "espn"}
+SUPPORTED_DATA_SOURCES = {"datafc", "openligadb"}
 
 def has_data_source(league: str) -> tuple:
     """检查联赛是否有至少一个数据源覆盖
@@ -788,69 +1014,36 @@ def has_data_source(league: str) -> tuple:
     if not cfg:
         return False, f"联赛 {league} 未在 LEAGUE_TOURNAMENT 中配置"
 
-    ctype = cfg.get("type", "")
-    espn_slug = cfg.get("espn")
-
-    if espn_slug:
-        return True, f"ESPN ({espn_slug})"
-    if ctype in ("world_cup", "uefa"):
-        return True, "OpenLigaDB"
-    if ctype in ("league", "knockout"):
-        return True, "datafc (Sofascore)"
-
-    return False, f"联赛 {league} type={ctype} 无已知数据源"
+    # 所有赛事类型优先尝试 datafc (Sofascore)，OpenLigaDB 作为回退
+    return True, "datafc (Sofascore) + OpenLigaDB 回退"
 
 
 # ============================================================
 # 赛程校验 — 防止为不存在的比赛生成预测
 # ============================================================
 
-def _espn_check_match(home_en: str, away_en: str, espn_slug: str) -> bool:
-    """通过 ESPN API 检查比赛是否存在（用于 AFC 等 OpenLigaDB 不覆盖的赛事）"""
-    import urllib.request, json, ssl
-    url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{espn_slug}/scoreboard"
-    try:
-        ctx = ssl.create_default_context()
-        ctx.check_hostname = False
-        ctx.verify_mode = ssl.CERT_NONE
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=8, context=ctx) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-        for e in data.get("events", []):
-            name = e.get("name", "").lower()
-            if home_en.lower() in name and away_en.lower() in name:
-                return True
-            # ESPN 格式可能是 "TeamA at TeamB"
-            comps = e.get("competitions", [{}])[0]
-            competitors = comps.get("competitors", [])
-            teams_in_match = [c.get("team", {}).get("displayName", "").lower() for c in competitors]
-            if home_en.lower() in teams_in_match and away_en.lower() in teams_in_match:
-                return True
-    except Exception:
-        pass
-    return False
-
-
 def is_match_scheduled(home: str, away: str, league: str = "wm26") -> tuple:
-    """校验两队是否在 OpenLigaDB 赛程中有（过）比赛
+    """校验两队赛程：datafc 优先 → OpenLigaDB 回退
 
-    Args:
-        home, away: 中文队名
-        league: 联赛标识
-
-    Returns:
-        (bool, str): (是否存在赛程, 详情消息)
+    v8.5: 移除 ESPN 回退（datafc 已全覆盖）
     """
+    # datafc 优先
+    if get_datafc_alive():
+        try:
+            _df_dfc = get_matches(league, team_name=home)
+            if _df_dfc is not None and not _df_dfc.empty:
+                _hn = _enrich_match_names(home, _df_dfc)
+                _an = _enrich_match_names(away, _df_dfc)
+                for _, _r in _df_dfc.iterrows():
+                    _ht = _norm(_r.get("home_team", ""))
+                    _at = _norm(_r.get("away_team", ""))
+                    if (any(n in _ht for n in _hn) and any(n in _at for n in _an)) or                        (any(n in _at for n in _hn) and any(n in _ht for n in _an)):
+                        return True, f"✅ datafc 赛程确认: {_r.get('home_team','?')} vs {_r.get('away_team','?')}"
+        except Exception:
+            pass
+    # OpenLigaDB 回退
     df = _fetch_openligadb_matches_inner(league, include_future=True)
     if df.empty:
-        # OpenLigaDB 无数据 → 尝试 ESPN（针对 AFC 等赛事）
-        cfg = LEAGUE_TOURNAMENT.get(league, {})
-        espn_slug = cfg.get("espn")
-        if espn_slug:
-            home_en = TEAM_EN.get(home, home)
-            away_en = TEAM_EN.get(away, away)
-            if _espn_check_match(home_en, away_en, espn_slug):
-                return True, f"✅ ESPN 赛程确认: {home} vs {away}"
         return True, "⚠️ 无法获取赛程数据，跳过校验"
 
     # 构建两队各自的匹配名集合（含模糊回退）
@@ -889,12 +1082,18 @@ def _save_odds_file(home: str, away: str, odds_data: dict, source: str = "odds-a
         _safe_a = away.replace(" ", "").replace("/", "_")
         _fname = f"odds_{_safe_h}_{_safe_a}_{_now}.json"
         _fpath = os.path.join(CACHE_DIR, _fname)
-        # 同秒已写过则跳过（避免重复写同一版本）
         if _fname in _ODDS_TIMESTAMPS:
             return
         _ODDS_TIMESTAMPS.add(_fname)
         with open(_fpath, "w", encoding="utf-8") as _f:
             json.dump(odds_data, _f, ensure_ascii=False, indent=2, default=str)
+        # 清理旧缓存：每场比赛保留最新 5 个文件（v8.5）
+        _existing = sorted(glob.glob(os.path.join(CACHE_DIR, f"odds_{_safe_h}_{_safe_a}_*.json")))
+        for _old_f in _existing[:-5]:
+            try:
+                os.remove(_old_f)
+            except Exception:
+                pass
     except Exception:
         pass
 
@@ -956,14 +1155,11 @@ def auto_fill_odds(home: str, away: str, league: str, p_final: float,
             scan_plan = [("default", w, None) for w in range(18, 0, -1)]
 
         for tt, wk, stage in scan_plan:
-            try:
-                kwargs = {"tournament_id": tid, "season_id": sid, "week_number": wk}
-                if tt == "uefa":
-                    kwargs["tournament_type"] = "uefa"
-                    kwargs["tournament_stage"] = stage
-                df = dfc_match_data(**kwargs)
-            except Exception:
-                continue
+            kwargs = {"tournament_id": tid, "season_id": sid, "week_number": wk}
+            if tt == "uefa":
+                kwargs["tournament_type"] = "uefa"
+                kwargs["tournament_stage"] = stage
+            df = _call_datafc(dfc_match_data, **kwargs)
             if df is None or df.empty:
                 continue
 
@@ -1028,6 +1224,25 @@ def auto_fill_odds(home: str, away: str, league: str, p_final: float,
                             "odds_away": away_odds,
                             "asian_handicap": odds_info.get("asian_handicap", []),
                         })
+
+                        # ── 跨源赔率交叉验证（v8.5） ──
+                        try:
+                            from skill.fetch_match_data import fetch_yapan_data
+                            _yp = fetch_yapan_data(home, away)
+                            if _yp and "error" not in _yp:
+                                _b365 = _yp.get("bet365", {})
+                                _eu = _b365.get("european", {}) or _yp.get("1xbet", {}).get("european", {})
+                                _alt_h = float(_eu.get("home", 0)) if _eu.get("home") else 0
+                                if _alt_h > 0 and home_odds:
+                                    _diff = abs(home_odds - _alt_h) / home_odds
+                                    if _diff > 0.15:
+                                        log(f"[⚠️ 赔率分歧] datafc={home_odds:.2f} odds-api={_alt_h:.2f} "
+                                            f"差异{_diff:.1%}，已取较保守值")
+                                        # 取较保守值（较高赔率=较低概率=安全）
+                                        selected_odds = max(home_odds, _alt_h)
+                        except Exception:
+                            pass
+
                         return {"odds": selected_odds, "home_odds": home_odds,
                                 "draw_odds": draw_odds, "away_odds": away_odds,
                                 "source": "datafc", "week": w}
@@ -1092,9 +1307,17 @@ def auto_fill_odds(home: str, away: str, league: str, p_final: float,
                     except Exception as e:
                         log(f"[auto_fill_odds] PnL 写入失败（odds-api.io）: {e}")
 
+                # ── 极端赔率标注（低流动性警告 v8.5） ──
+                _liquidity_warn = ""
+                for _name, _odds in [("主胜", home_odds), ("平局", draw_odds), ("客胜", away_odds)]:
+                    if _odds and (_odds > 10.0 or _odds < 1.10):
+                        _liquidity_warn = f"⚠️ 低流动性：{_name}@{_odds}"
+                        log(f"[auto_fill_odds] {_liquidity_warn}")
+                        break
+
                 return {"odds": home_odds, "home_odds": home_odds,
                         "draw_odds": draw_odds, "away_odds": away_odds,
-                        "source": "odds-api"}
+                        "source": "odds-api", "liquidity_warning": _liquidity_warn}
     except Exception as e:
         log(f"[auto_fill_odds] odds-api.io 失败: {e}")
 
@@ -1138,11 +1361,9 @@ def get_team_corner_summary(team_name: str, league: str, max_games: int = 5) -> 
     for w in range(18, 0, -1):
         if len(team_matches) >= max_games:
             break
-        try:
-            df = dfc_match_data(tournament_id=tid, season_id=sid, week_number=w)
-        except Exception:
-            continue
+        df = _call_datafc(dfc_match_data, tournament_id=tid, season_id=sid, week_number=w)
         if df is None or df.empty:
+            continue
             continue
         ended = df[df["status"] == "Ended"]
         if ended.empty:
@@ -1213,13 +1434,13 @@ def get_team_corner_summary(team_name: str, league: str, max_games: int = 5) -> 
     if n == 0:
         return {"corners_for_90": 5.0, "corners_against_90": 5.0, "matches_played": 0}
 
-    # 贝叶斯收缩（同进球模型，prior=联赛平均角球~5.0）
+    # 贝叶斯收缩（prior=联赛平均角球，v8.5 全局化）
     raw_cf = total_cf / n
     raw_ca = total_ca / n
-    LEAGUE_AVG_CORNER = 5.0
+    _corner_prior = LEAGUE_AVG_CORNER.get(league, LEAGUE_AVG_CORNER["default"])
     prior = 3
-    shrunken_cf = (raw_cf * n + LEAGUE_AVG_CORNER * prior) / (n + prior)
-    shrunken_ca = (raw_ca * n + LEAGUE_AVG_CORNER * prior) / (n + prior)
+    shrunken_cf = (raw_cf * n + _corner_prior * prior) / (n + prior)
+    shrunken_ca = (raw_ca * n + _corner_prior * prior) / (n + prior)
 
     return {
         "corners_for_90": round(shrunken_cf, 2),
@@ -1261,14 +1482,16 @@ def get_team_recent_matches(team_name: str, league: str, max_games: int = 10) ->
         _RECENT_MATCHES_CACHE[cache_key] = _disk[cache_key]
         return _disk[cache_key]
 
-    if DATAFIC_ALIVE:
+    if get_datafc_alive():
         # ── 主通路：Sofascore (datafc) ──
         cfg = get_league_config(league)
         if not cfg:
             return pd.DataFrame()
-        # 杯赛/淘汰赛/UEFA：Sofascore 覆盖差，直接返回空走 OpenLigaDB 回退
-        if cfg.get("type") in ("world_cup", "knockout", "uefa"):
-            return pd.DataFrame()
+        # UEFA/淘汰赛：Sofascore 对欧战赛事覆盖差，但欧战球队同时参加本国联赛
+        # 放行 datafc 尝试扫描（能找到最好），找不到时上游调用者会走 OpenLigaDB 回退
+        if cfg.get("type") in ("uefa", "knockout"):
+            # 直接放行到下面的 datafc 扫描，不做提前返回
+            pass
         tid = cfg["tid"]
         sid = cfg.get("sid") or _get_season_id(tid)
         if not sid:
@@ -1279,20 +1502,21 @@ def get_team_recent_matches(team_name: str, league: str, max_games: int = 10) ->
         max_week = 20
         try:
             from datafc import season_rounds_data
-            _rdf = season_rounds_data(tournament_id=tid, season_id=sid)
+            _rdf = _call_datafc(season_rounds_data, tournament_id=tid, season_id=sid)
             if _rdf is not None and not _rdf.empty:
                 max_week = int(_rdf['round_number'].max())
         except Exception:
             max_week = 38
+        # 杯赛（世界杯等）最多 ~7 个比赛轮次，设上限避免大量空请求
+        _is_cup = cfg.get("type") in ("world_cup", "cup")
+        if _is_cup and max_week > 10:
+            max_week = 10
         # 从最近轮次开始倒序扫描，找到足够场次即退出
         for w in range(max_week, 0, -1):
             if len(all_matches) >= max_games:
                 break
-            try:
-                df = dfc_match_data(tournament_id=tid, season_id=sid, week_number=w)
-            except Exception:
-                continue
-            if df.empty:
+            df = _call_datafc(dfc_match_data, tournament_id=tid, season_id=sid, week_number=w)
+            if df is None or df.empty:
                 continue
             team_df = _find_team_in_matches(df, team_name)
             if not team_df.empty:
@@ -1358,8 +1582,14 @@ def get_xg_data(match_df: pd.DataFrame) -> pd.DataFrame:
             shots = dfc_shots_data(match_df=single)
             if not shots.empty:
                 all_shots.append(shots)
-        except Exception:
-            continue  # 跳过无shotmap的比赛（如K联赛）
+        except Exception as _ex:
+            _gid = "?"
+            try:
+                _gid = str(single.iloc[0].get("game_id", "?")) if not single.empty else "?"
+            except Exception:
+                pass
+            log(f"[datafc] shots_data 失败: {_ex} (match_id={_gid}) — 跳过该场")
+            continue
 
     if not all_shots:
         return pd.DataFrame()
@@ -1368,6 +1598,8 @@ def get_xg_data(match_df: pd.DataFrame) -> pd.DataFrame:
 
 def get_team_xg_summary(team_name: str, league: str, max_games: int = 8) -> dict:
     """估算球队的 xG 数据（基于 shots_data 聚合）
+
+    v8.5: 时间指数衰减加权 + 对手强度调整
 
     Args:
         team_name: 球队名（中文）
@@ -1382,101 +1614,224 @@ def get_team_xg_summary(team_name: str, league: str, max_games: int = 8) -> dict
     # 1. 获取近期比赛
     matches = get_team_recent_matches(team_name, league, max_games=max_games)
     if matches.empty:
+        # v8.6: datafc/OpenLigaDB 都无数据 → 五大联赛尝试 Understat 回退
+        if league in ("epl", "laliga", "bl1", "seriea", "ligue1"):
+            try:
+                from understat_provider import fetch_team_xg
+                _us = fetch_team_xg(team_name, league)
+                if _us.get("source") == "understat" and _us.get("matches_played", 0) > 0:
+                    return {
+                        "xG_for_90": _us["xG_for_90"],
+                        "xG_against_90": _us["xG_against_90"],
+                        "matches_played": _us["matches_played"],
+                        "source": "understat",
+                        "is_calibrated": True,
+                    }
+            except Exception:
+                pass
         return {"xG_for_90": 0, "xG_against_90": 0, "matches_played": 0,
                 "source": "datafc_no_data", "is_calibrated": False}
 
     # 2. 获取射门数据
     shots = get_xg_data(matches)
     if shots.empty:
-        # 无射门数据，从比分估算
+        # v8.6: datafc 无 xG → 五大联赛尝试 Understat 回退
+        if league in ("epl", "laliga", "bl1", "seriea", "ligue1"):
+            try:
+                from understat_provider import fetch_team_xg
+                _us = fetch_team_xg(team_name, league)
+                if _us.get("source") == "understat" and _us.get("matches_played", 0) > 0:
+                    return {
+                        "xG_for_90": _us["xG_for_90"],
+                        "xG_against_90": _us["xG_against_90"],
+                        "matches_played": _us["matches_played"],
+                        "source": "understat",
+                        "is_calibrated": True,
+                    }
+            except Exception:
+                pass
         return _estimate_from_scores(matches, team_name)
 
-    # 3. 聚合 xG
-    total_xg_for = 0.0
-    total_xg_against = 0.0
-    total_shots_for = 0
-    total_shots_against = 0
-    match_ids = set()
+    # 3. 构建 match_id → {时间戳, 对手名} 映射（用于权重计算）
+    _now_ts = time()
+    _HALF_LIFE_DAYS = 14          # 14天半衰期
+    _HALF_LIFE_SECS = _HALF_LIFE_DAYS * 86400
+    team_en = TEAM_EN.get(team_name, team_name).lower().replace(" ", "")
 
-    for _, row in shots.iterrows():
-        gid = row.get("game_id")
-        is_home = row.get("is_home", True)
-        xg_val = row.get("xg", 0) or 0
-        shot_type = row.get("shot_type", "")
+    _match_info = {}
+    for _idx, _row in matches.iterrows():
+        _gid = _row.get("game_id")
+        _ts = _row.get("start_timestamp", _now_ts)
+        if not _ts or _ts == 0:
+            _ts = _now_ts
+        # 判断本队是主还是客，提取对手名
+        _ht = str(_row.get("home_team", "")).lower().replace(" ", "")
+        _at = str(_row.get("away_team", "")).lower().replace(" ", "")
+        _is_h = team_en in _ht
+        _opponent = str(_row.get("away_team", "") if _is_h else _row.get("home_team", ""))
+        # 对手 ELO（用于强度调整）
+        _opp_elo = get_team_elo(_opponent).get("elo", 1500)
+        _match_info[_gid] = {"ts": int(_ts), "opponent_elo": _opp_elo}
 
-        if is_home:
-            total_xg_for += float(xg_val)
-            if shot_type not in ("blocked",):
-                total_shots_for += 1
+    # 4. 按 game_id 分组聚合 xG
+    _match_xg = {}  # game_id -> {"xg_for": 0, "xg_against": 0, "shots_for": 0, ...}
+    for _, _row in shots.iterrows():
+        _gid = _row.get("game_id")
+        if _gid not in _match_xg:
+            _match_xg[_gid] = {"xg_for": 0.0, "xg_against": 0.0,
+                                "shots_for": 0, "shots_against": 0}
+        _is_home = _row.get("is_home")
+        if _is_home is None:
+            _htid = _row.get("home_team_id")
+            _tid = _row.get("team_id")
+            if _htid is not None and _tid is not None:
+                try:
+                    _is_home = (int(_htid) == int(_tid))
+                except (ValueError, TypeError):
+                    _is_home = None
+            if _is_home is None:
+                continue
+        _xg = _row.get("xg", 0)
+        if _xg is None or (isinstance(_xg, float) and math.isnan(_xg)):
+            _xg = 0.0
+        _st = _row.get("shot_type", "")
+        if _is_home:
+            _match_xg[_gid]["xg_for"] += float(_xg)
+            if _st not in ("blocked",):
+                _match_xg[_gid]["shots_for"] += 1
         else:
-            total_xg_against += float(xg_val)
-            if shot_type not in ("blocked",):
-                total_shots_against += 1
+            _match_xg[_gid]["xg_against"] += float(_xg)
+            if _st not in ("blocked",):
+                _match_xg[_gid]["shots_against"] += 1
 
-        match_ids.add(gid)
-
-    match_count = len(matches)
-    if match_count == 0:
-        match_count = 1
-
-    # 检查 xG 是否有效
-    has_real_xg = (total_xg_for > 0 or total_xg_against > 0)
-
-    if not has_real_xg:
-        # 无有效 xG → 从比分估算（涵盖了无shotmap和shotmap无xG两种情况）
+    if not _match_xg:
         return _estimate_from_scores(matches, team_name)
+
+    # 5. 加权聚合（时间衰减 × 对手强度）
+    _total_w = 0.0
+    _wgted_xg_for = 0.0
+    _wgted_xg_against = 0.0
+    _wgted_shots_for = 0.0
+    _wgted_shots_against = 0.0
+    _LEAGUE_BASELINE_ELO = 1500
+
+    for _gid, _mxg in _match_xg.items():
+        _info = _match_info.get(_gid, {"ts": _now_ts, "opponent_elo": 1500})
+        # 时间衰减权重：exp(-days_ago / half_life)
+        _days_ago = max(0, (_now_ts - _info["ts"]) / 86400)
+        _time_w = math.exp(-_days_ago / _HALF_LIFE_DAYS)
+        # 对手强度权重：弱队(ELO低)的进球含金量低→权重降，强队(ELO高)的进球含金量高→权重升
+        # 对手防守强度≈ opp_elo / baseline, 我方进攻权重按此缩放
+        _opp_w = _info["opponent_elo"] / _LEAGUE_BASELINE_ELO
+        _opp_w = max(0.5, min(2.0, _opp_w))  # 钳制在 0.5-2.0
+        _w = _time_w * _opp_w
+        _total_w += _w
+        _wgted_xg_for += _mxg["xg_for"] * _w
+        _wgted_xg_against += _mxg["xg_against"] * _w
+        _wgted_shots_for += _mxg["shots_for"] * _w
+        _wgted_shots_against += _mxg["shots_against"] * _w
+
+    if _total_w <= 0:
+        return _estimate_from_scores(matches, team_name)
+
+    _match_count = len(_match_xg)
+    _xg_for = round(_wgted_xg_for / _total_w, 2)
+    _xg_against = round(_wgted_xg_against / _total_w, 2)
+
+    # v8.6: datafc xG 全为 0 → 五大联赛尝试 Understat 回退
+    if _xg_for == 0 and _xg_against == 0 and league in ("epl", "laliga", "bl1", "seriea", "ligue1"):
+        try:
+            from understat_provider import fetch_team_xg
+            _us = fetch_team_xg(team_name, league)
+            if _us.get("source") == "understat" and _us.get("matches_played", 0) > 0:
+                return {
+                    "xG_for_90": _us["xG_for_90"],
+                    "xG_against_90": _us["xG_against_90"],
+                    "matches_played": _us["matches_played"],
+                    "source": "understat",
+                    "is_calibrated": True,
+                    "_datafc_raw": {"xG_for_90": _xg_for, "xG_against_90": _xg_against},
+                }
+        except Exception:
+            pass
 
     return {
-        "xG_for_90": round(total_xg_for / match_count, 2),
-        "xG_against_90": round(total_xg_against / match_count, 2),
-        "matches_played": match_count,
-        "shots_for_90": round(total_shots_for / match_count, 1),
-        "shots_against_90": round(total_shots_against / match_count, 1),
+        "xG_for_90": _xg_for,
+        "xG_against_90": round(_wgted_xg_against / _total_w, 2),
+        "matches_played": _match_count,
+        "shots_for_90": round(_wgted_shots_for / _total_w, 1),
+        "shots_against_90": round(_wgted_shots_against / _total_w, 1),
         "source": "datafc_xg",
         "is_calibrated": True,
+        "_time_weighted": True,
+        "_effective_n": round(_total_w, 1),
     }
 
 
 def _estimate_from_scores(matches: pd.DataFrame, team_name: str) -> dict:
-    """从比分估算 xG（当无射门数据时回退）"""
+    """从比分估算 xG（当无射门数据时回退）
+
+    v8.5: 时间指数衰减加权 + 对手强度调整
+    """
     team_en = TEAM_EN.get(team_name, team_name)
-    total_gf = 0
-    total_ga = 0
-    count = 0
-
     team_lower = team_en.lower().replace(" ", "")
+    _now_ts = time()
+    _HALF_LIFE_DAYS = 14
+    _LEAGUE_BASELINE_ELO = 1500
 
-    for _, row in matches.iterrows():
-        ht = str(row.get("home_team", "")).lower().replace(" ", "")
-        at = str(row.get("away_team", "")).lower().replace(" ", "")
-        hs = row.get("home_score_normaltime") or row.get("home_score_display") or 0
-        as_ = row.get("away_score_normaltime") or row.get("away_score_display") or 0
+    _total_w = 0.0
+    _wgted_gf = 0.0
+    _wgted_ga = 0.0
+    _count = 0
 
+    for _, _row in matches.iterrows():
+        _ht = str(_row.get("home_team", "")).lower().replace(" ", "")
+        _at = str(_row.get("away_team", "")).lower().replace(" ", "")
+        _hs = _row.get("home_score_normaltime") or _row.get("home_score_display") or 0
+        _as_ = _row.get("away_score_normaltime") or _row.get("away_score_display") or 0
         try:
-            hs, as_ = int(hs), int(as_)
+            _hs, _as_ = int(_hs), int(_as_)
         except (ValueError, TypeError):
             continue
 
-        if team_lower in ht:
-            total_gf += hs
-            total_ga += as_
-        elif team_lower in at:
-            total_gf += as_
-            total_ga += hs
-        else:
+        # 判断本队角色，提取对手
+        _is_h = team_lower in _ht
+        if not _is_h and team_lower not in _at:
             continue
-        count += 1
+        _opponent = str(_row.get("away_team", "") if _is_h else _row.get("home_team", ""))
+        _gf = _hs if _is_h else _as_
+        _ga = _as_ if _is_h else _hs
 
-    if count == 0:
+        # 时间衰减
+        _ts = _row.get("start_timestamp", _now_ts)
+        if not _ts or _ts == 0:
+            _ts = _now_ts
+        _days_ago = max(0, (_now_ts - int(_ts)) / 86400)
+        _time_w = math.exp(-_days_ago / _HALF_LIFE_DAYS)
+
+        # 对手强度调整
+        _opp_elo = get_team_elo(_opponent).get("elo", 1500)
+        _opp_w = _opp_elo / _LEAGUE_BASELINE_ELO
+        _opp_w = max(0.5, min(2.0, _opp_w))
+
+        _w = _time_w * _opp_w
+        _total_w += _w
+        _wgted_gf += _gf * _w
+        _wgted_ga += _ga * _w
+        _count += 1
+
+    if _count == 0 or _total_w <= 0:
         return {"xG_for_90": 0, "xG_against_90": 0,
                 "matches_played": 0, "source": "datafc_no_matches"}
 
     return {
-        "xG_for_90": round(total_gf / count, 2),
-        "xG_against_90": round(total_ga / count, 2),
-        "matches_played": count,
+        "xG_for_90": round(_wgted_gf / _total_w, 2),
+        "xG_against_90": round(_wgted_ga / _total_w, 2),
+        "matches_played": _count,
         "source": "datafc_goals_fallback",
         "is_calibrated": False,
+        "_time_weighted": True,
+        "_effective_n": round(_total_w, 1),
     }
 
 
@@ -1788,11 +2143,8 @@ def sync_results_to_file(league: str = "wm26", week_numbers: list = None) -> int
     weeks = week_numbers or list(range(1, 20))
 
     for w in weeks:
-        try:
-            df = dfc_match_data(tournament_id=tid, season_id=sid, week_number=w)
-        except Exception:
-            continue
-        if df.empty:
+        df = _call_datafc(dfc_match_data, tournament_id=tid, season_id=sid, week_number=w)
+        if df is None or df.empty:
             continue
 
         finished = df[df["status"] == "Ended"]
@@ -1844,7 +2196,7 @@ def estimate_team_strength(team_name: str, league: str, max_games: int = 10) -> 
     """
     # ── 磁盘缓存检查 ──
     _cache_key = f"strength_{league}_{team_name}_{max_games}"
-    if DATAFIC_ALIVE:
+    if get_datafc_alive():
         try:
             if os.path.exists(_STRENGTH_CACHE_FILE):
                 with open(_STRENGTH_CACHE_FILE, "r", encoding="utf-8") as _f:
@@ -1857,25 +2209,16 @@ def estimate_team_strength(team_name: str, league: str, max_games: int = 10) -> 
     # 1. 从 datafc 获取 xG
     xg = get_team_xg_summary(team_name, league, max_games=max_games)
 
-    # 2. 联赛平均
-    LEAGUE_XG_AVG = {
-        "bl1": 1.55, "epl": 1.50, "laliga": 1.35, "seriea": 1.40,
-        "ligue1": 1.45, "kleague1": 1.13, "kleague2": 1.05,
-        "jleague1": 1.31, "jleague2": 1.28,
-        "allsvenskan": 1.30, "eliteserien": 1.30, "championship": 1.25,
-        "bundesliga2": 1.30, "ligue2": 1.25, "laliga2": 1.25, "serieb": 1.25,
-        "primeira": 1.30, "proleague": 1.40, "scottish": 1.30, "eredivisie": 1.50,
-        "aleague": 1.30, "mls": 1.50, "brasileirao": 1.35, "ligamx": 1.40,
-        "csl": 1.25, "zhongjia": 1.20, "zhongyi": 1.10, "saudi": 1.30,
-        "league1": 1.25, "league2": 1.20,
-        "kleague1": 1.13, "kleague2": 1.05, "jleague1": 1.31, "jleague2": 1.28,
-        "veikkausliiga": 1.25,
-        "ucl": 1.50, "uel": 1.45, "uecl": 1.40,
-        "facup": 1.40, "eflcup": 1.35, "copadelrey": 1.35, "dfbpokal": 1.35, "coppaita": 1.35,
-        "sportsdb": 1.30, "wm26": 1.40, "default": 1.40,
-        "euro": 1.40, "copaf": 1.40, "afcon": 1.35, "asiancup": 1.35,
-        "afccl": 1.40, "afccup": 1.35,
-    }
+    # 1b. 自动检测联赛：当当前联赛无数据时用球队名反查正确赛事
+    if xg.get("matches_played", 0) == 0:
+        detected = detect_team_league(team_name, fallback_league=league)
+        if detected != league:
+            log(f"[datafc] ⚠️ {team_name} 在联赛 {league} 无数据，自动检测到 {detected}，重试")
+            xg = get_team_xg_summary(team_name, detected, max_games=max_games)
+            if xg.get("matches_played", 0) > 0:
+                league = detected  # 后续逻辑用新联赛
+
+    # 2. 联赛平均（全局 LEAGUE_XG_AVG，datafc 可覆盖）
     avg_xg = LEAGUE_XG_AVG.get(league, LEAGUE_XG_AVG["default"])
 
     # 3. ELO 驱动的大 λ差调整
@@ -1884,8 +2227,7 @@ def estimate_team_strength(team_name: str, league: str, max_games: int = 10) -> 
     # 西班牙(2159) vs 佛得角(1619) → P_home 从 55% → ~80%
     elo_data = get_team_elo(team_name)
     team_elo = elo_data.get("elo", 1500)
-    LEAGUE_AVG_ELO = {"wm26": 1850, "WC": 1850, "default": 1500}
-    avg_elo = LEAGUE_AVG_ELO.get(league, LEAGUE_AVG_ELO["default"])
+    avg_elo = get_league_avg_elo(league)
     elo_adjust = ((team_elo - avg_elo) / 100) * ELO_ADJUST_FACTOR
     xg_for_raw = xg.get("xG_for_90", avg_xg)
     xg_against_raw = xg.get("xG_against_90", avg_xg)
@@ -1945,7 +2287,7 @@ def estimate_team_strength(team_name: str, league: str, max_games: int = 10) -> 
         xg["form_rating"] = 1.5
 
     # ── 写入磁盘缓存（仅 datafc 路径，含 NaN 保护） ──
-    if DATAFIC_ALIVE:
+    if get_datafc_alive():
         try:
             # 丢弃无效数据：NaN、matches_played=0 不缓存
             _xg_for = xg.get("xG_for_90")
@@ -1977,22 +2319,6 @@ def estimate_xg_from_openligadb(team_name: str, league: str = "wm26") -> dict:
         dict with keys: xG_for_90, xG_against_90, matches_played, source,
                         home_attack, home_defense, form_rating, is_calibrated
     """
-    LEAGUE_XG_AVG = {
-        "bl1": 1.55, "epl": 1.50, "laliga": 1.35, "seriea": 1.40,
-        "ligue1": 1.45, "kleague1": 1.13, "kleague2": 1.05,
-        "jleague1": 1.31, "jleague2": 1.28,
-        "allsvenskan": 1.30, "eliteserien": 1.30, "championship": 1.25,
-        "bundesliga2": 1.30, "ligue2": 1.25, "laliga2": 1.25, "serieb": 1.25,
-        "primeira": 1.30, "proleague": 1.40, "scottish": 1.30, "eredivisie": 1.50,
-        "aleague": 1.30, "mls": 1.50, "brasileirao": 1.35, "ligamx": 1.40,
-        "csl": 1.25, "zhongjia": 1.20, "zhongyi": 1.10, "saudi": 1.30,
-        "league1": 1.25, "league2": 1.20,
-        "kleague1": 1.13, "kleague2": 1.05, "jleague1": 1.31, "jleague2": 1.28,
-        "veikkausliiga": 1.25,
-        "ucl": 1.50, "uel": 1.45, "uecl": 1.40,
-        "facup": 1.40, "eflcup": 1.35, "copadelrey": 1.35, "dfbpokal": 1.35, "coppaita": 1.35,
-        "sportsdb": 1.30, "wm26": 1.40, "WC": 1.40, "default": 1.40,
-    }
     avg_xg = LEAGUE_XG_AVG.get(league, LEAGUE_XG_AVG["default"])
 
     def score_from_xg(value, avg, higher_is_better=True):
@@ -2050,8 +2376,7 @@ def estimate_xg_from_openligadb(team_name: str, league: str = "wm26") -> dict:
     # ELO 驱动的大 λ差调整
     elo_data = get_team_elo(team_name)
     team_elo = elo_data.get("elo", 1500)
-    LEAGUE_AVG_ELO = {"wm26": 1850, "WC": 1850, "default": 1500}
-    avg_elo = LEAGUE_AVG_ELO.get(league, LEAGUE_AVG_ELO["default"])
+    avg_elo = get_league_avg_elo(league)
     elo_adjust = ((team_elo - avg_elo) / 100) * ELO_ADJUST_FACTOR
 
     # 贝叶斯收缩：小样本下向联赛均值回归（实际进球方差是 xG 的 3-5 倍）
@@ -2087,38 +2412,21 @@ def estimate_xg_from_openligadb(team_name: str, league: str = "wm26") -> dict:
 # ============================================================
 
 def compute_7dim_scores(home: str, away: str, league: str = "wm26") -> dict:
-    """计算两队七维评分（1-10），用于 L1 → P_base
+    """计算两队六维评分（1-10），用于 L1 → P_base
 
-    七维及权重（SKILL.md v8.4）：
-      ① 进攻能力    20%
-      ② 防守稳固性   20%
-      ③ 中场控制力   15%
-      ④ 大赛经验    15%
+    六维及权重（v8.5，X因素已移除）：
+      ① 进攻能力    22%
+      ② 防守稳固性   22%
+      ③ 中场控制力   18%
+      ④ 大赛经验    18%
       ⑤ 战术适配度   15%
-      ⑥ 体能/状态   10%
-      ⑦ X因素       5%
+      ⑥ 体能/状态    5%
 
     Returns:
         dict with keys:
-          home_进攻, home_防守, home_中场, home_经验, home_战术, home_状态, home_X因素,
+          home_进攻, home_防守, home_中场, home_经验, home_战术, home_状态,
           away_同理, 以及 home_total, away_total
     """
-    LEAGUE_XG_AVG = {
-        "bl1": 1.55, "epl": 1.50, "laliga": 1.35, "seriea": 1.40,
-        "ligue1": 1.45, "kleague1": 1.13, "kleague2": 1.05,
-        "jleague1": 1.31, "jleague2": 1.28,
-        "allsvenskan": 1.30, "eliteserien": 1.30, "championship": 1.25,
-        "bundesliga2": 1.30, "ligue2": 1.25, "laliga2": 1.25, "serieb": 1.25,
-        "primeira": 1.30, "proleague": 1.40, "scottish": 1.30, "eredivisie": 1.50,
-        "aleague": 1.30, "mls": 1.50, "brasileirao": 1.35, "ligamx": 1.40,
-        "csl": 1.25, "zhongjia": 1.20, "zhongyi": 1.10, "saudi": 1.30,
-        "league1": 1.25, "league2": 1.20,
-        "kleague1": 1.13, "kleague2": 1.05, "jleague1": 1.31, "jleague2": 1.28,
-        "veikkausliiga": 1.25,
-        "ucl": 1.50, "uel": 1.45, "uecl": 1.40,
-        "facup": 1.40, "eflcup": 1.35, "copadelrey": 1.35, "dfbpokal": 1.35, "coppaita": 1.35,
-        "sportsdb": 1.30, "wm26": 1.40, "WC": 1.40, "default": 1.40,
-    }
     avg_xg = LEAGUE_XG_AVG.get(league, LEAGUE_XG_AVG["default"])
 
     def _score_from_ratio(value, avg, higher_is_better=True):
@@ -2153,14 +2461,24 @@ def compute_7dim_scores(home: str, away: str, league: str = "wm26") -> dict:
     # ═══════════════════════════════════════════════════════════
     # ① 进攻能力（20%）— 基于 xG_for/90
     # ═══════════════════════════════════════════════════════════
+    if lam_h is None or (isinstance(lam_h, float) and math.isnan(lam_h)):
+        lam_h = avg_xg
+    if lam_a is None or (isinstance(lam_a, float) and math.isnan(lam_a)):
+        lam_a = avg_xg
     att_h = _score_from_ratio(lam_h, avg_xg, higher_is_better=True)
     att_a = _score_from_ratio(lam_a, avg_xg, higher_is_better=True)
 
     # ═══════════════════════════════════════════════════════════
     # ② 防守稳固性（20%）— 基于 xG_against/90
     # ═══════════════════════════════════════════════════════════
-    def_rating_h = _score_from_ratio(xg_h.get("xG_against_90", avg_xg), avg_xg, higher_is_better=False)
-    def_rating_a = _score_from_ratio(xg_a.get("xG_against_90", avg_xg), avg_xg, higher_is_better=False)
+    _raw_def_h = xg_h.get("xG_against_90", avg_xg)
+    _raw_def_a = xg_a.get("xG_against_90", avg_xg)
+    if _raw_def_h is None or (isinstance(_raw_def_h, float) and math.isnan(_raw_def_h)):
+        _raw_def_h = avg_xg
+    if _raw_def_a is None or (isinstance(_raw_def_a, float) and math.isnan(_raw_def_a)):
+        _raw_def_a = avg_xg
+    def_rating_h = _score_from_ratio(_raw_def_h, avg_xg, higher_is_better=False)
+    def_rating_a = _score_from_ratio(_raw_def_a, avg_xg, higher_is_better=False)
 
     # ═══════════════════════════════════════════════════════════
     # ③ 中场控制力（15%）— 基于攻防综合 + ELO 修正
@@ -2222,6 +2540,14 @@ def compute_7dim_scores(home: str, away: str, league: str = "wm26") -> dict:
     form_h = xg_h.get("form_rating", 1.5)
     form_a = xg_a.get("form_rating", 1.5)
 
+    # ═══════════════════════════════════════════════════════════
+    # ⑥ 体能/状态（10%）— 基于近 6 场指数衰减加权胜率
+    #    从 form_rating(场均积分): ≥2.3=8-10, 1.8-2.29=6-7,
+    #                          1.2-1.79=4-5, 0.6-1.19=2-3, <0.6=1-2
+    # ═══════════════════════════════════════════════════════════
+    form_h = xg_h.get("form_rating", 1.5)
+    form_a = xg_a.get("form_rating", 1.5)
+
     def _form_to_score(fr):
         if fr >= 2.3:  return 8.0
         elif fr >= 1.8: return 6.5
@@ -2232,47 +2558,25 @@ def compute_7dim_scores(home: str, away: str, league: str = "wm26") -> dict:
     cond_a = _form_to_score(form_a)
 
     # ═══════════════════════════════════════════════════════════
-    # ⑦ X因素（5%）— 主观因素：东道主/德比/纪录驱动
-    #    默认 5，东道主淘汰赛+2，德比+1，封顶 8
+    # 加权总分（六维，X因素已移除，权重重分配: 进攻22% 防守22%
+    # 中场18% 经验18% 战术15% 状态5%）
     # ═══════════════════════════════════════════════════════════
-    x_h = 5.0
-    x_a = 5.0
-    # 东道主加成（通过 ELO 代码识别 host nation）
-    host_nations = {"USA", "Mexico", "Kanada"}  # 2026 世界杯联合主办国
-    host_de = TEAM_DE.get(home, "")
-    host_en = TEAM_EN.get(home, "")
-    if host_nations & {host_de, host_en}:
-        x_h += 2.0 if is_knockout_league(league) else 1.0
-    host_de_a = TEAM_DE.get(away, "")
-    host_en_a = TEAM_EN.get(away, "")
-    if host_nations & {host_de_a, host_en_a}:
-        x_a += 2.0 if is_knockout_league(league) else 1.0
-    # 德比
-    if is_derby_match(home, away):
-        x_h += 0.5
-        x_a += 0.5
-    x_h = min(8.0, x_h)
-    x_a = min(8.0, x_a)
-
-    # ═══════════════════════════════════════════════════════════
-    # 加权总分
-    # ═══════════════════════════════════════════════════════════
-    w = [0.20, 0.20, 0.15, 0.15, 0.15, 0.10, 0.05]
+    w = [0.22, 0.22, 0.18, 0.18, 0.15, 0.05]
     total_h = (att_h * w[0] + def_rating_h * w[1] + mid_h * w[2]
-               + exp_h * w[3] + tact_h * w[4] + cond_h * w[5] + x_h * w[6])
+               + exp_h * w[3] + tact_h * w[4] + cond_h * w[5])
     total_a = (att_a * w[0] + def_rating_a * w[1] + mid_a * w[2]
-               + exp_a * w[3] + tact_a * w[4] + cond_a * w[5] + x_a * w[6])
+               + exp_a * w[3] + tact_a * w[4] + cond_a * w[5])
     total_h = round(total_h, 2)
     total_a = round(total_a, 2)
 
     return {
         "home_进攻": att_h, "home_防守": def_rating_h,
         "home_中场": mid_h, "home_经验": exp_h,
-        "home_战术": tact_h, "home_状态": cond_h, "home_X因素": x_h,
+        "home_战术": tact_h, "home_状态": cond_h,
         "home_total": total_h,
         "away_进攻": att_a, "away_防守": def_rating_a,
         "away_中场": mid_a, "away_经验": exp_a,
-        "away_战术": tact_a, "away_状态": cond_a, "away_X因素": x_a,
+        "away_战术": tact_a, "away_状态": cond_a,
         "away_total": total_a,
         "diff": round(total_h - total_a, 2),
         "P_base_raw": round(1.0 / (1.0 + math.exp(-ALPHA_LOGISTIC * (total_h - total_a))), 4),
@@ -2306,6 +2610,15 @@ TEAM_ELO_CODE = {
     "乌兹别克": "UZ", "阿尔及利亚": "DZ",
     "突尼斯": "TN", "海地": "HT", "库拉索": "CW",
     "科特迪瓦": "CI", "巴拿马": "PA",
+    # 欧战俱乐部
+    "索陆军": "CSS", "CSKA Sofia": "CSS",
+    "斯海杜克": "HAJ", "Hajduk Split": "HAJ",
+    "日利纳": "ZIL", "Žilina": "ZIL",
+    "德里城": "DER", "Derry City": "DER",
+    "伏伊伏丁": "VOJ", "Vojvodina": "VOJ",
+    "费伦茨": "FER", "Ferencváros": "FER", "Ferencvaros": "FER",
+    "阿拉木图": "KRT", "Kairat Almaty": "KRT", "Kairat": "KRT",
+    "苏捷斯卡": "SUT", "FK Sutjeska": "SUT", "Sutjeska": "SUT",
 }
 
 # 比赛类型权重（与 SKILL 方法论一致）
@@ -2495,7 +2808,7 @@ def get_team_starting_xi(team_name: str, league: str, match_count: int = 3) -> l
     Returns:
         [set(["球员A","球员B",...]), set(...)]   # 最新在前
     """
-    if not DATAFIC_ALIVE:
+    if not get_datafc_alive():
         return []  # Sofascore 不可用，阵容数据不可获取
 
     matches = get_team_recent_matches(team_name, league, max_games=match_count)
@@ -2656,20 +2969,38 @@ def infer_rest_diff(team_name: str, league: str) -> int:
 # ============================================================
 
 def is_knockout_league(league: str) -> bool:
-    """判断联赛是否属于淘汰赛制（杯赛/世界杯淘汰赛阶段）
+    """判断联赛是否属于淘汰赛制（杯赛/世界杯/俱乐部欧战淘汰赛阶段）
 
     淘汰赛制下历史交锋参考价值下降（×0.625），
     但比赛重要性上升（淘汰赛/德比 → ×1.15）。
+
+    注意：club cup (ucl/uel/uecl) 同时包含小组赛和淘汰赛，
+    当前整赛事视为淘汰赛权重（保守处理），后续可细化到 stage 级别。
     """
     if not league:
         return False
     info = LEAGUE_TOURNAMENT.get(league, {})
     tour_type = info.get("type", "")
-    # world_cup 全程视为淘汰赛权重（小组赛阶段用淘汰赛H2H防误判）
-    if tour_type in ("world_cup", "cup"):
+    # world_cup + cup + uefa + knockout 都视为淘汰赛权重
+    # fix: 漏掉了俱乐部欧战(type=uefa) 和国内杯赛(type=knockout)
+    if tour_type in ("world_cup", "cup", "uefa", "knockout"):
         return True
     # 联赛名为纯 league 类型 → 不是淘汰赛
     return False
+
+
+def has_knockout_stage(league: str) -> bool:
+    """联赛是否有淘汰赛阶段（区别于纯联赛/纯淘汰赛制）
+
+    仅 uefa（欧冠/欧联/欧协联）和 world_cup（世界杯/欧洲杯等）有小组赛+淘汰赛结构。
+    纯淘汰赛（facup/dfbpokal 等）一轮定胜负，节奏与联赛无显著差异，不触发 λ 衰减。
+
+    用于 KO λ 系数和 KO M 系数的触发条件。
+    """
+    if not league:
+        return False
+    info = LEAGUE_TOURNAMENT.get(league, {})
+    return info.get("type") in ("uefa", "world_cup")
 
 
 def is_derby_match(home_team: str, away_team: str) -> bool:
@@ -2756,11 +3087,17 @@ def infer_m_factors(team_name: str, league: str) -> dict:
     """
     factors = {}
 
-    # 轮换
-    try:
-        factors["rotation"] = infer_rotation_level(team_name, league)
-    except Exception:
+    # 轮换检测 — 仅联赛和纯淘汰赛(足总杯等)运行（v8.5）
+    # 国家队杯赛(world_cup)和俱乐部欧战(uefa)的淘汰赛阶段不检测
+    # 原因：国家队阵容数据不全，易误判为L4（摩洛哥bug）
+    # 纯淘汰赛(足总杯)运行轮换检测（英超队确实会轮换）
+    if is_knockout_league(league) and has_knockout_stage(league):
         factors["rotation"] = 0
+    else:
+        try:
+            factors["rotation"] = infer_rotation_level(team_name, league)
+        except Exception:
+            factors["rotation"] = 0
 
     # 大败
     try:
@@ -2797,6 +3134,82 @@ def search_team(team_name: str) -> list:
         return r.to_dict("records") if not r.empty else []
     except Exception:
         return []
+
+
+def detect_team_league(team_name: str, fallback_league: str = "wm26") -> str:
+    """通过 Sofascore 搜索自动检测球队当前参加的联赛/赛事
+
+    当指定联赛找不到球队数据时，用球队名搜索 Sofascore，
+    从搜索结果中提取球队当前参与的赛事 ID，映射回 LEAGUE_TOURNAMENT 中的联赛代码。
+
+    Args:
+        team_name: 球队名（中文/英文）
+        fallback_league: 未找到时的默认联赛
+
+    Returns:
+        联赛代码（如 "ucl", "bl1", "kleague1"），或 fallback_league
+    """
+    if not DATAFIC_AVAILABLE:
+        return fallback_league
+
+    # 已有缓存：本次会话中查过的球队
+    _detect_cache = getattr(detect_team_league, "_cache", {})
+    if team_name in _detect_cache:
+        return _detect_cache[team_name]
+
+    try:
+        results = search_team(team_name)
+        if not results:
+            return fallback_league
+
+        # 从搜索结果提取 tournament_id
+        for r in results:
+            tid = r.get("tournament_id") or r.get("tournament", {}).get("id")
+            if not tid:
+                continue
+            tid = int(tid)
+            # 反向查找 LEAGUE_TOURNAMENT：哪个联赛代码匹配这个 tid？
+            for code, cfg in LEAGUE_TOURNAMENT.items():
+                if cfg.get("tid") == tid:
+                    _detect_cache[team_name] = code
+                    detect_team_league._cache = _detect_cache
+                    return code
+
+        # 已知欧战资格赛球队的国内联赛映射（search 失败时回退）
+        _TEAM_LEAGUE_MAP = {
+            "伏伊伏丁": "rsl", "Vojvodina": "rsl", "FK Vojvodina": "rsl",
+            "索陆军": "bul", "CSKA Sofia": "bul",
+            "斯海杜克": "cro", "Hajduk Split": "cro",
+            "日利纳": "svk", "Zilina": "svk",
+            "德里城": "irl", "Derry City": "irl",
+            "费伦茨": "hun", "Ferencvaros": "hun", "Ferencváros": "hun",
+        }
+        _norm_input = _norm(team_name)
+        for _tn, _lc in _TEAM_LEAGUE_MAP.items():
+            if _norm_input == _norm(_tn):
+                _detect_cache[team_name] = _lc
+                detect_team_league._cache = _detect_cache
+                return _lc
+
+        # tid 未直接映射 → 尝试通过 tournament_name 模糊匹配
+        for r in results:
+            tour_name = (r.get("tournament", {}) or {}).get("name", "") or r.get("tournament_name", "")
+            if not tour_name:
+                continue
+            tn = tour_name.lower()
+            for code, cfg in LEAGUE_TOURNAMENT.items():
+                cfg_name = cfg.get("name", "").lower()
+                # 赛事名部分匹配（如 "UEFA Champions League" → "ucl"）
+                if cfg_name and (cfg_name in tn or tn in cfg_name):
+                    _detect_cache[team_name] = code
+                    detect_team_league._cache = _detect_cache
+                    return code
+    except Exception:
+        pass
+
+    _detect_cache[team_name] = fallback_league
+    detect_team_league._cache = _detect_cache
+    return fallback_league
 
 
 if __name__ == "__main__":

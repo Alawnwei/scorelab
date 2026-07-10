@@ -48,11 +48,48 @@ class BettingEngine:
 
         # 职业模式 vs 普通模式
         if mode == "pro":
-            self.min_ev = 10        # +EV阈值10%
+            self.min_ev = 10        # +EV阈值10%（默认）
             self.kelly_frac = 0.25  # 1/4凯利
         else:
             self.min_ev = 5         # +EV阈值5%
             self.kelly_frac = 0.50  # 半凯利
+
+        # 分市场 +EV 阈值（不同市场效率不同，v8.5）
+        self.MARKET_MIN_EV = {
+            "1x2": 10,       # 1X2 市场效率最高，需要更高门槛
+            "asian": 12,     # 亚盘盘口精密，要求更高
+            "ou": 8,         # 大小球市场效率略低
+            "btts": 10,      # 双方进球
+            "corners": 15,   # 角球低流动性
+        }
+
+        # 仓位时间管理（v8.5）
+        self.hours_to_match = 24  # 默认24h
+
+    def get_market_min_ev(self, market_type: str = "1x2") -> int:
+        """获取指定市场的最低 +EV 阈值"""
+        return self.MARKET_MIN_EV.get(market_type, self.min_ev)
+
+    def set_hours_to_match(self, hours: float):
+        """设置距离开赛小时数（用于时间窗口仓位调整）"""
+        self.hours_to_match = hours if hours is not None else 24
+        return self
+
+    @staticmethod
+    def get_time_adjustment(hours: float) -> float:
+        """根据距离开赛时间返回仓位乘数（v8.5）"""
+        if hours is None or hours < 0:
+            return 1.0
+        if hours < 3:
+            return 0.5     # 临场：信息已被市场消化
+        elif hours < 12:
+            return 1.0
+        elif hours < 48:
+            return 1.0
+        elif hours < 72:
+            return 0.8     # 信息不足
+        else:
+            return 0.6     # 过早下注，变数太多
 
     # ============================================================
     # 概率工具
@@ -156,6 +193,258 @@ class BettingEngine:
             return 0
         dist = self.score_distribution(lam_h, lam_a)
         return sum(p for (i,j), p in dist.items() if i - j > hdp)
+
+    # ────────────────────────────────────────────────────────
+    # 1. 多盘口精确概率（支持 quarter-ball 线）
+    # ────────────────────────────────────────────────────────
+
+    OU_LINES = [0.5, 1.0, 1.5, 2.0, 2.25, 2.5, 2.75, 3.0, 3.25, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5]
+    AH_LINES = [-0, -0.25, -0.5, -0.75, -1, -1.25, -1.5, -1.75, -2, -2.25, -2.5, -3, -3.5, -4]
+
+    def _goal_dist(self, lam_h, lam_a, maxg=10):
+        dist = self.score_distribution(lam_h, lam_a, max_goals=maxg)
+        goal_p = {}
+        for (i,j), p in dist.items():
+            g = i + j
+            goal_p[g] = goal_p.get(g, 0) + p
+        return goal_p
+
+    def _margin_dist(self, lam_h, lam_a, maxg=10):
+        dist = self.score_distribution(lam_h, lam_a, max_goals=maxg)
+        margin_p = {}
+        for (i,j), p in dist.items():
+            d = i - j
+            margin_p[d] = margin_p.get(d, 0) + p
+        return margin_p
+
+    def prob_over_exact(self, lam_h, lam_a, line):
+        """P(大球) 精确概率，支持 quarter-ball"""
+        from math import modf
+        frac, inte = modf(line)
+        inte = int(inte)
+        if frac == 0:
+            return self.prob_over(lam_h, lam_a, line)
+        elif abs(frac - 0.25) < 0.01:
+            p_low = self.prob_over(lam_h, lam_a, inte)
+            p_high = self.prob_over(lam_h, lam_a, inte + 0.5)
+            return 0.5 * p_low + 0.5 * p_high
+        elif abs(frac - 0.75) < 0.01:
+            p_low = self.prob_over(lam_h, lam_a, inte + 0.5)
+            p_high = self.prob_over(lam_h, lam_a, inte + 1)
+            return 0.5 * p_low + 0.5 * p_high
+        return self.prob_over(lam_h, lam_a, line)
+
+    def prob_hdp_exact(self, lam_h, lam_a, hdp, side="home"):
+        """P(让球方覆盖盘口) 精确概率，支持 quarter-ball"""
+        lam_h, lam_a = self._get_lam(lam_h, lam_a)
+        if lam_h is None:
+            return 0
+        margin_p = self._margin_dist(lam_h, lam_a)
+
+        if side == "away":
+            hdp_adj = -hdp
+        else:
+            hdp_adj = hdp
+
+        from math import modf
+        abs_hdp = abs(hdp_adj)
+        frac, inte = modf(abs_hdp)
+        inte = int(inte)
+        sign = -1 if hdp_adj < 0 else 1
+
+        def _p(cond):
+            return sum(p for d, p in margin_p.items() if cond(d))
+        def _win():   return _p(lambda d: d > 0)
+        def _draw():  return margin_p.get(0, 0)
+        def _nb():    return _p(lambda d: d >= 0)
+        def _ge(k):   return _p(lambda d: d >= k)
+        def _eq(k):   return margin_p.get(k, 0)
+
+        if abs_hdp < 0.01:
+            return _win()
+        if frac == 0:
+            if sign < 0:
+                return _p(lambda d: d > inte)
+            else:
+                return _p(lambda d: d > -inte)
+        elif abs(frac - 0.25) < 0.01:
+            if sign < 0:
+                # 主-0.25: 0.5x平手(P赢+0.5P平) + 0.5x半球(P赢) = P赢 + 0.25P平
+                return _win() + 0.25 * _draw()
+            else:
+                # 主+0.25: 0.5x(+0)有效(P赢+0.5P平) + 0.5x(+0.5)有效(P不败) = P赢 + 0.75P平
+                return _win() + 0.75 * _draw()
+        elif abs(frac - 0.75) < 0.01:
+            if sign < 0:
+                # 主-0.75: 0.5x半球(P净胜>=1) + 0.5x一球(P净胜>=2+0.5P净胜=1) = P净胜>=2 + 0.5P净胜=1
+                return _ge(2) + 0.5 * _eq(1)
+            else:
+                # 主+0.75: 0.5x(+0.5)(P不败) + 0.5x(+1.0)(P不败+P输1) = P不败 + 0.5P输1
+                return _nb() + 0.5 * _eq(-1)
+        return self.prob_cover_handicap(lam_h, lam_a, hdp)
+
+    # ────────────────────────────────────────────────────────
+    # 2. 多盘口扫描器
+    # ────────────────────────────────────────────────────────
+
+    def scan_ou_all(self, match_name, market_ou_dict, lam_h=None, lam_a=None):
+        """扫描所有常见大小球线，返回按+EV排序的结果列表"""
+        lam_h, lam_a = self._get_lam(lam_h, lam_a)
+        if lam_h is None:
+            return []
+        results = []
+        _ou_min_ev = self.get_market_min_ev("ou")
+        for line in sorted(market_ou_dict.keys()):
+            over_odds, under_odds = market_ou_dict[line]
+            if not over_odds or not under_odds:
+                continue
+            prob_over = self.prob_over_exact(lam_h, lam_a, line) * 100
+            prob_under = 100 - prob_over
+            for label, prob, odds in [("大", prob_over, over_odds), ("小", prob_under, under_odds)]:
+                ev_pct, mip = self.calc_ev(prob, odds, [over_odds, under_odds], market_type="ou")
+                if ev_pct >= _ou_min_ev:
+                    kelly = self.kelly(odds, prob)
+                    results.append({
+                        "market": f"大小球{label}{line}", "direction": f"{label}{line}",
+                        "model_prob": round(prob, 1), "mip": round(mip, 1),
+                        "ev": round(ev_pct, 1), "odds": odds,
+                        "kelly_pct": round(kelly * 100, 1),
+                        "bet_pct": round(min(kelly, self.max_bet_pct) * 100, 1),
+                        "depth": abs(prob - 50), "group": "ou",
+                    })
+        results.sort(key=lambda r: -r["ev"])
+        return results
+
+    def scan_asian_all(self, match_name, market_ah_dict, lam_h=None, lam_a=None, side="home"):
+        """扫描所有常见亚盘线，返回按+EV排序的结果列表"""
+        lam_h, lam_a = self._get_lam(lam_h, lam_a)
+        if lam_h is None:
+            return []
+        results = []
+        _ah_min_ev = self.get_market_min_ev("asian")
+        for hdp, (home_odds, away_odds) in sorted(market_ah_dict.items()):
+            if not home_odds or not away_odds:
+                continue
+            if side == "home":
+                prob_cover = self.prob_hdp_exact(lam_h, lam_a, hdp, side="home") * 100
+                label = f"主{hdp:+.1f}"
+                odds = home_odds
+            else:
+                prob_cover = self.prob_hdp_exact(lam_h, lam_a, hdp, side="away") * 100
+                label = f"客{abs(hdp):.1f}"
+                odds = away_odds
+            ev_pct, mip = self.calc_ev(prob_cover, odds, [home_odds, away_odds], market_type="asian")
+            if ev_pct >= _ah_min_ev:
+                kelly = self.kelly(odds, prob_cover)
+                results.append({
+                    "market": f"亚盘{label}", "direction": label,
+                    "model_prob": round(prob_cover, 1), "mip": round(mip, 1),
+                    "ev": round(ev_pct, 1), "odds": odds,
+                    "kelly_pct": round(kelly * 100, 1),
+                    "bet_pct": round(min(kelly, self.max_bet_pct) * 100, 1),
+                    "depth": abs(prob_cover - 50), "group": "ah",
+                })
+        results.sort(key=lambda r: -r["ev"])
+        return results
+
+    # ────────────────────────────────────────────────────────
+    # 3. 跨市场推荐排名引擎
+    # ────────────────────────────────────────────────────────
+
+    CORRELATION_GROUPS = {
+        "1x2_home":     {"group": "direction",  "related": ["ah_home", "ah_home_q"]},
+        "1x2_away":     {"group": "direction",  "related": ["ah_away", "ah_away_q"]},
+        "ah_home":      {"group": "direction",  "related": ["1x2_home"]},
+        "ah_away":      {"group": "direction",  "related": ["1x2_away"]},
+        "ou":           {"group": "goals",      "related": ["btts"]},
+        "btts":         {"group": "goals",      "related": ["ou"]},
+        "corners":      {"group": "set_piece",  "related": []},
+    }
+
+    def _market_group(self, result):
+        m = result.get("market", "")
+        if "大小球" in m: return "ou"
+        if "亚盘" in m: return "ah_home" if "主" in m else "ah_away"
+        if "BTTS" in m or "双方进球" in m: return "btts"
+        if "1X2" in m or "胜平负" in m:
+            if "主" in m: return "1x2_home"
+            if "客" in m: return "1x2_away"
+        if "角球" in m: return "corners"
+        return "other"
+
+    def _logical_contradiction(self, market_a: str, market_b: str) -> bool:
+        """检测两个推荐是否存在逻辑矛盾
+
+        v8.5: 阻止互斥方向同时出现在 Top3 推荐中
+        """
+        m_lower = (market_a.lower(), market_b.lower())
+
+        # 大小球互斥：大2.5 vs 小2.5
+        if any("大" in m for m in m_lower) and any("小" in m for m in m_lower):
+            # 确保盘口线一致（大2.5 vs 小2.5 → 矛盾；大2.5 vs 小3.0 → 可共存）
+            import re
+            _nums_a = re.findall(r'[\d.]+', m_lower[0])
+            _nums_b = re.findall(r'[\d.]+', m_lower[1])
+            if _nums_a and _nums_b and float(_nums_a[0]) == float(_nums_b[0]):
+                return True
+        # 胜负互斥：主胜 vs 客胜（支持任意顺序）
+        _has_home = any("主" in m for m in m_lower)
+        _has_away = any("客" in m for m in m_lower)
+        if _has_home and _has_away and not ("主" in m_lower[0] and "主" in m_lower[1]):
+            # 一个含主、一个含客（排除两个都含主/客的情况）
+            g_a = self._market_group({"market": market_a})
+            g_b = self._market_group({"market": market_b})
+            if g_a.startswith("1x2") and g_b.startswith("1x2"):
+                return True
+            if "ah_" in g_a and "ah_" in g_b:
+                return True
+        return False
+
+    def _correlation_penalty(self, new_result, selected_results):
+        new_group = self._market_group(new_result)
+        new_market = new_result.get("market", "")
+        for sel in selected_results:
+            sel_group = self._market_group(sel)
+            sel_market = sel.get("market", "")
+            # 逻辑矛盾检测：互斥方向不同时推荐
+            if self._logical_contradiction(new_market, sel_market):
+                return 0
+            if new_group == sel_group:
+                return 0
+            for g in self.CORRELATION_GROUPS:
+                info = self.CORRELATION_GROUPS[g]
+                if new_group == g and sel_group in info.get("related", []):
+                    return 0.7
+                if sel_group == g and new_group in info.get("related", []):
+                    return 0.7
+        return 1.0
+
+    def recommend_sorted(self, all_results, max_picks=3, bankroll=10000):
+        """跨市场推荐排序引擎"""
+        scored = []
+        for r in all_results:
+            if not isinstance(r, dict) or not r.get("ev", 0):
+                continue
+            ev = r["ev"]
+            depth = min(r.get("depth", 0), 30)
+            score = ev * depth / 100
+            scored.append((score, r))
+        scored.sort(key=lambda x: -x[0])
+
+        selected = []
+        for score, r in scored:
+            if len(selected) >= max_picks:
+                break
+            penalty = self._correlation_penalty(r, selected)
+            if penalty == 0:
+                continue
+            adj_score = score * penalty
+            r["rank_score"] = round(adj_score, 1)
+            r["correlation_note"] = "" if penalty >= 1 else f"相关市场折扣x{penalty}"
+            bet_pct = r.get("bet_pct", 0) / 100
+            r["bet_amount"] = round(bankroll * bet_pct)
+            selected.append(r)
+        return selected
 
     # ============================================================
     # 推水
@@ -450,6 +739,9 @@ class BettingEngine:
         """构建统一结果"""
         kelly = self.kelly(odds, model_prob)
         bet_pct = min(kelly, self.max_bet_pct)
+        # 时间窗口仓位调整（v8.5）
+        _time_adj = self.get_time_adjustment(self.hours_to_match)
+        bet_pct *= _time_adj
         bet_amount = self.bankroll * bet_pct
 
         # 价值分歧检测

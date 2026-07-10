@@ -1,5 +1,2417 @@
 [
   {
+    "game_id": 15372981,
+    "home_cn": "Incheon United",
+    "away_cn": "FC Seoul",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372923,
+    "home_cn": "Ulsan HD",
+    "away_cn": "Gangwon FC",
+    "score_ft": "3-1",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372924,
+    "home_cn": "Gimcheon Sangmu FC",
+    "away_cn": "Pohang Steelers",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372925,
+    "home_cn": "Jeonbuk Hyundai Motors",
+    "away_cn": "Bucheon FC 1995",
+    "score_ft": "2-3",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372980,
+    "home_cn": "Jeju SK",
+    "away_cn": "Gwangju FC",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372948,
+    "home_cn": "Daejeon Hana Citizen",
+    "away_cn": "FC Anyang",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372942,
+    "home_cn": "Bucheon FC 1995",
+    "away_cn": "Daejeon Hana Citizen",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372928,
+    "home_cn": "Gwangju FC",
+    "away_cn": "Incheon United",
+    "score_ft": "3-2",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372930,
+    "home_cn": "Gimcheon Sangmu FC",
+    "away_cn": "Jeonbuk Hyundai Motors",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372965,
+    "home_cn": "FC Anyang",
+    "away_cn": "Jeju SK",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15743817,
+    "home_cn": "Pohang Steelers",
+    "away_cn": "Gangwon FC",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15868246,
+    "home_cn": "Ulsan HD",
+    "away_cn": "FC Seoul",
+    "score_ft": "1-4",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372974,
+    "home_cn": "Gwangju FC",
+    "away_cn": "Jeonbuk Hyundai Motors",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372978,
+    "home_cn": "Daejeon Hana Citizen",
+    "away_cn": "Gimcheon Sangmu FC",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372931,
+    "home_cn": "Bucheon FC 1995",
+    "away_cn": "Ulsan HD",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372956,
+    "home_cn": "Jeju SK",
+    "away_cn": "FC Seoul",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372976,
+    "home_cn": "Gangwon FC",
+    "away_cn": "FC Anyang",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372943,
+    "home_cn": "Pohang Steelers",
+    "away_cn": "Incheon United",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372971,
+    "home_cn": "Gimcheon Sangmu FC",
+    "away_cn": "Gwangju FC",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372977,
+    "home_cn": "Bucheon FC 1995",
+    "away_cn": "Gangwon FC",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372961,
+    "home_cn": "Incheon United",
+    "away_cn": "Daejeon Hana Citizen",
+    "score_ft": "1-3",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372979,
+    "home_cn": "Jeju SK",
+    "away_cn": "Ulsan HD",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372982,
+    "home_cn": "Jeonbuk Hyundai Motors",
+    "away_cn": "FC Anyang",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372983,
+    "home_cn": "Pohang Steelers",
+    "away_cn": "FC Seoul",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372984,
+    "home_cn": "Daejeon Hana Citizen",
+    "away_cn": "Jeonbuk Hyundai Motors",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372929,
+    "home_cn": "FC Seoul",
+    "away_cn": "Gwangju FC",
+    "score_ft": "5-0",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372933,
+    "home_cn": "Ulsan HD",
+    "away_cn": "Gimcheon Sangmu FC",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372932,
+    "home_cn": "FC Anyang",
+    "away_cn": "Incheon United",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372934,
+    "home_cn": "Gangwon FC",
+    "away_cn": "Jeju SK",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372936,
+    "home_cn": "Pohang Steelers",
+    "away_cn": "Bucheon FC 1995",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372937,
+    "home_cn": "Jeju SK",
+    "away_cn": "Bucheon FC 1995",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372938,
+    "home_cn": "Jeonbuk Hyundai Motors",
+    "away_cn": "Ulsan HD",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372939,
+    "home_cn": "Gangwon FC",
+    "away_cn": "Gwangju FC",
+    "score_ft": "3-0",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372941,
+    "home_cn": "Pohang Steelers",
+    "away_cn": "Daejeon Hana Citizen",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372940,
+    "home_cn": "FC Anyang",
+    "away_cn": "FC Seoul",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372945,
+    "home_cn": "Incheon United",
+    "away_cn": "Gimcheon Sangmu FC",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372944,
+    "home_cn": "FC Seoul",
+    "away_cn": "Jeonbuk Hyundai Motors",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372946,
+    "home_cn": "Pohang Steelers",
+    "away_cn": "Jeju SK",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372947,
+    "home_cn": "Gwangju FC",
+    "away_cn": "Bucheon FC 1995",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372949,
+    "home_cn": "Incheon United",
+    "away_cn": "Ulsan HD",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372950,
+    "home_cn": "Daejeon Hana Citizen",
+    "away_cn": "Gangwon FC",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372951,
+    "home_cn": "Gimcheon Sangmu FC",
+    "away_cn": "FC Anyang",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372954,
+    "home_cn": "FC Seoul",
+    "away_cn": "Daejeon Hana Citizen",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372952,
+    "home_cn": "Gangwon FC",
+    "away_cn": "Jeonbuk Hyundai Motors",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372955,
+    "home_cn": "Bucheon FC 1995",
+    "away_cn": "Incheon United",
+    "score_ft": "2-2",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372953,
+    "home_cn": "Jeju SK",
+    "away_cn": "Gimcheon Sangmu FC",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372960,
+    "home_cn": "Ulsan HD",
+    "away_cn": "Gwangju FC",
+    "score_ft": "5-1",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372957,
+    "home_cn": "Pohang Steelers",
+    "away_cn": "FC Anyang",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372962,
+    "home_cn": "FC Seoul",
+    "away_cn": "Bucheon FC 1995",
+    "score_ft": "3-0",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372959,
+    "home_cn": "Gimcheon Sangmu FC",
+    "away_cn": "Gangwon FC",
+    "score_ft": "0-3",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372958,
+    "home_cn": "Jeonbuk Hyundai Motors",
+    "away_cn": "Incheon United",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372964,
+    "home_cn": "Daejeon Hana Citizen",
+    "away_cn": "Jeju SK",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372963,
+    "home_cn": "FC Anyang",
+    "away_cn": "Ulsan HD",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372967,
+    "home_cn": "Pohang Steelers",
+    "away_cn": "Gwangju FC",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372966,
+    "home_cn": "Gangwon FC",
+    "away_cn": "FC Seoul",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372969,
+    "home_cn": "Bucheon FC 1995",
+    "away_cn": "Gimcheon Sangmu FC",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372968,
+    "home_cn": "Incheon United",
+    "away_cn": "Jeju SK",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372970,
+    "home_cn": "Jeonbuk Hyundai Motors",
+    "away_cn": "Pohang Steelers",
+    "score_ft": "3-2",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372975,
+    "home_cn": "Gwangju FC",
+    "away_cn": "FC Anyang",
+    "score_ft": "2-5",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372972,
+    "home_cn": "Ulsan HD",
+    "away_cn": "Daejeon Hana Citizen",
+    "score_ft": "1-4",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372973,
+    "home_cn": "FC Seoul",
+    "away_cn": "Gimcheon Sangmu FC",
+    "score_ft": "2-3",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372986,
+    "home_cn": "Ulsan HD",
+    "away_cn": "Pohang Steelers",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372987,
+    "home_cn": "Incheon United",
+    "away_cn": "Gangwon FC",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372990,
+    "home_cn": "Jeju SK",
+    "away_cn": "Jeonbuk Hyundai Motors",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372992,
+    "home_cn": "FC Anyang",
+    "away_cn": "Bucheon FC 1995",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372994,
+    "home_cn": "Gwangju FC",
+    "away_cn": "Daejeon Hana Citizen",
+    "score_ft": "0-5",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373002,
+    "home_cn": "Bucheon FC 1995",
+    "away_cn": "Jeju SK",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 12,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372988,
+    "home_cn": "Jeonbuk Hyundai Motors",
+    "away_cn": "Gwangju FC",
+    "score_ft": "4-0",
+    "status": "FINISHED",
+    "week": 12,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372991,
+    "home_cn": "Daejeon Hana Citizen",
+    "away_cn": "Incheon United",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "week": 12,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372989,
+    "home_cn": "Gangwon FC",
+    "away_cn": "Pohang Steelers",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 12,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372995,
+    "home_cn": "Gimcheon Sangmu FC",
+    "away_cn": "Ulsan HD",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 12,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372993,
+    "home_cn": "FC Seoul",
+    "away_cn": "FC Anyang",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "week": 12,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372996,
+    "home_cn": "Jeju SK",
+    "away_cn": "FC Seoul",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 13,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373001,
+    "home_cn": "Gimcheon Sangmu FC",
+    "away_cn": "Incheon United",
+    "score_ft": "0-3",
+    "status": "FINISHED",
+    "week": 13,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373003,
+    "home_cn": "Gwangju FC",
+    "away_cn": "Gangwon FC",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "week": 13,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373000,
+    "home_cn": "Daejeon Hana Citizen",
+    "away_cn": "Pohang Steelers",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "week": 13,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372999,
+    "home_cn": "Ulsan HD",
+    "away_cn": "Bucheon FC 1995",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 13,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372998,
+    "home_cn": "FC Anyang",
+    "away_cn": "Jeonbuk Hyundai Motors",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 13,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15372997,
+    "home_cn": "Gangwon FC",
+    "away_cn": "Daejeon Hana Citizen",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 14,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373009,
+    "home_cn": "Gwangju FC",
+    "away_cn": "FC Seoul",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 14,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373004,
+    "home_cn": "Incheon United",
+    "away_cn": "Pohang Steelers",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 14,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373005,
+    "home_cn": "Bucheon FC 1995",
+    "away_cn": "Jeonbuk Hyundai Motors",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "week": 14,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373006,
+    "home_cn": "FC Anyang",
+    "away_cn": "Gimcheon Sangmu FC",
+    "score_ft": "2-2",
+    "status": "FINISHED",
+    "week": 14,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373007,
+    "home_cn": "Ulsan HD",
+    "away_cn": "Jeju SK",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 14,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373010,
+    "home_cn": "Daejeon Hana Citizen",
+    "away_cn": "FC Seoul",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 15,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373011,
+    "home_cn": "Incheon United",
+    "away_cn": "Gwangju FC",
+    "score_ft": "4-0",
+    "status": "FINISHED",
+    "week": 15,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373008,
+    "home_cn": "Jeju SK",
+    "away_cn": "FC Anyang",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 15,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373012,
+    "home_cn": "Jeonbuk Hyundai Motors",
+    "away_cn": "Gimcheon Sangmu FC",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 15,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373013,
+    "home_cn": "Bucheon FC 1995",
+    "away_cn": "Pohang Steelers",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 15,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15373014,
+    "home_cn": "Gangwon FC",
+    "away_cn": "Ulsan HD",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 15,
+    "tournament": "K League 1"
+  },
+  {
+    "game_id": 15260739,
+    "home_cn": "HamKam",
+    "away_cn": "Viking FK",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260738,
+    "home_cn": "Molde FK",
+    "away_cn": "Rosenborg BK",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260742,
+    "home_cn": "Kristiansund BK",
+    "away_cn": "SK Brann",
+    "score_ft": "3-2",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260737,
+    "home_cn": "Aalesunds FK",
+    "away_cn": "Lillestrøm SK",
+    "score_ft": "1-3",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260741,
+    "home_cn": "KFUM Oslo",
+    "away_cn": "IK Start",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260743,
+    "home_cn": "Vålerenga IF",
+    "away_cn": "Sandefjord Fotball",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260744,
+    "home_cn": "Tromsø IL",
+    "away_cn": "Fredrikstad FK",
+    "score_ft": "4-0",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15878599,
+    "home_cn": "Sarpsborg 08",
+    "away_cn": "Bodø/Glimt",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260748,
+    "home_cn": "IK Start",
+    "away_cn": "Aalesunds FK",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260746,
+    "home_cn": "Viking FK",
+    "away_cn": "Molde FK",
+    "score_ft": "4-1",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260747,
+    "home_cn": "Rosenborg BK",
+    "away_cn": "Vålerenga IF",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260749,
+    "home_cn": "Fredrikstad FK",
+    "away_cn": "KFUM Oslo",
+    "score_ft": "3-1",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260745,
+    "home_cn": "SK Brann",
+    "away_cn": "Tromsø IL",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260751,
+    "home_cn": "Sandefjord Fotball",
+    "away_cn": "Sarpsborg 08",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15882341,
+    "home_cn": "Lillestrøm SK",
+    "away_cn": "Kristiansund BK",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260750,
+    "home_cn": "Vålerenga IF",
+    "away_cn": "Viking FK",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260754,
+    "home_cn": "HamKam",
+    "away_cn": "SK Brann",
+    "score_ft": "1-5",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260755,
+    "home_cn": "Kristiansund BK",
+    "away_cn": "Bodø/Glimt",
+    "score_ft": "0-3",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260759,
+    "home_cn": "Molde FK",
+    "away_cn": "Lillestrøm SK",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260760,
+    "home_cn": "Sarpsborg 08",
+    "away_cn": "IK Start",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260761,
+    "home_cn": "Tromsø IL",
+    "away_cn": "Rosenborg BK",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260766,
+    "home_cn": "Aalesunds FK",
+    "away_cn": "Fredrikstad FK",
+    "score_ft": "2-3",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260772,
+    "home_cn": "KFUM Oslo",
+    "away_cn": "Sandefjord Fotball",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260780,
+    "home_cn": "Lillestrøm SK",
+    "away_cn": "IK Start",
+    "score_ft": "3-1",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260756,
+    "home_cn": "Tromsø IL",
+    "away_cn": "Kristiansund BK",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260781,
+    "home_cn": "Viking FK",
+    "away_cn": "Bodø/Glimt",
+    "score_ft": "5-0",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260762,
+    "home_cn": "Rosenborg BK",
+    "away_cn": "Sarpsborg 08",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260803,
+    "home_cn": "Aalesunds FK",
+    "away_cn": "KFUM Oslo",
+    "score_ft": "2-2",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260765,
+    "home_cn": "Fredrikstad FK",
+    "away_cn": "Vålerenga IF",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260778,
+    "home_cn": "Molde FK",
+    "away_cn": "HamKam",
+    "score_ft": "4-1",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260771,
+    "home_cn": "SK Brann",
+    "away_cn": "Sandefjord Fotball",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260757,
+    "home_cn": "Bodø/Glimt",
+    "away_cn": "Aalesunds FK",
+    "score_ft": "3-0",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260768,
+    "home_cn": "Sandefjord Fotball",
+    "away_cn": "Rosenborg BK",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260758,
+    "home_cn": "Viking FK",
+    "away_cn": "SK Brann",
+    "score_ft": "3-2",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260777,
+    "home_cn": "Vålerenga IF",
+    "away_cn": "Lillestrøm SK",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260774,
+    "home_cn": "HamKam",
+    "away_cn": "KFUM Oslo",
+    "score_ft": "4-0",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260769,
+    "home_cn": "Kristiansund BK",
+    "away_cn": "Fredrikstad FK",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260783,
+    "home_cn": "Sarpsborg 08",
+    "away_cn": "Tromsø IL",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260776,
+    "home_cn": "IK Start",
+    "away_cn": "Molde FK",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260784,
+    "home_cn": "Fredrikstad FK",
+    "away_cn": "Viking FK",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260773,
+    "home_cn": "Rosenborg BK",
+    "away_cn": "SK Brann",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260782,
+    "home_cn": "Molde FK",
+    "away_cn": "Vålerenga IF",
+    "score_ft": "5-1",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260779,
+    "home_cn": "Aalesunds FK",
+    "away_cn": "Kristiansund BK",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260763,
+    "home_cn": "HamKam",
+    "away_cn": "IK Start",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260767,
+    "home_cn": "KFUM Oslo",
+    "away_cn": "Sarpsborg 08",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260764,
+    "home_cn": "Tromsø IL",
+    "away_cn": "Sandefjord Fotball",
+    "score_ft": "3-1",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260775,
+    "home_cn": "Lillestrøm SK",
+    "away_cn": "Bodø/Glimt",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260770,
+    "home_cn": "Viking FK",
+    "away_cn": "Rosenborg BK",
+    "score_ft": "3-0",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260785,
+    "home_cn": "SK Brann",
+    "away_cn": "Fredrikstad FK",
+    "score_ft": "3-1",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260788,
+    "home_cn": "Lillestrøm SK",
+    "away_cn": "Sarpsborg 08",
+    "score_ft": "4-0",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260789,
+    "home_cn": "IK Start",
+    "away_cn": "Tromsø IL",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15394494,
+    "home_cn": "Kristiansund BK",
+    "away_cn": "HamKam",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260786,
+    "home_cn": "Sandefjord Fotball",
+    "away_cn": "Aalesunds FK",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260793,
+    "home_cn": "Vålerenga IF",
+    "away_cn": "KFUM Oslo",
+    "score_ft": "2-2",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260791,
+    "home_cn": "Bodø/Glimt",
+    "away_cn": "Molde FK",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260790,
+    "home_cn": "HamKam",
+    "away_cn": "Vålerenga IF",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260794,
+    "home_cn": "Sarpsborg 08",
+    "away_cn": "Fredrikstad FK",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260795,
+    "home_cn": "Rosenborg BK",
+    "away_cn": "Lillestrøm SK",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260792,
+    "home_cn": "KFUM Oslo",
+    "away_cn": "Viking FK",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260796,
+    "home_cn": "Sandefjord Fotball",
+    "away_cn": "Kristiansund BK",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260797,
+    "home_cn": "Tromsø IL",
+    "away_cn": "Molde FK",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 16091962,
+    "home_cn": "IK Start",
+    "away_cn": "Bodø/Glimt",
+    "score_ft": "1-4",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 16097542,
+    "home_cn": "Aalesunds FK",
+    "away_cn": "SK Brann",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260799,
+    "home_cn": "SK Brann",
+    "away_cn": "KFUM Oslo",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260804,
+    "home_cn": "Fredrikstad FK",
+    "away_cn": "HamKam",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260801,
+    "home_cn": "Lillestrøm SK",
+    "away_cn": "Sandefjord Fotball",
+    "score_ft": "3-1",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260802,
+    "home_cn": "Molde FK",
+    "away_cn": "Kristiansund BK",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260805,
+    "home_cn": "Rosenborg BK",
+    "away_cn": "Aalesunds FK",
+    "score_ft": "2-3",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260806,
+    "home_cn": "Viking FK",
+    "away_cn": "IK Start",
+    "score_ft": "6-3",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260816,
+    "home_cn": "Bodø/Glimt",
+    "away_cn": "Tromsø IL",
+    "score_ft": "5-0",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260822,
+    "home_cn": "Vålerenga IF",
+    "away_cn": "Sarpsborg 08",
+    "score_ft": "3-2",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260809,
+    "home_cn": "Bodø/Glimt",
+    "away_cn": "SK Brann",
+    "score_ft": "3-1",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260807,
+    "home_cn": "Kristiansund BK",
+    "away_cn": "Viking FK",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260813,
+    "home_cn": "IK Start",
+    "away_cn": "Vålerenga IF",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260823,
+    "home_cn": "HamKam",
+    "away_cn": "Lillestrøm SK",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260831,
+    "home_cn": "KFUM Oslo",
+    "away_cn": "Rosenborg BK",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260808,
+    "home_cn": "Sarpsborg 08",
+    "away_cn": "Molde FK",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260814,
+    "home_cn": "Tromsø IL",
+    "away_cn": "Aalesunds FK",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260811,
+    "home_cn": "Sandefjord Fotball",
+    "away_cn": "Fredrikstad FK",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260817,
+    "home_cn": "Aalesunds FK",
+    "away_cn": "HamKam",
+    "score_ft": "2-2",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260812,
+    "home_cn": "Fredrikstad FK",
+    "away_cn": "IK Start",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260815,
+    "home_cn": "KFUM Oslo",
+    "away_cn": "Tromsø IL",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260821,
+    "home_cn": "Rosenborg BK",
+    "away_cn": "Bodø/Glimt",
+    "score_ft": "2-2",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260810,
+    "home_cn": "SK Brann",
+    "away_cn": "Sarpsborg 08",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260820,
+    "home_cn": "Vålerenga IF",
+    "away_cn": "Kristiansund BK",
+    "score_ft": "3-1",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260819,
+    "home_cn": "Molde FK",
+    "away_cn": "Sandefjord Fotball",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260851,
+    "home_cn": "Tromsø IL",
+    "away_cn": "Lillestrøm SK",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "week": 15,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260872,
+    "home_cn": "Tromsø IL",
+    "away_cn": "SK Brann",
+    "score_ft": "0-5",
+    "status": "FINISHED",
+    "week": 17,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15260873,
+    "home_cn": "Bodø/Glimt",
+    "away_cn": "IK Start",
+    "score_ft": "5-0",
+    "status": "FINISHED",
+    "week": 18,
+    "tournament": "Eliteserien"
+  },
+  {
+    "game_id": 15385893,
+    "home_cn": "Degerfors IF",
+    "away_cn": "IK Sirius",
+    "score_ft": "0-3",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15385887,
+    "home_cn": "Hammarby IF",
+    "away_cn": "Mjällby AIF",
+    "score_ft": "3-0",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15385886,
+    "home_cn": "AIK",
+    "away_cn": "Halmstads BK",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15385894,
+    "home_cn": "Kalmar FF",
+    "away_cn": "Västerås SK",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15385889,
+    "home_cn": "Örgryte IS",
+    "away_cn": "Malmö FF",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15385890,
+    "home_cn": "BK Häcken",
+    "away_cn": "IF Brommapojkarna",
+    "score_ft": "2-2",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15385891,
+    "home_cn": "IF Elfsborg",
+    "away_cn": "IFK Göteborg",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15385888,
+    "home_cn": "GAIS",
+    "away_cn": "Djurgårdens IF",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 1,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15406401,
+    "home_cn": "IFK Göteborg",
+    "away_cn": "BK Häcken",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15406402,
+    "home_cn": "Mjällby AIF",
+    "away_cn": "Örgryte IS",
+    "score_ft": "0-2",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15406403,
+    "home_cn": "Västerås SK",
+    "away_cn": "IF Elfsborg",
+    "score_ft": "2-2",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15406400,
+    "home_cn": "Djurgårdens IF",
+    "away_cn": "Kalmar FF",
+    "score_ft": "3-2",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15406407,
+    "home_cn": "Halmstads BK",
+    "away_cn": "Degerfors IF",
+    "score_ft": "0-3",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15406404,
+    "home_cn": "Malmö FF",
+    "away_cn": "GAIS",
+    "score_ft": "3-1",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15406406,
+    "home_cn": "IF Brommapojkarna",
+    "away_cn": "AIK",
+    "score_ft": "2-2",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15406405,
+    "home_cn": "IK Sirius",
+    "away_cn": "Hammarby IF",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 2,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272377,
+    "home_cn": "Degerfors IF",
+    "away_cn": "IF Elfsborg",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272386,
+    "home_cn": "Djurgårdens IF",
+    "away_cn": "Malmö FF",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272390,
+    "home_cn": "Halmstads BK",
+    "away_cn": "IFK Göteborg",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272385,
+    "home_cn": "Hammarby IF",
+    "away_cn": "Örgryte IS",
+    "score_ft": "8-1",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272379,
+    "home_cn": "IK Sirius",
+    "away_cn": "Västerås SK",
+    "score_ft": "4-1",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272388,
+    "home_cn": "Mjällby AIF",
+    "away_cn": "IF Brommapojkarna",
+    "score_ft": "3-0",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272374,
+    "home_cn": "AIK",
+    "away_cn": "Kalmar FF",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272378,
+    "home_cn": "BK Häcken",
+    "away_cn": "GAIS",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 3,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272381,
+    "home_cn": "Hammarby IF",
+    "away_cn": "Halmstads BK",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272384,
+    "home_cn": "IF Elfsborg",
+    "away_cn": "Djurgårdens IF",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272387,
+    "home_cn": "Västerås SK",
+    "away_cn": "BK Häcken",
+    "score_ft": "3-3",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272383,
+    "home_cn": "Örgryte IS",
+    "away_cn": "IF Brommapojkarna",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272394,
+    "home_cn": "Degerfors IF",
+    "away_cn": "AIK",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272382,
+    "home_cn": "GAIS",
+    "away_cn": "Mjällby AIF",
+    "score_ft": "0-0",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272389,
+    "home_cn": "Kalmar FF",
+    "away_cn": "IFK Göteborg",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272375,
+    "home_cn": "Malmö FF",
+    "away_cn": "IK Sirius",
+    "score_ft": "2-3",
+    "status": "FINISHED",
+    "week": 4,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272397,
+    "home_cn": "Djurgårdens IF",
+    "away_cn": "Hammarby IF",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272400,
+    "home_cn": "IF Brommapojkarna",
+    "away_cn": "Västerås SK",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272392,
+    "home_cn": "IFK Göteborg",
+    "away_cn": "GAIS",
+    "score_ft": "2-2",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272395,
+    "home_cn": "AIK",
+    "away_cn": "Malmö FF",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272398,
+    "home_cn": "BK Häcken",
+    "away_cn": "IK Sirius",
+    "score_ft": "2-2",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272401,
+    "home_cn": "Kalmar FF",
+    "away_cn": "IF Elfsborg",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272399,
+    "home_cn": "Mjällby AIF",
+    "away_cn": "Halmstads BK",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272391,
+    "home_cn": "Örgryte IS",
+    "away_cn": "Degerfors IF",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 5,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272406,
+    "home_cn": "Degerfors IF",
+    "away_cn": "BK Häcken",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272409,
+    "home_cn": "IK Sirius",
+    "away_cn": "Kalmar FF",
+    "score_ft": "3-2",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272403,
+    "home_cn": "Hammarby IF",
+    "away_cn": "Västerås SK",
+    "score_ft": "3-0",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272404,
+    "home_cn": "Malmö FF",
+    "away_cn": "Mjällby AIF",
+    "score_ft": "2-3",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272405,
+    "home_cn": "GAIS",
+    "away_cn": "Örgryte IS",
+    "score_ft": "4-0",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272408,
+    "home_cn": "IF Elfsborg",
+    "away_cn": "AIK",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272402,
+    "home_cn": "Djurgårdens IF",
+    "away_cn": "IFK Göteborg",
+    "score_ft": "6-0",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272410,
+    "home_cn": "Halmstads BK",
+    "away_cn": "IF Brommapojkarna",
+    "score_ft": "1-3",
+    "status": "FINISHED",
+    "week": 6,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272411,
+    "home_cn": "IF Elfsborg",
+    "away_cn": "IF Brommapojkarna",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272414,
+    "home_cn": "Degerfors IF",
+    "away_cn": "Mjällby AIF",
+    "score_ft": "1-4",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272407,
+    "home_cn": "IFK Göteborg",
+    "away_cn": "Hammarby IF",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272416,
+    "home_cn": "Västerås SK",
+    "away_cn": "GAIS",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272413,
+    "home_cn": "AIK",
+    "away_cn": "Djurgårdens IF",
+    "score_ft": "2-4",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272417,
+    "home_cn": "Kalmar FF",
+    "away_cn": "Halmstads BK",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272412,
+    "home_cn": "BK Häcken",
+    "away_cn": "Malmö FF",
+    "score_ft": "3-2",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272415,
+    "home_cn": "IK Sirius",
+    "away_cn": "Örgryte IS",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 7,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272419,
+    "home_cn": "GAIS",
+    "away_cn": "Degerfors IF",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272428,
+    "home_cn": "Halmstads BK",
+    "away_cn": "IF Elfsborg",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272421,
+    "home_cn": "Hammarby IF",
+    "away_cn": "Malmö FF",
+    "score_ft": "4-1",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272420,
+    "home_cn": "IF Brommapojkarna",
+    "away_cn": "Kalmar FF",
+    "score_ft": "1-0",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272422,
+    "home_cn": "Mjällby AIF",
+    "away_cn": "BK Häcken",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272423,
+    "home_cn": "Västerås SK",
+    "away_cn": "AIK",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272418,
+    "home_cn": "Djurgårdens IF",
+    "away_cn": "IK Sirius",
+    "score_ft": "2-3",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272431,
+    "home_cn": "Örgryte IS",
+    "away_cn": "IFK Göteborg",
+    "score_ft": "2-3",
+    "status": "FINISHED",
+    "week": 8,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272425,
+    "home_cn": "Djurgårdens IF",
+    "away_cn": "IF Brommapojkarna",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272436,
+    "home_cn": "Halmstads BK",
+    "away_cn": "Örgryte IS",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272438,
+    "home_cn": "Kalmar FF",
+    "away_cn": "Degerfors IF",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272427,
+    "home_cn": "Hammarby IF",
+    "away_cn": "AIK",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272440,
+    "home_cn": "IK Sirius",
+    "away_cn": "GAIS",
+    "score_ft": "2-1",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272432,
+    "home_cn": "Malmö FF",
+    "away_cn": "Västerås SK",
+    "score_ft": "2-3",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 16190070,
+    "home_cn": "IF Elfsborg",
+    "away_cn": "BK Häcken",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272426,
+    "home_cn": "IFK Göteborg",
+    "away_cn": "Mjällby AIF",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 9,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272430,
+    "home_cn": "Örgryte IS",
+    "away_cn": "IF Elfsborg",
+    "score_ft": "2-2",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272429,
+    "home_cn": "AIK",
+    "away_cn": "IK Sirius",
+    "score_ft": "0-3",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272434,
+    "home_cn": "GAIS",
+    "away_cn": "Kalmar FF",
+    "score_ft": "3-0",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272435,
+    "home_cn": "Malmö FF",
+    "away_cn": "Halmstads BK",
+    "score_ft": "5-2",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272433,
+    "home_cn": "BK Häcken",
+    "away_cn": "Hammarby IF",
+    "score_ft": "3-2",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272437,
+    "home_cn": "Degerfors IF",
+    "away_cn": "IF Brommapojkarna",
+    "score_ft": "2-2",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272439,
+    "home_cn": "Västerås SK",
+    "away_cn": "IFK Göteborg",
+    "score_ft": "4-5",
+    "status": "FINISHED",
+    "week": 10,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272447,
+    "home_cn": "IK Sirius",
+    "away_cn": "Mjällby AIF",
+    "score_ft": "4-4",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272444,
+    "home_cn": "Degerfors IF",
+    "away_cn": "Malmö FF",
+    "score_ft": "0-1",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272450,
+    "home_cn": "Halmstads BK",
+    "away_cn": "Västerås SK",
+    "score_ft": "1-3",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272445,
+    "home_cn": "IFK Göteborg",
+    "away_cn": "AIK",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272448,
+    "home_cn": "Kalmar FF",
+    "away_cn": "Örgryte IS",
+    "score_ft": "3-0",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272446,
+    "home_cn": "IF Elfsborg",
+    "away_cn": "Hammarby IF",
+    "score_ft": "1-2",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272442,
+    "home_cn": "BK Häcken",
+    "away_cn": "Djurgårdens IF",
+    "score_ft": "2-4",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272441,
+    "home_cn": "IF Brommapojkarna",
+    "away_cn": "GAIS",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 11,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272487,
+    "home_cn": "GAIS",
+    "away_cn": "Hammarby IF",
+    "score_ft": "2-0",
+    "status": "FINISHED",
+    "week": 15,
+    "tournament": "Allsvenskan"
+  },
+  {
+    "game_id": 15272473,
+    "home_cn": "IF Elfsborg",
+    "away_cn": "Mjällby AIF",
+    "score_ft": "1-1",
+    "status": "FINISHED",
+    "week": 15,
+    "tournament": "Allsvenskan"
+  },
+  {
     "match": "巴拿马 vs 英格兰",
     "home_cn": "巴拿马",
     "away_cn": "英格兰",
